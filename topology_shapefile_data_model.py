@@ -9,10 +9,10 @@ import osgeo.ogr
 from osgeo import ogr, osr
 
 # For normal routes
-ROUTE_NAME_FIELD = "NAME"
+ROUTE_NAME_FIELD = "name"
 # For route extensions
-ROUTE_EXT_ID_FIELD = "ID"
-ROUTE_EXT_NAME_FIELD = "Name"
+ROUTE_EXT_ID_FIELD = "id"
+ROUTE_EXT_NAME_FIELD = "name"
 ROUTE_EXT_TYPE_FIELD = "Ext_Type"
 ROUTE_EXT_EXIST_S_NAME_FIELD = "Ext_s_name"
 ROUTE_EXT_EXIST_L_NAME_FIELD = "Ext_l_name"
@@ -33,15 +33,15 @@ ROUTE_EXT_ALL_TYPES = [ROUTE_EXT_TYPE_EXTENSION, ROUTE_EXT_TYPE_NEW]
 EPSG_SEGS_FILE = 4326
 SEG_LYR_NAME = "segments"
 SEG_ID_FIELD = "id"                 # str, 21
-SEG_ROUTE_LIST_FIELD = "route_list" # str, 254
-SEG_STOP_1_NAME_FIELD = "pt_a"      # str, 24
-SEG_STOP_2_NAME_FIELD = "pt_b"      # str, 24
-SEG_ROUTE_DIST_FIELD = 'leg_length' # real, 24, 15
+SEG_ROUTE_LIST_FIELD = "routes" # str, 254
+SEG_STOP_1_NAME_FIELD = "stop1"      # str, 24
+SEG_STOP_2_NAME_FIELD = "stop2"      # str, 24
+SEG_ROUTE_DIST_FIELD = 'route_dist' # real, 24, 15
 ROUTE_DIST_RATIO_TO_KM = 1000       # As it says - effectively encodes units
 
 EPSG_STOPS_FILE = 4326
 STOP_LYR_NAME = "stops"
-STOP_ID_FIELD = "ID"                # int, 10
+STOP_ID_FIELD = "id"                # int, 10
 STOP_NAME_FIELD = "name"            # str, 254
 STOP_TYPE_FIELD = "typ"             # str, 50 - reasonable length type strs.
 STOP_GTFS_ID_FIELD = "gtfs_id"      # int, 10
@@ -530,8 +530,8 @@ def get_stop_ids_of_seg(seg_feature):
     pt_a_name = seg_feature.GetField(SEG_STOP_1_NAME_FIELD)
     pt_b_name = seg_feature.GetField(SEG_STOP_2_NAME_FIELD)
     # Courtesy http://stackoverflow.com/questions/4289331/python-extract-numbers-from-a-string
-    pt_a_id = int(re.findall(r'\d+', pt_a_name)[0])
-    pt_b_id = int(re.findall(r'\d+', pt_b_name)[0])
+    pt_a_id = int(re.findall(r'\d+', str(pt_a_name))[0])
+    pt_b_id = int(re.findall(r'\d+', str(pt_b_name))[0])
     return pt_a_id, pt_b_id
 
 def create_seg_geom_from_stop_pair(stop_feat_a, stop_feat_b, stops_srs):

@@ -1132,9 +1132,8 @@ def read_route_defs(csv_file_name, do_sort=True):
         sys.exit(1) 
 
     dict_reader = csv.DictReader(csv_file, delimiter=';', quotechar="'") 
-
     # Check old vs new format
-    if 'Route' in dict_reader.fieldnames:
+    if 'route' in dict_reader.fieldnames:
         format_version = "00"
     else:
         format_version = "01"
@@ -1142,7 +1141,7 @@ def read_route_defs(csv_file_name, do_sort=True):
     for ii, row in enumerate(dict_reader):
         if format_version == "00":
             r_id = ii
-            r_short_name = row['Route']
+            r_short_name = row['route']
             r_long_name = None
         else:
             r_id = int(row['route_id'])
@@ -1162,7 +1161,7 @@ def read_route_defs(csv_file_name, do_sort=True):
             r_gtfs_id = None
         dir1 = row['dir1']
         dir2 = row['dir2']
-        segments_str = row['Segments'].split(',')
+        segments_str = row['segments'].split(',')
 
         seg_ids = [int(segstr) for segstr in segments_str]
         route_def = Route_Def(r_id, r_short_name, r_long_name,

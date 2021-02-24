@@ -78,15 +78,16 @@ def build_stop_list_and_seg_info_along_route(route_def, serv_period, dir_id,
             % (route_segs.get_print_name(route_def))
         return []
     route_segments_lyr = route_segments_shp.GetLayer(0)
+
     stops_lyr = stops_shp.GetLayer(0)
 
     seg_speed_model.setup_for_trip_set(route_def, serv_period, dir_id)
 
     # Apply a filter to speed up calculations - only segments on this route.
-    where_clause = "%s LIKE '%%%s' OR %s LIKE '%%%s,%%'" % \
-        (tp_model.SEG_ROUTE_LIST_FIELD, route_def.id,\
-        tp_model.SEG_ROUTE_LIST_FIELD, route_def.id)
-    route_segments_lyr.SetAttributeFilter(where_clause)
+    # where_clause = "%s LIKE '%%%s' OR %s LIKE '%%%s,%%'" % \
+    #     (tp_model.SEG_ROUTE_LIST_FIELD, route_def.id,\
+    #     tp_model.SEG_ROUTE_LIST_FIELD, route_def.id)
+    # route_segments_lyr.SetAttributeFilter(where_clause)
     segs_lookup_table = tp_model.build_segs_lookup_table(route_segments_lyr)
 
     ordered_seg_refs = route_segs.create_ordered_seg_refs_from_ids(
@@ -100,6 +101,7 @@ def build_stop_list_and_seg_info_along_route(route_def, serv_period, dir_id,
     else:
         seg_refs_in_dir = reversed(ordered_seg_refs)
         stop_ids_along_route.reverse()
+
 
     for seg_ctr, seg_ref in enumerate(seg_refs_in_dir):
         first_stop_id = stop_ids_along_route[seg_ctr]
