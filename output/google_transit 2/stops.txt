@@ -1,0 +1,49 @@
+stop_lon,stop_name,stop_lat,stop_id,location_type
+144.963637774,3-Lincoln Square/Swanston St (Carlton),-37.8023612528,3000040,0
+144.969777346,117-Richardson St/Lygon St (Carlton North),-37.7840432237,3000033,0
+144.963071749,4-Queensberry St/Swanston St (Carlton),-37.8056245409,3000041,0
+144.963275565,7-RMIT University/Swanston St (Melbourne City),-37.80840771,3000042,0
+144.964381318,1-Melbourne University/Swanston St (Carlton),-37.7981768373,3000039,0
+144.968842534,115-Melbourne Cemetery/Lygon St (Carlton North),-37.7895877834,3000031,0
+144.964230594,8-Melbourne Central Station/Swanston St (Melbourne City),-37.8104730076,3000043,0
+144.972573045,125-Blyth St/Lygon St (Brunswick East),-37.7666747369,3000019,0
+144.972300535,124-Victoria St/Lygon St (Brunswick East),-37.7682132633,3000018,0
+144.972001504,123-Albert St/Lygon St (Brunswick East),-37.7697899879,3000017,0
+144.971488892,122-Glenlyon Rd/Lygon St (Brunswick East),-37.772748634,3000016,0
+144.971028172,121-Weston St/Lygon St (Brunswick East),-37.7756758934,3000015,0
+144.970665305,120-Brunswick Rd/Lygon St (Brunswick),-37.778459795,3000014,0
+144.970517592,119-Park St/Lygon St (Carlton North),-37.7794241367,3000013,0
+144.948681,32-Beaconsfield Pde/Victoria Ave (Albert Park),-37.847213,3000012,0
+144.949901931,31-Graham St/Victoria Ave (Albert Park),-37.8457368011,3000011,0
+144.95134444,30-Richardson St/Victoria Ave (Albert Park),-37.8439928192,3000010,0
+144.969215547,116-Fenwick St/Lygon St (Carlton North),-37.7873749691,3000032,0
+144.967942655,13-Federation Square/Swanston St (Melbourne City),-37.8185435759,3000046,0
+144.965579543,10-Bourke Street Mall/Swanston St (Melbourne City),-37.8134115116,3000044,0
+144.954452065,27-Montague St/Park St (South Melbourne),-37.8372806744,3000035,0
+144.969519764,14-Arts Centre/St Kilda Rd (Southbank),-37.821983615,3000047,0
+144.97011393,118-Pigdon St/Lygon St (Carlton North),-37.7819303609,3000034,0
+144.973982557,127-Albion St/Holmes St (Brunswick East),-37.7618737126,3000037,0
+144.955600208,28-Bridport St/Montague St (Albert Park),-37.8404775349,3000036,0
+144.977389246,133-Harding St/Nicholson St (Coburg),-37.7463839541,3000026,0
+144.977806448,134-Merribell Ave/Nicholson St (Coburg),-37.7443710801,3000027,0
+144.976575778,131-Rennie St/Nicholson St (Coburg),-37.7513518366,3000024,0
+144.976891895,132-Crozier St/Nicholson St (Coburg),-37.749426343,3000025,0
+144.974834905,129-Moreland Rd/Holmes St (Brunswick),-37.7568940089,3000022,0
+144.976011387,130-The Avenue/Nicholson St (Coburg),-37.7535903977,3000023,0
+144.972968072,126-Stewart St/Lygon St (Brunswick East),-37.7644386774,3000020,0
+144.974401831,128-Mitchell St/Holmes St (Brunswick East),-37.7593984898,3000021,0
+144.967160812,112-Lygon St/Elgin St (Carlton),-37.7971139616,3000028,0
+144.968073811,113-Lytton St/Lygon St (Carlton),-37.7941351351,3000029,0
+144.956427769,26-Ferrars St/Park St (South Melbourne),-37.8367109608,3000008,0
+144.953356936,29-Bridport St/Victoria Ave (Albert Park),-37.8415812405,3000009,0
+144.965039972,22-Dorcas St/Eastern Rd (South Melbourne),-37.8321993734,3000004,0
+144.96387611,23-Moray St/Park St (South Melbourne),-37.8345623762,3000005,0
+144.961335296,24-Clarendon St/Park St (South Melbourne),-37.835297099,3000006,0
+144.958905191,25-Cecil St/Park St (South Melbourne),-37.8360003783,3000007,0
+144.965350029,20-Kings Way/Sturt St (Southbank),-37.8301479694,3000000,0
+144.965851,19-Miles St/Sturt St (Southbank),-37.8284594803,3000001,0
+144.966663783,18-Grant St/Sturt St (Southbank),-37.8257880915,3000002,0
+144.96726595,17-Southbank Bvd/Sturt St (Southbank),-37.823780281,3000003,0
+144.978031506,135-Bell St/Nicholson St (Coburg),-37.7427994482,3000038,0
+144.968313595,114-Princes St/Lygon St (Carlton North),-37.7926964324,3000030,0
+144.96696007,11-City Square/Swanston St (Melbourne City),-37.8164041531,3000045,0

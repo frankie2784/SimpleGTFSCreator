@@ -1,0 +1,841 @@
+route_id,trip_id,trip_headsign,service_id
+3000000,3000320,Coburg,sun
+3000000,3000321,Coburg,sun
+3000000,3000322,Coburg,sun
+3000000,3000323,Coburg,sun
+3000000,3000324,Coburg,sun
+3000000,3000325,Coburg,sun
+3000000,3000326,Coburg,sun
+3000000,3000327,Coburg,sun
+3000000,3000328,Coburg,sun
+3000000,3000329,Coburg,sun
+3000000,3000330,Coburg,sun
+3000000,3000331,Coburg,sun
+3000000,3000332,Coburg,sun
+3000000,3000333,Coburg,sun
+3000000,3000334,Coburg,sun
+3000000,3000335,Coburg,sun
+3000000,3000336,Coburg,sun
+3000000,3000337,Coburg,sun
+3000000,3000338,Coburg,sun
+3000000,3000339,Coburg,sun
+3000000,3000340,Coburg,sun
+3000000,3000341,Coburg,sun
+3000000,3000342,Coburg,sun
+3000000,3000343,Coburg,sun
+3000000,3000344,Coburg,sun
+3000000,3000345,Coburg,sun
+3000000,3000346,Coburg,sun
+3000000,3000347,Coburg,sun
+3000000,3000348,Coburg,sun
+3000000,3000349,Coburg,sun
+3000000,3000350,Coburg,sun
+3000000,3000351,Coburg,sun
+3000000,3000352,Coburg,sun
+3000000,3000353,Coburg,sun
+3000000,3000354,Coburg,sun
+3000000,3000355,Coburg,sun
+3000000,3000356,Coburg,sun
+3000000,3000357,Coburg,sun
+3000000,3000358,Coburg,sun
+3000000,3000359,Coburg,sun
+3000000,3000360,Coburg,sun
+3000000,3000361,Coburg,sun
+3000000,3000362,Coburg,sun
+3000000,3000363,Coburg,sun
+3000000,3000364,Coburg,sun
+3000000,3000365,Coburg,sun
+3000000,3000366,Coburg,sun
+3000000,3000367,Coburg,sun
+3000000,3000368,Coburg,sun
+3000000,3000369,Coburg,sun
+3000000,3000370,Coburg,sun
+3000000,3000371,Coburg,sun
+3000000,3000372,Coburg,sun
+3000000,3000373,Coburg,sun
+3000000,3000374,Coburg,sun
+3000000,3000375,Coburg,sun
+3000000,3000376,Coburg,sun
+3000000,3000377,Coburg,sun
+3000000,3000378,Coburg,sun
+3000000,3000379,Coburg,sun
+3000000,3000380,Coburg,sun
+3000000,3000381,Coburg,sun
+3000000,3000382,Coburg,sun
+3000000,3000383,Coburg,sun
+3000000,3000384,Coburg,sun
+3000000,3000385,Coburg,sun
+3000000,3000386,Coburg,sun
+3000000,3000387,Coburg,sun
+3000000,3000388,Coburg,sun
+3000000,3000389,Coburg,sun
+3000000,3000390,Coburg,sun
+3000000,3000391,Coburg,sun
+3000000,3000392,Coburg,sun
+3000000,3000393,Coburg,sun
+3000000,3000394,Coburg,sun
+3000000,3000395,Coburg,sun
+3000000,3000396,Coburg,sun
+3000000,3000397,Coburg,sun
+3000000,3000398,Coburg,sun
+3000000,3000399,Coburg,sun
+3000000,3000400,Coburg,sun
+3000000,3000401,Coburg,sun
+3000000,3000402,Coburg,sun
+3000000,3000403,Coburg,sun
+3000000,3000404,Coburg,sun
+3000000,3000405,Coburg,sun
+3000000,3000406,Coburg,sun
+3000000,3000407,Coburg,sun
+3000000,3000408,Coburg,sun
+3000000,3000409,Coburg,sun
+3000000,3000410,Coburg,sun
+3000000,3000411,Coburg,sun
+3000000,3000412,Coburg,sun
+3000000,3000413,Coburg,sun
+3000000,3000414,Coburg,sun
+3000000,3000415,Coburg,sun
+3000000,3000416,Coburg,sun
+3000000,3000417,Coburg,sun
+3000000,3000418,Coburg,sun
+3000000,3000419,Coburg,sun
+3000000,3000420,Albert Park,monfri
+3000000,3000421,Albert Park,monfri
+3000000,3000422,Albert Park,monfri
+3000000,3000423,Albert Park,monfri
+3000000,3000424,Albert Park,monfri
+3000000,3000425,Albert Park,monfri
+3000000,3000426,Albert Park,monfri
+3000000,3000427,Albert Park,monfri
+3000000,3000428,Albert Park,monfri
+3000000,3000429,Albert Park,monfri
+3000000,3000430,Albert Park,monfri
+3000000,3000431,Albert Park,monfri
+3000000,3000432,Albert Park,monfri
+3000000,3000433,Albert Park,monfri
+3000000,3000434,Albert Park,monfri
+3000000,3000435,Albert Park,monfri
+3000000,3000436,Albert Park,monfri
+3000000,3000437,Albert Park,monfri
+3000000,3000438,Albert Park,monfri
+3000000,3000439,Albert Park,monfri
+3000000,3000440,Albert Park,monfri
+3000000,3000441,Albert Park,monfri
+3000000,3000442,Albert Park,monfri
+3000000,3000443,Albert Park,monfri
+3000000,3000444,Albert Park,monfri
+3000000,3000445,Albert Park,monfri
+3000000,3000446,Albert Park,monfri
+3000000,3000447,Albert Park,monfri
+3000000,3000448,Albert Park,monfri
+3000000,3000449,Albert Park,monfri
+3000000,3000450,Albert Park,monfri
+3000000,3000451,Albert Park,monfri
+3000000,3000452,Albert Park,monfri
+3000000,3000453,Albert Park,monfri
+3000000,3000454,Albert Park,monfri
+3000000,3000455,Albert Park,monfri
+3000000,3000456,Albert Park,monfri
+3000000,3000457,Albert Park,monfri
+3000000,3000458,Albert Park,monfri
+3000000,3000459,Albert Park,monfri
+3000000,3000460,Albert Park,monfri
+3000000,3000461,Albert Park,monfri
+3000000,3000462,Albert Park,monfri
+3000000,3000463,Albert Park,monfri
+3000000,3000464,Albert Park,monfri
+3000000,3000465,Albert Park,monfri
+3000000,3000466,Albert Park,monfri
+3000000,3000467,Albert Park,monfri
+3000000,3000468,Albert Park,monfri
+3000000,3000469,Albert Park,monfri
+3000000,3000470,Albert Park,monfri
+3000000,3000471,Albert Park,monfri
+3000000,3000472,Albert Park,monfri
+3000000,3000473,Albert Park,monfri
+3000000,3000474,Albert Park,monfri
+3000000,3000475,Albert Park,monfri
+3000000,3000476,Albert Park,monfri
+3000000,3000477,Albert Park,monfri
+3000000,3000478,Albert Park,monfri
+3000000,3000479,Albert Park,monfri
+3000000,3000480,Albert Park,monfri
+3000000,3000481,Albert Park,monfri
+3000000,3000482,Albert Park,monfri
+3000000,3000483,Albert Park,monfri
+3000000,3000484,Albert Park,monfri
+3000000,3000485,Albert Park,monfri
+3000000,3000486,Albert Park,monfri
+3000000,3000487,Albert Park,monfri
+3000000,3000488,Albert Park,monfri
+3000000,3000489,Albert Park,monfri
+3000000,3000490,Albert Park,monfri
+3000000,3000491,Albert Park,monfri
+3000000,3000492,Albert Park,monfri
+3000000,3000493,Albert Park,monfri
+3000000,3000494,Albert Park,monfri
+3000000,3000495,Albert Park,monfri
+3000000,3000496,Albert Park,monfri
+3000000,3000497,Albert Park,monfri
+3000000,3000498,Albert Park,monfri
+3000000,3000499,Albert Park,monfri
+3000000,3000500,Albert Park,monfri
+3000000,3000501,Albert Park,monfri
+3000000,3000502,Albert Park,monfri
+3000000,3000503,Albert Park,monfri
+3000000,3000504,Albert Park,monfri
+3000000,3000505,Albert Park,monfri
+3000000,3000506,Albert Park,monfri
+3000000,3000507,Albert Park,monfri
+3000000,3000508,Albert Park,monfri
+3000000,3000509,Albert Park,monfri
+3000000,3000510,Albert Park,monfri
+3000000,3000511,Albert Park,monfri
+3000000,3000512,Albert Park,monfri
+3000000,3000513,Albert Park,monfri
+3000000,3000514,Albert Park,monfri
+3000000,3000515,Albert Park,monfri
+3000000,3000516,Albert Park,monfri
+3000000,3000517,Albert Park,monfri
+3000000,3000518,Albert Park,monfri
+3000000,3000519,Albert Park,monfri
+3000000,3000520,Albert Park,monfri
+3000000,3000521,Albert Park,monfri
+3000000,3000522,Albert Park,monfri
+3000000,3000523,Albert Park,monfri
+3000000,3000524,Albert Park,monfri
+3000000,3000525,Albert Park,monfri
+3000000,3000526,Albert Park,monfri
+3000000,3000527,Albert Park,monfri
+3000000,3000528,Albert Park,monfri
+3000000,3000529,Albert Park,monfri
+3000000,3000530,Albert Park,monfri
+3000000,3000531,Albert Park,monfri
+3000000,3000532,Albert Park,monfri
+3000000,3000533,Albert Park,monfri
+3000000,3000534,Albert Park,monfri
+3000000,3000535,Albert Park,monfri
+3000000,3000536,Albert Park,monfri
+3000000,3000537,Albert Park,monfri
+3000000,3000538,Albert Park,monfri
+3000000,3000539,Albert Park,monfri
+3000000,3000540,Albert Park,monfri
+3000000,3000541,Albert Park,monfri
+3000000,3000542,Albert Park,monfri
+3000000,3000543,Albert Park,monfri
+3000000,3000544,Albert Park,monfri
+3000000,3000545,Albert Park,monfri
+3000000,3000546,Albert Park,monfri
+3000000,3000547,Albert Park,monfri
+3000000,3000548,Albert Park,monfri
+3000000,3000549,Albert Park,monfri
+3000000,3000550,Albert Park,monfri
+3000000,3000551,Albert Park,monfri
+3000000,3000552,Albert Park,monfri
+3000000,3000553,Albert Park,monfri
+3000000,3000554,Albert Park,monfri
+3000000,3000555,Albert Park,monfri
+3000000,3000556,Albert Park,monfri
+3000000,3000557,Albert Park,monfri
+3000000,3000558,Albert Park,monfri
+3000000,3000559,Albert Park,monfri
+3000000,3000560,Albert Park,sat
+3000000,3000561,Albert Park,sat
+3000000,3000562,Albert Park,sat
+3000000,3000563,Albert Park,sat
+3000000,3000564,Albert Park,sat
+3000000,3000565,Albert Park,sat
+3000000,3000566,Albert Park,sat
+3000000,3000567,Albert Park,sat
+3000000,3000568,Albert Park,sat
+3000000,3000569,Albert Park,sat
+3000000,3000570,Albert Park,sat
+3000000,3000571,Albert Park,sat
+3000000,3000572,Albert Park,sat
+3000000,3000573,Albert Park,sat
+3000000,3000574,Albert Park,sat
+3000000,3000575,Albert Park,sat
+3000000,3000576,Albert Park,sat
+3000000,3000577,Albert Park,sat
+3000000,3000578,Albert Park,sat
+3000000,3000579,Albert Park,sat
+3000000,3000580,Albert Park,sat
+3000000,3000581,Albert Park,sat
+3000000,3000582,Albert Park,sat
+3000000,3000583,Albert Park,sat
+3000000,3000584,Albert Park,sat
+3000000,3000585,Albert Park,sat
+3000000,3000586,Albert Park,sat
+3000000,3000587,Albert Park,sat
+3000000,3000588,Albert Park,sat
+3000000,3000589,Albert Park,sat
+3000000,3000590,Albert Park,sat
+3000000,3000591,Albert Park,sat
+3000000,3000592,Albert Park,sat
+3000000,3000593,Albert Park,sat
+3000000,3000594,Albert Park,sat
+3000000,3000595,Albert Park,sat
+3000000,3000596,Albert Park,sat
+3000000,3000597,Albert Park,sat
+3000000,3000598,Albert Park,sat
+3000000,3000599,Albert Park,sat
+3000000,3000600,Albert Park,sat
+3000000,3000601,Albert Park,sat
+3000000,3000602,Albert Park,sat
+3000000,3000603,Albert Park,sat
+3000000,3000604,Albert Park,sat
+3000000,3000605,Albert Park,sat
+3000000,3000606,Albert Park,sat
+3000000,3000607,Albert Park,sat
+3000000,3000608,Albert Park,sat
+3000000,3000609,Albert Park,sat
+3000000,3000610,Albert Park,sat
+3000000,3000611,Albert Park,sat
+3000000,3000612,Albert Park,sat
+3000000,3000613,Albert Park,sat
+3000000,3000614,Albert Park,sat
+3000000,3000615,Albert Park,sat
+3000000,3000616,Albert Park,sat
+3000000,3000617,Albert Park,sat
+3000000,3000618,Albert Park,sat
+3000000,3000619,Albert Park,sat
+3000000,3000620,Albert Park,sat
+3000000,3000621,Albert Park,sat
+3000000,3000622,Albert Park,sat
+3000000,3000623,Albert Park,sat
+3000000,3000624,Albert Park,sat
+3000000,3000625,Albert Park,sat
+3000000,3000626,Albert Park,sat
+3000000,3000627,Albert Park,sat
+3000000,3000628,Albert Park,sat
+3000000,3000629,Albert Park,sat
+3000000,3000630,Albert Park,sat
+3000000,3000631,Albert Park,sat
+3000000,3000632,Albert Park,sat
+3000000,3000633,Albert Park,sat
+3000000,3000634,Albert Park,sat
+3000000,3000635,Albert Park,sat
+3000000,3000636,Albert Park,sat
+3000000,3000637,Albert Park,sat
+3000000,3000638,Albert Park,sat
+3000000,3000639,Albert Park,sat
+3000000,3000640,Albert Park,sat
+3000000,3000641,Albert Park,sat
+3000000,3000642,Albert Park,sat
+3000000,3000643,Albert Park,sat
+3000000,3000644,Albert Park,sat
+3000000,3000645,Albert Park,sat
+3000000,3000646,Albert Park,sat
+3000000,3000647,Albert Park,sat
+3000000,3000648,Albert Park,sat
+3000000,3000649,Albert Park,sat
+3000000,3000650,Albert Park,sat
+3000000,3000651,Albert Park,sat
+3000000,3000652,Albert Park,sat
+3000000,3000653,Albert Park,sat
+3000000,3000654,Albert Park,sat
+3000000,3000655,Albert Park,sat
+3000000,3000656,Albert Park,sat
+3000000,3000657,Albert Park,sat
+3000000,3000658,Albert Park,sat
+3000000,3000659,Albert Park,sat
+3000000,3000660,Albert Park,sat
+3000000,3000661,Albert Park,sat
+3000000,3000662,Albert Park,sat
+3000000,3000663,Albert Park,sat
+3000000,3000664,Albert Park,sat
+3000000,3000665,Albert Park,sat
+3000000,3000666,Albert Park,sat
+3000000,3000667,Albert Park,sat
+3000000,3000668,Albert Park,sat
+3000000,3000669,Albert Park,sat
+3000000,3000670,Albert Park,sat
+3000000,3000671,Albert Park,sat
+3000000,3000672,Albert Park,sat
+3000000,3000673,Albert Park,sat
+3000000,3000674,Albert Park,sat
+3000000,3000675,Albert Park,sat
+3000000,3000676,Albert Park,sat
+3000000,3000677,Albert Park,sat
+3000000,3000678,Albert Park,sat
+3000000,3000679,Albert Park,sat
+3000000,3000680,Albert Park,sat
+3000000,3000681,Albert Park,sat
+3000000,3000682,Albert Park,sat
+3000000,3000683,Albert Park,sat
+3000000,3000684,Albert Park,sat
+3000000,3000685,Albert Park,sat
+3000000,3000686,Albert Park,sat
+3000000,3000687,Albert Park,sat
+3000000,3000688,Albert Park,sat
+3000000,3000689,Albert Park,sat
+3000000,3000690,Albert Park,sat
+3000000,3000691,Albert Park,sat
+3000000,3000692,Albert Park,sat
+3000000,3000693,Albert Park,sat
+3000000,3000694,Albert Park,sat
+3000000,3000695,Albert Park,sat
+3000000,3000696,Albert Park,sat
+3000000,3000697,Albert Park,sat
+3000000,3000698,Albert Park,sat
+3000000,3000699,Albert Park,sat
+3000000,3000700,Albert Park,sun
+3000000,3000701,Albert Park,sun
+3000000,3000702,Albert Park,sun
+3000000,3000703,Albert Park,sun
+3000000,3000704,Albert Park,sun
+3000000,3000705,Albert Park,sun
+3000000,3000706,Albert Park,sun
+3000000,3000707,Albert Park,sun
+3000000,3000708,Albert Park,sun
+3000000,3000709,Albert Park,sun
+3000000,3000710,Albert Park,sun
+3000000,3000711,Albert Park,sun
+3000000,3000712,Albert Park,sun
+3000000,3000713,Albert Park,sun
+3000000,3000714,Albert Park,sun
+3000000,3000715,Albert Park,sun
+3000000,3000716,Albert Park,sun
+3000000,3000717,Albert Park,sun
+3000000,3000718,Albert Park,sun
+3000000,3000719,Albert Park,sun
+3000000,3000720,Albert Park,sun
+3000000,3000721,Albert Park,sun
+3000000,3000722,Albert Park,sun
+3000000,3000723,Albert Park,sun
+3000000,3000724,Albert Park,sun
+3000000,3000725,Albert Park,sun
+3000000,3000726,Albert Park,sun
+3000000,3000727,Albert Park,sun
+3000000,3000728,Albert Park,sun
+3000000,3000729,Albert Park,sun
+3000000,3000730,Albert Park,sun
+3000000,3000731,Albert Park,sun
+3000000,3000732,Albert Park,sun
+3000000,3000733,Albert Park,sun
+3000000,3000734,Albert Park,sun
+3000000,3000735,Albert Park,sun
+3000000,3000736,Albert Park,sun
+3000000,3000737,Albert Park,sun
+3000000,3000738,Albert Park,sun
+3000000,3000739,Albert Park,sun
+3000000,3000740,Albert Park,sun
+3000000,3000741,Albert Park,sun
+3000000,3000742,Albert Park,sun
+3000000,3000743,Albert Park,sun
+3000000,3000744,Albert Park,sun
+3000000,3000745,Albert Park,sun
+3000000,3000746,Albert Park,sun
+3000000,3000747,Albert Park,sun
+3000000,3000748,Albert Park,sun
+3000000,3000749,Albert Park,sun
+3000000,3000750,Albert Park,sun
+3000000,3000751,Albert Park,sun
+3000000,3000752,Albert Park,sun
+3000000,3000753,Albert Park,sun
+3000000,3000754,Albert Park,sun
+3000000,3000755,Albert Park,sun
+3000000,3000756,Albert Park,sun
+3000000,3000757,Albert Park,sun
+3000000,3000758,Albert Park,sun
+3000000,3000759,Albert Park,sun
+3000000,3000760,Albert Park,sun
+3000000,3000761,Albert Park,sun
+3000000,3000762,Albert Park,sun
+3000000,3000763,Albert Park,sun
+3000000,3000764,Albert Park,sun
+3000000,3000765,Albert Park,sun
+3000000,3000766,Albert Park,sun
+3000000,3000767,Albert Park,sun
+3000000,3000768,Albert Park,sun
+3000000,3000769,Albert Park,sun
+3000000,3000770,Albert Park,sun
+3000000,3000771,Albert Park,sun
+3000000,3000772,Albert Park,sun
+3000000,3000773,Albert Park,sun
+3000000,3000774,Albert Park,sun
+3000000,3000775,Albert Park,sun
+3000000,3000776,Albert Park,sun
+3000000,3000777,Albert Park,sun
+3000000,3000778,Albert Park,sun
+3000000,3000779,Albert Park,sun
+3000000,3000780,Albert Park,sun
+3000000,3000781,Albert Park,sun
+3000000,3000782,Albert Park,sun
+3000000,3000783,Albert Park,sun
+3000000,3000784,Albert Park,sun
+3000000,3000785,Albert Park,sun
+3000000,3000786,Albert Park,sun
+3000000,3000787,Albert Park,sun
+3000000,3000788,Albert Park,sun
+3000000,3000789,Albert Park,sun
+3000000,3000790,Albert Park,sun
+3000000,3000791,Albert Park,sun
+3000000,3000792,Albert Park,sun
+3000000,3000793,Albert Park,sun
+3000000,3000794,Albert Park,sun
+3000000,3000795,Albert Park,sun
+3000000,3000796,Albert Park,sun
+3000000,3000797,Albert Park,sun
+3000000,3000798,Albert Park,sun
+3000000,3000799,Albert Park,sun
+3000000,3000800,Albert Park,sun
+3000000,3000801,Albert Park,sun
+3000000,3000802,Albert Park,sun
+3000000,3000803,Albert Park,sun
+3000000,3000804,Albert Park,sun
+3000000,3000805,Albert Park,sun
+3000000,3000806,Albert Park,sun
+3000000,3000807,Albert Park,sun
+3000000,3000808,Albert Park,sun
+3000000,3000809,Albert Park,sun
+3000000,3000810,Albert Park,sun
+3000000,3000811,Albert Park,sun
+3000000,3000812,Albert Park,sun
+3000000,3000813,Albert Park,sun
+3000000,3000814,Albert Park,sun
+3000000,3000815,Albert Park,sun
+3000000,3000816,Albert Park,sun
+3000000,3000817,Albert Park,sun
+3000000,3000818,Albert Park,sun
+3000000,3000819,Albert Park,sun
+3000000,3000820,Albert Park,sun
+3000000,3000821,Albert Park,sun
+3000000,3000822,Albert Park,sun
+3000000,3000823,Albert Park,sun
+3000000,3000824,Albert Park,sun
+3000000,3000825,Albert Park,sun
+3000000,3000826,Albert Park,sun
+3000000,3000827,Albert Park,sun
+3000000,3000828,Albert Park,sun
+3000000,3000829,Albert Park,sun
+3000000,3000830,Albert Park,sun
+3000000,3000831,Albert Park,sun
+3000000,3000832,Albert Park,sun
+3000000,3000833,Albert Park,sun
+3000000,3000834,Albert Park,sun
+3000000,3000835,Albert Park,sun
+3000000,3000836,Albert Park,sun
+3000000,3000837,Albert Park,sun
+3000000,3000838,Albert Park,sun
+3000000,3000839,Albert Park,sun
+3000000,3000000,Coburg,monfri
+3000000,3000001,Coburg,monfri
+3000000,3000002,Coburg,monfri
+3000000,3000003,Coburg,monfri
+3000000,3000004,Coburg,monfri
+3000000,3000005,Coburg,monfri
+3000000,3000006,Coburg,monfri
+3000000,3000007,Coburg,monfri
+3000000,3000008,Coburg,monfri
+3000000,3000009,Coburg,monfri
+3000000,3000010,Coburg,monfri
+3000000,3000011,Coburg,monfri
+3000000,3000012,Coburg,monfri
+3000000,3000013,Coburg,monfri
+3000000,3000014,Coburg,monfri
+3000000,3000015,Coburg,monfri
+3000000,3000016,Coburg,monfri
+3000000,3000017,Coburg,monfri
+3000000,3000018,Coburg,monfri
+3000000,3000019,Coburg,monfri
+3000000,3000020,Coburg,monfri
+3000000,3000021,Coburg,monfri
+3000000,3000022,Coburg,monfri
+3000000,3000023,Coburg,monfri
+3000000,3000024,Coburg,monfri
+3000000,3000025,Coburg,monfri
+3000000,3000026,Coburg,monfri
+3000000,3000027,Coburg,monfri
+3000000,3000028,Coburg,monfri
+3000000,3000029,Coburg,monfri
+3000000,3000030,Coburg,monfri
+3000000,3000031,Coburg,monfri
+3000000,3000032,Coburg,monfri
+3000000,3000033,Coburg,monfri
+3000000,3000034,Coburg,monfri
+3000000,3000035,Coburg,monfri
+3000000,3000036,Coburg,monfri
+3000000,3000037,Coburg,monfri
+3000000,3000038,Coburg,monfri
+3000000,3000039,Coburg,monfri
+3000000,3000040,Coburg,monfri
+3000000,3000041,Coburg,monfri
+3000000,3000042,Coburg,monfri
+3000000,3000043,Coburg,monfri
+3000000,3000044,Coburg,monfri
+3000000,3000045,Coburg,monfri
+3000000,3000046,Coburg,monfri
+3000000,3000047,Coburg,monfri
+3000000,3000048,Coburg,monfri
+3000000,3000049,Coburg,monfri
+3000000,3000050,Coburg,monfri
+3000000,3000051,Coburg,monfri
+3000000,3000052,Coburg,monfri
+3000000,3000053,Coburg,monfri
+3000000,3000054,Coburg,monfri
+3000000,3000055,Coburg,monfri
+3000000,3000056,Coburg,monfri
+3000000,3000057,Coburg,monfri
+3000000,3000058,Coburg,monfri
+3000000,3000059,Coburg,monfri
+3000000,3000060,Coburg,monfri
+3000000,3000061,Coburg,monfri
+3000000,3000062,Coburg,monfri
+3000000,3000063,Coburg,monfri
+3000000,3000064,Coburg,monfri
+3000000,3000065,Coburg,monfri
+3000000,3000066,Coburg,monfri
+3000000,3000067,Coburg,monfri
+3000000,3000068,Coburg,monfri
+3000000,3000069,Coburg,monfri
+3000000,3000070,Coburg,monfri
+3000000,3000071,Coburg,monfri
+3000000,3000072,Coburg,monfri
+3000000,3000073,Coburg,monfri
+3000000,3000074,Coburg,monfri
+3000000,3000075,Coburg,monfri
+3000000,3000076,Coburg,monfri
+3000000,3000077,Coburg,monfri
+3000000,3000078,Coburg,monfri
+3000000,3000079,Coburg,monfri
+3000000,3000080,Coburg,monfri
+3000000,3000081,Coburg,monfri
+3000000,3000082,Coburg,monfri
+3000000,3000083,Coburg,monfri
+3000000,3000084,Coburg,monfri
+3000000,3000085,Coburg,monfri
+3000000,3000086,Coburg,monfri
+3000000,3000087,Coburg,monfri
+3000000,3000088,Coburg,monfri
+3000000,3000089,Coburg,monfri
+3000000,3000090,Coburg,monfri
+3000000,3000091,Coburg,monfri
+3000000,3000092,Coburg,monfri
+3000000,3000093,Coburg,monfri
+3000000,3000094,Coburg,monfri
+3000000,3000095,Coburg,monfri
+3000000,3000096,Coburg,monfri
+3000000,3000097,Coburg,monfri
+3000000,3000098,Coburg,monfri
+3000000,3000099,Coburg,monfri
+3000000,3000100,Coburg,monfri
+3000000,3000101,Coburg,monfri
+3000000,3000102,Coburg,monfri
+3000000,3000103,Coburg,monfri
+3000000,3000104,Coburg,monfri
+3000000,3000105,Coburg,monfri
+3000000,3000106,Coburg,monfri
+3000000,3000107,Coburg,monfri
+3000000,3000108,Coburg,monfri
+3000000,3000109,Coburg,monfri
+3000000,3000110,Coburg,monfri
+3000000,3000111,Coburg,monfri
+3000000,3000112,Coburg,monfri
+3000000,3000113,Coburg,monfri
+3000000,3000114,Coburg,monfri
+3000000,3000115,Coburg,monfri
+3000000,3000116,Coburg,monfri
+3000000,3000117,Coburg,monfri
+3000000,3000118,Coburg,monfri
+3000000,3000119,Coburg,monfri
+3000000,3000120,Coburg,monfri
+3000000,3000121,Coburg,monfri
+3000000,3000122,Coburg,monfri
+3000000,3000123,Coburg,monfri
+3000000,3000124,Coburg,monfri
+3000000,3000125,Coburg,monfri
+3000000,3000126,Coburg,monfri
+3000000,3000127,Coburg,monfri
+3000000,3000128,Coburg,monfri
+3000000,3000129,Coburg,monfri
+3000000,3000130,Coburg,monfri
+3000000,3000131,Coburg,monfri
+3000000,3000132,Coburg,monfri
+3000000,3000133,Coburg,monfri
+3000000,3000134,Coburg,monfri
+3000000,3000135,Coburg,monfri
+3000000,3000136,Coburg,monfri
+3000000,3000137,Coburg,monfri
+3000000,3000138,Coburg,monfri
+3000000,3000139,Coburg,monfri
+3000000,3000140,Coburg,sat
+3000000,3000141,Coburg,sat
+3000000,3000142,Coburg,sat
+3000000,3000143,Coburg,sat
+3000000,3000144,Coburg,sat
+3000000,3000145,Coburg,sat
+3000000,3000146,Coburg,sat
+3000000,3000147,Coburg,sat
+3000000,3000148,Coburg,sat
+3000000,3000149,Coburg,sat
+3000000,3000150,Coburg,sat
+3000000,3000151,Coburg,sat
+3000000,3000152,Coburg,sat
+3000000,3000153,Coburg,sat
+3000000,3000154,Coburg,sat
+3000000,3000155,Coburg,sat
+3000000,3000156,Coburg,sat
+3000000,3000157,Coburg,sat
+3000000,3000158,Coburg,sat
+3000000,3000159,Coburg,sat
+3000000,3000160,Coburg,sat
+3000000,3000161,Coburg,sat
+3000000,3000162,Coburg,sat
+3000000,3000163,Coburg,sat
+3000000,3000164,Coburg,sat
+3000000,3000165,Coburg,sat
+3000000,3000166,Coburg,sat
+3000000,3000167,Coburg,sat
+3000000,3000168,Coburg,sat
+3000000,3000169,Coburg,sat
+3000000,3000170,Coburg,sat
+3000000,3000171,Coburg,sat
+3000000,3000172,Coburg,sat
+3000000,3000173,Coburg,sat
+3000000,3000174,Coburg,sat
+3000000,3000175,Coburg,sat
+3000000,3000176,Coburg,sat
+3000000,3000177,Coburg,sat
+3000000,3000178,Coburg,sat
+3000000,3000179,Coburg,sat
+3000000,3000180,Coburg,sat
+3000000,3000181,Coburg,sat
+3000000,3000182,Coburg,sat
+3000000,3000183,Coburg,sat
+3000000,3000184,Coburg,sat
+3000000,3000185,Coburg,sat
+3000000,3000186,Coburg,sat
+3000000,3000187,Coburg,sat
+3000000,3000188,Coburg,sat
+3000000,3000189,Coburg,sat
+3000000,3000190,Coburg,sat
+3000000,3000191,Coburg,sat
+3000000,3000192,Coburg,sat
+3000000,3000193,Coburg,sat
+3000000,3000194,Coburg,sat
+3000000,3000195,Coburg,sat
+3000000,3000196,Coburg,sat
+3000000,3000197,Coburg,sat
+3000000,3000198,Coburg,sat
+3000000,3000199,Coburg,sat
+3000000,3000200,Coburg,sat
+3000000,3000201,Coburg,sat
+3000000,3000202,Coburg,sat
+3000000,3000203,Coburg,sat
+3000000,3000204,Coburg,sat
+3000000,3000205,Coburg,sat
+3000000,3000206,Coburg,sat
+3000000,3000207,Coburg,sat
+3000000,3000208,Coburg,sat
+3000000,3000209,Coburg,sat
+3000000,3000210,Coburg,sat
+3000000,3000211,Coburg,sat
+3000000,3000212,Coburg,sat
+3000000,3000213,Coburg,sat
+3000000,3000214,Coburg,sat
+3000000,3000215,Coburg,sat
+3000000,3000216,Coburg,sat
+3000000,3000217,Coburg,sat
+3000000,3000218,Coburg,sat
+3000000,3000219,Coburg,sat
+3000000,3000220,Coburg,sat
+3000000,3000221,Coburg,sat
+3000000,3000222,Coburg,sat
+3000000,3000223,Coburg,sat
+3000000,3000224,Coburg,sat
+3000000,3000225,Coburg,sat
+3000000,3000226,Coburg,sat
+3000000,3000227,Coburg,sat
+3000000,3000228,Coburg,sat
+3000000,3000229,Coburg,sat
+3000000,3000230,Coburg,sat
+3000000,3000231,Coburg,sat
+3000000,3000232,Coburg,sat
+3000000,3000233,Coburg,sat
+3000000,3000234,Coburg,sat
+3000000,3000235,Coburg,sat
+3000000,3000236,Coburg,sat
+3000000,3000237,Coburg,sat
+3000000,3000238,Coburg,sat
+3000000,3000239,Coburg,sat
+3000000,3000240,Coburg,sat
+3000000,3000241,Coburg,sat
+3000000,3000242,Coburg,sat
+3000000,3000243,Coburg,sat
+3000000,3000244,Coburg,sat
+3000000,3000245,Coburg,sat
+3000000,3000246,Coburg,sat
+3000000,3000247,Coburg,sat
+3000000,3000248,Coburg,sat
+3000000,3000249,Coburg,sat
+3000000,3000250,Coburg,sat
+3000000,3000251,Coburg,sat
+3000000,3000252,Coburg,sat
+3000000,3000253,Coburg,sat
+3000000,3000254,Coburg,sat
+3000000,3000255,Coburg,sat
+3000000,3000256,Coburg,sat
+3000000,3000257,Coburg,sat
+3000000,3000258,Coburg,sat
+3000000,3000259,Coburg,sat
+3000000,3000260,Coburg,sat
+3000000,3000261,Coburg,sat
+3000000,3000262,Coburg,sat
+3000000,3000263,Coburg,sat
+3000000,3000264,Coburg,sat
+3000000,3000265,Coburg,sat
+3000000,3000266,Coburg,sat
+3000000,3000267,Coburg,sat
+3000000,3000268,Coburg,sat
+3000000,3000269,Coburg,sat
+3000000,3000270,Coburg,sat
+3000000,3000271,Coburg,sat
+3000000,3000272,Coburg,sat
+3000000,3000273,Coburg,sat
+3000000,3000274,Coburg,sat
+3000000,3000275,Coburg,sat
+3000000,3000276,Coburg,sat
+3000000,3000277,Coburg,sat
+3000000,3000278,Coburg,sat
+3000000,3000279,Coburg,sat
+3000000,3000280,Coburg,sun
+3000000,3000281,Coburg,sun
+3000000,3000282,Coburg,sun
+3000000,3000283,Coburg,sun
+3000000,3000284,Coburg,sun
+3000000,3000285,Coburg,sun
+3000000,3000286,Coburg,sun
+3000000,3000287,Coburg,sun
+3000000,3000288,Coburg,sun
+3000000,3000289,Coburg,sun
+3000000,3000290,Coburg,sun
+3000000,3000291,Coburg,sun
+3000000,3000292,Coburg,sun
+3000000,3000293,Coburg,sun
+3000000,3000294,Coburg,sun
+3000000,3000295,Coburg,sun
+3000000,3000296,Coburg,sun
+3000000,3000297,Coburg,sun
+3000000,3000298,Coburg,sun
+3000000,3000299,Coburg,sun
+3000000,3000300,Coburg,sun
+3000000,3000301,Coburg,sun
+3000000,3000302,Coburg,sun
+3000000,3000303,Coburg,sun
+3000000,3000304,Coburg,sun
+3000000,3000305,Coburg,sun
+3000000,3000306,Coburg,sun
+3000000,3000307,Coburg,sun
+3000000,3000308,Coburg,sun
+3000000,3000309,Coburg,sun
+3000000,3000310,Coburg,sun
+3000000,3000311,Coburg,sun
+3000000,3000312,Coburg,sun
+3000000,3000313,Coburg,sun
+3000000,3000314,Coburg,sun
+3000000,3000315,Coburg,sun
+3000000,3000316,Coburg,sun
+3000000,3000317,Coburg,sun
+3000000,3000318,Coburg,sun
+3000000,3000319,Coburg,sun

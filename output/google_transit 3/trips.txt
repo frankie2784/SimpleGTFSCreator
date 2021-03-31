@@ -1,0 +1,1401 @@
+route_id,trip_id,trip_headsign,service_id
+3200000,3200000,Coburg,monthur
+3200000,3200001,Coburg,monthur
+3200000,3200002,Coburg,monthur
+3200000,3200003,Coburg,monthur
+3200000,3200004,Coburg,monthur
+3200000,3200005,Coburg,monthur
+3200000,3200006,Coburg,monthur
+3200000,3200007,Coburg,monthur
+3200000,3200008,Coburg,monthur
+3200000,3200009,Coburg,monthur
+3200000,3200010,Coburg,monthur
+3200000,3200011,Coburg,monthur
+3200000,3200012,Coburg,monthur
+3200000,3200013,Coburg,monthur
+3200000,3200014,Coburg,monthur
+3200000,3200015,Coburg,monthur
+3200000,3200016,Coburg,monthur
+3200000,3200017,Coburg,monthur
+3200000,3200018,Coburg,monthur
+3200000,3200019,Coburg,monthur
+3200000,3200020,Coburg,monthur
+3200000,3200021,Coburg,monthur
+3200000,3200022,Coburg,monthur
+3200000,3200023,Coburg,monthur
+3200000,3200024,Coburg,monthur
+3200000,3200025,Coburg,monthur
+3200000,3200026,Coburg,monthur
+3200000,3200027,Coburg,monthur
+3200000,3200028,Coburg,monthur
+3200000,3200029,Coburg,monthur
+3200000,3200030,Coburg,monthur
+3200000,3200031,Coburg,monthur
+3200000,3200032,Coburg,monthur
+3200000,3200033,Coburg,monthur
+3200000,3200034,Coburg,monthur
+3200000,3200035,Coburg,monthur
+3200000,3200036,Coburg,monthur
+3200000,3200037,Coburg,monthur
+3200000,3200038,Coburg,monthur
+3200000,3200039,Coburg,monthur
+3200000,3200040,Coburg,monthur
+3200000,3200041,Coburg,monthur
+3200000,3200042,Coburg,monthur
+3200000,3200043,Coburg,monthur
+3200000,3200044,Coburg,monthur
+3200000,3200045,Coburg,monthur
+3200000,3200046,Coburg,monthur
+3200000,3200047,Coburg,monthur
+3200000,3200048,Coburg,monthur
+3200000,3200049,Coburg,monthur
+3200000,3200050,Coburg,monthur
+3200000,3200051,Coburg,monthur
+3200000,3200052,Coburg,monthur
+3200000,3200053,Coburg,monthur
+3200000,3200054,Coburg,monthur
+3200000,3200055,Coburg,monthur
+3200000,3200056,Coburg,monthur
+3200000,3200057,Coburg,monthur
+3200000,3200058,Coburg,monthur
+3200000,3200059,Coburg,monthur
+3200000,3200060,Coburg,monthur
+3200000,3200061,Coburg,monthur
+3200000,3200062,Coburg,monthur
+3200000,3200063,Coburg,monthur
+3200000,3200064,Coburg,monthur
+3200000,3200065,Coburg,monthur
+3200000,3200066,Coburg,monthur
+3200000,3200067,Coburg,monthur
+3200000,3200068,Coburg,monthur
+3200000,3200069,Coburg,monthur
+3200000,3200070,Coburg,monthur
+3200000,3200071,Coburg,monthur
+3200000,3200072,Coburg,monthur
+3200000,3200073,Coburg,monthur
+3200000,3200074,Coburg,monthur
+3200000,3200075,Coburg,monthur
+3200000,3200076,Coburg,monthur
+3200000,3200077,Coburg,monthur
+3200000,3200078,Coburg,monthur
+3200000,3200079,Coburg,monthur
+3200000,3200080,Coburg,monthur
+3200000,3200081,Coburg,monthur
+3200000,3200082,Coburg,monthur
+3200000,3200083,Coburg,monthur
+3200000,3200084,Coburg,monthur
+3200000,3200085,Coburg,monthur
+3200000,3200086,Coburg,monthur
+3200000,3200087,Coburg,monthur
+3200000,3200088,Coburg,monthur
+3200000,3200089,Coburg,monthur
+3200000,3200090,Coburg,monthur
+3200000,3200091,Coburg,monthur
+3200000,3200092,Coburg,monthur
+3200000,3200093,Coburg,monthur
+3200000,3200094,Coburg,monthur
+3200000,3200095,Coburg,monthur
+3200000,3200096,Coburg,monthur
+3200000,3200097,Coburg,monthur
+3200000,3200098,Coburg,monthur
+3200000,3200099,Coburg,monthur
+3200000,3200100,Coburg,monthur
+3200000,3200101,Coburg,monthur
+3200000,3200102,Coburg,monthur
+3200000,3200103,Coburg,monthur
+3200000,3200104,Coburg,monthur
+3200000,3200105,Coburg,monthur
+3200000,3200106,Coburg,monthur
+3200000,3200107,Coburg,monthur
+3200000,3200108,Coburg,monthur
+3200000,3200109,Coburg,monthur
+3200000,3200110,Coburg,monthur
+3200000,3200111,Coburg,monthur
+3200000,3200112,Coburg,monthur
+3200000,3200113,Coburg,monthur
+3200000,3200114,Coburg,monthur
+3200000,3200115,Coburg,monthur
+3200000,3200116,Coburg,monthur
+3200000,3200117,Coburg,monthur
+3200000,3200118,Coburg,monthur
+3200000,3200119,Coburg,monthur
+3200000,3200120,Coburg,monthur
+3200000,3200121,Coburg,monthur
+3200000,3200122,Coburg,monthur
+3200000,3200123,Coburg,monthur
+3200000,3200124,Coburg,monthur
+3200000,3200125,Coburg,monthur
+3200000,3200126,Coburg,monthur
+3200000,3200127,Coburg,monthur
+3200000,3200128,Coburg,monthur
+3200000,3200129,Coburg,monthur
+3200000,3200130,Coburg,monthur
+3200000,3200131,Coburg,monthur
+3200000,3200132,Coburg,monthur
+3200000,3200133,Coburg,monthur
+3200000,3200134,Coburg,monthur
+3200000,3200135,Coburg,monthur
+3200000,3200136,Coburg,monthur
+3200000,3200137,Coburg,monthur
+3200000,3200138,Coburg,monthur
+3200000,3200139,Coburg,monthur
+3200000,3200140,Coburg,monfri
+3200000,3200141,Coburg,monfri
+3200000,3200142,Coburg,monfri
+3200000,3200143,Coburg,monfri
+3200000,3200144,Coburg,monfri
+3200000,3200145,Coburg,monfri
+3200000,3200146,Coburg,monfri
+3200000,3200147,Coburg,monfri
+3200000,3200148,Coburg,monfri
+3200000,3200149,Coburg,monfri
+3200000,3200150,Coburg,monfri
+3200000,3200151,Coburg,monfri
+3200000,3200152,Coburg,monfri
+3200000,3200153,Coburg,monfri
+3200000,3200154,Coburg,monfri
+3200000,3200155,Coburg,monfri
+3200000,3200156,Coburg,monfri
+3200000,3200157,Coburg,monfri
+3200000,3200158,Coburg,monfri
+3200000,3200159,Coburg,monfri
+3200000,3200160,Coburg,monfri
+3200000,3200161,Coburg,monfri
+3200000,3200162,Coburg,monfri
+3200000,3200163,Coburg,monfri
+3200000,3200164,Coburg,monfri
+3200000,3200165,Coburg,monfri
+3200000,3200166,Coburg,monfri
+3200000,3200167,Coburg,monfri
+3200000,3200168,Coburg,monfri
+3200000,3200169,Coburg,monfri
+3200000,3200170,Coburg,monfri
+3200000,3200171,Coburg,monfri
+3200000,3200172,Coburg,monfri
+3200000,3200173,Coburg,monfri
+3200000,3200174,Coburg,monfri
+3200000,3200175,Coburg,monfri
+3200000,3200176,Coburg,monfri
+3200000,3200177,Coburg,monfri
+3200000,3200178,Coburg,monfri
+3200000,3200179,Coburg,monfri
+3200000,3200180,Coburg,monfri
+3200000,3200181,Coburg,monfri
+3200000,3200182,Coburg,monfri
+3200000,3200183,Coburg,monfri
+3200000,3200184,Coburg,monfri
+3200000,3200185,Coburg,monfri
+3200000,3200186,Coburg,monfri
+3200000,3200187,Coburg,monfri
+3200000,3200188,Coburg,monfri
+3200000,3200189,Coburg,monfri
+3200000,3200190,Coburg,monfri
+3200000,3200191,Coburg,monfri
+3200000,3200192,Coburg,monfri
+3200000,3200193,Coburg,monfri
+3200000,3200194,Coburg,monfri
+3200000,3200195,Coburg,monfri
+3200000,3200196,Coburg,monfri
+3200000,3200197,Coburg,monfri
+3200000,3200198,Coburg,monfri
+3200000,3200199,Coburg,monfri
+3200000,3200200,Coburg,monfri
+3200000,3200201,Coburg,monfri
+3200000,3200202,Coburg,monfri
+3200000,3200203,Coburg,monfri
+3200000,3200204,Coburg,monfri
+3200000,3200205,Coburg,monfri
+3200000,3200206,Coburg,monfri
+3200000,3200207,Coburg,monfri
+3200000,3200208,Coburg,monfri
+3200000,3200209,Coburg,monfri
+3200000,3200210,Coburg,monfri
+3200000,3200211,Coburg,monfri
+3200000,3200212,Coburg,monfri
+3200000,3200213,Coburg,monfri
+3200000,3200214,Coburg,monfri
+3200000,3200215,Coburg,monfri
+3200000,3200216,Coburg,monfri
+3200000,3200217,Coburg,monfri
+3200000,3200218,Coburg,monfri
+3200000,3200219,Coburg,monfri
+3200000,3200220,Coburg,monfri
+3200000,3200221,Coburg,monfri
+3200000,3200222,Coburg,monfri
+3200000,3200223,Coburg,monfri
+3200000,3200224,Coburg,monfri
+3200000,3200225,Coburg,monfri
+3200000,3200226,Coburg,monfri
+3200000,3200227,Coburg,monfri
+3200000,3200228,Coburg,monfri
+3200000,3200229,Coburg,monfri
+3200000,3200230,Coburg,monfri
+3200000,3200231,Coburg,monfri
+3200000,3200232,Coburg,monfri
+3200000,3200233,Coburg,monfri
+3200000,3200234,Coburg,monfri
+3200000,3200235,Coburg,monfri
+3200000,3200236,Coburg,monfri
+3200000,3200237,Coburg,monfri
+3200000,3200238,Coburg,monfri
+3200000,3200239,Coburg,monfri
+3200000,3200240,Coburg,monfri
+3200000,3200241,Coburg,monfri
+3200000,3200242,Coburg,monfri
+3200000,3200243,Coburg,monfri
+3200000,3200244,Coburg,monfri
+3200000,3200245,Coburg,monfri
+3200000,3200246,Coburg,monfri
+3200000,3200247,Coburg,monfri
+3200000,3200248,Coburg,monfri
+3200000,3200249,Coburg,monfri
+3200000,3200250,Coburg,monfri
+3200000,3200251,Coburg,monfri
+3200000,3200252,Coburg,monfri
+3200000,3200253,Coburg,monfri
+3200000,3200254,Coburg,monfri
+3200000,3200255,Coburg,monfri
+3200000,3200256,Coburg,monfri
+3200000,3200257,Coburg,monfri
+3200000,3200258,Coburg,monfri
+3200000,3200259,Coburg,monfri
+3200000,3200260,Coburg,monfri
+3200000,3200261,Coburg,monfri
+3200000,3200262,Coburg,monfri
+3200000,3200263,Coburg,monfri
+3200000,3200264,Coburg,monfri
+3200000,3200265,Coburg,monfri
+3200000,3200266,Coburg,monfri
+3200000,3200267,Coburg,monfri
+3200000,3200268,Coburg,monfri
+3200000,3200269,Coburg,monfri
+3200000,3200270,Coburg,monfri
+3200000,3200271,Coburg,monfri
+3200000,3200272,Coburg,monfri
+3200000,3200273,Coburg,monfri
+3200000,3200274,Coburg,monfri
+3200000,3200275,Coburg,monfri
+3200000,3200276,Coburg,monfri
+3200000,3200277,Coburg,monfri
+3200000,3200278,Coburg,monfri
+3200000,3200279,Coburg,monfri
+3200000,3200280,Coburg,fri
+3200000,3200281,Coburg,fri
+3200000,3200282,Coburg,fri
+3200000,3200283,Coburg,fri
+3200000,3200284,Coburg,fri
+3200000,3200285,Coburg,fri
+3200000,3200286,Coburg,fri
+3200000,3200287,Coburg,fri
+3200000,3200288,Coburg,fri
+3200000,3200289,Coburg,fri
+3200000,3200290,Coburg,fri
+3200000,3200291,Coburg,fri
+3200000,3200292,Coburg,fri
+3200000,3200293,Coburg,fri
+3200000,3200294,Coburg,fri
+3200000,3200295,Coburg,fri
+3200000,3200296,Coburg,fri
+3200000,3200297,Coburg,fri
+3200000,3200298,Coburg,fri
+3200000,3200299,Coburg,fri
+3200000,3200300,Coburg,fri
+3200000,3200301,Coburg,fri
+3200000,3200302,Coburg,fri
+3200000,3200303,Coburg,fri
+3200000,3200304,Coburg,fri
+3200000,3200305,Coburg,fri
+3200000,3200306,Coburg,fri
+3200000,3200307,Coburg,fri
+3200000,3200308,Coburg,fri
+3200000,3200309,Coburg,fri
+3200000,3200310,Coburg,fri
+3200000,3200311,Coburg,fri
+3200000,3200312,Coburg,fri
+3200000,3200313,Coburg,fri
+3200000,3200314,Coburg,fri
+3200000,3200315,Coburg,fri
+3200000,3200316,Coburg,fri
+3200000,3200317,Coburg,fri
+3200000,3200318,Coburg,fri
+3200000,3200319,Coburg,fri
+3200000,3200320,Coburg,fri
+3200000,3200321,Coburg,fri
+3200000,3200322,Coburg,fri
+3200000,3200323,Coburg,fri
+3200000,3200324,Coburg,fri
+3200000,3200325,Coburg,fri
+3200000,3200326,Coburg,fri
+3200000,3200327,Coburg,fri
+3200000,3200328,Coburg,fri
+3200000,3200329,Coburg,fri
+3200000,3200330,Coburg,fri
+3200000,3200331,Coburg,fri
+3200000,3200332,Coburg,fri
+3200000,3200333,Coburg,fri
+3200000,3200334,Coburg,fri
+3200000,3200335,Coburg,fri
+3200000,3200336,Coburg,fri
+3200000,3200337,Coburg,fri
+3200000,3200338,Coburg,fri
+3200000,3200339,Coburg,fri
+3200000,3200340,Coburg,fri
+3200000,3200341,Coburg,fri
+3200000,3200342,Coburg,fri
+3200000,3200343,Coburg,fri
+3200000,3200344,Coburg,fri
+3200000,3200345,Coburg,fri
+3200000,3200346,Coburg,fri
+3200000,3200347,Coburg,fri
+3200000,3200348,Coburg,fri
+3200000,3200349,Coburg,fri
+3200000,3200350,Coburg,fri
+3200000,3200351,Coburg,fri
+3200000,3200352,Coburg,fri
+3200000,3200353,Coburg,fri
+3200000,3200354,Coburg,fri
+3200000,3200355,Coburg,fri
+3200000,3200356,Coburg,fri
+3200000,3200357,Coburg,fri
+3200000,3200358,Coburg,fri
+3200000,3200359,Coburg,fri
+3200000,3200360,Coburg,fri
+3200000,3200361,Coburg,fri
+3200000,3200362,Coburg,fri
+3200000,3200363,Coburg,fri
+3200000,3200364,Coburg,fri
+3200000,3200365,Coburg,fri
+3200000,3200366,Coburg,fri
+3200000,3200367,Coburg,fri
+3200000,3200368,Coburg,fri
+3200000,3200369,Coburg,fri
+3200000,3200370,Coburg,fri
+3200000,3200371,Coburg,fri
+3200000,3200372,Coburg,fri
+3200000,3200373,Coburg,fri
+3200000,3200374,Coburg,fri
+3200000,3200375,Coburg,fri
+3200000,3200376,Coburg,fri
+3200000,3200377,Coburg,fri
+3200000,3200378,Coburg,fri
+3200000,3200379,Coburg,fri
+3200000,3200380,Coburg,fri
+3200000,3200381,Coburg,fri
+3200000,3200382,Coburg,fri
+3200000,3200383,Coburg,fri
+3200000,3200384,Coburg,fri
+3200000,3200385,Coburg,fri
+3200000,3200386,Coburg,fri
+3200000,3200387,Coburg,fri
+3200000,3200388,Coburg,fri
+3200000,3200389,Coburg,fri
+3200000,3200390,Coburg,fri
+3200000,3200391,Coburg,fri
+3200000,3200392,Coburg,fri
+3200000,3200393,Coburg,fri
+3200000,3200394,Coburg,fri
+3200000,3200395,Coburg,fri
+3200000,3200396,Coburg,fri
+3200000,3200397,Coburg,fri
+3200000,3200398,Coburg,fri
+3200000,3200399,Coburg,fri
+3200000,3200400,Coburg,fri
+3200000,3200401,Coburg,fri
+3200000,3200402,Coburg,fri
+3200000,3200403,Coburg,fri
+3200000,3200404,Coburg,fri
+3200000,3200405,Coburg,fri
+3200000,3200406,Coburg,fri
+3200000,3200407,Coburg,fri
+3200000,3200408,Coburg,fri
+3200000,3200409,Coburg,fri
+3200000,3200410,Coburg,fri
+3200000,3200411,Coburg,fri
+3200000,3200412,Coburg,fri
+3200000,3200413,Coburg,fri
+3200000,3200414,Coburg,fri
+3200000,3200415,Coburg,fri
+3200000,3200416,Coburg,fri
+3200000,3200417,Coburg,fri
+3200000,3200418,Coburg,fri
+3200000,3200419,Coburg,fri
+3200000,3200420,Coburg,sat
+3200000,3200421,Coburg,sat
+3200000,3200422,Coburg,sat
+3200000,3200423,Coburg,sat
+3200000,3200424,Coburg,sat
+3200000,3200425,Coburg,sat
+3200000,3200426,Coburg,sat
+3200000,3200427,Coburg,sat
+3200000,3200428,Coburg,sat
+3200000,3200429,Coburg,sat
+3200000,3200430,Coburg,sat
+3200000,3200431,Coburg,sat
+3200000,3200432,Coburg,sat
+3200000,3200433,Coburg,sat
+3200000,3200434,Coburg,sat
+3200000,3200435,Coburg,sat
+3200000,3200436,Coburg,sat
+3200000,3200437,Coburg,sat
+3200000,3200438,Coburg,sat
+3200000,3200439,Coburg,sat
+3200000,3200440,Coburg,sat
+3200000,3200441,Coburg,sat
+3200000,3200442,Coburg,sat
+3200000,3200443,Coburg,sat
+3200000,3200444,Coburg,sat
+3200000,3200445,Coburg,sat
+3200000,3200446,Coburg,sat
+3200000,3200447,Coburg,sat
+3200000,3200448,Coburg,sat
+3200000,3200449,Coburg,sat
+3200000,3200450,Coburg,sat
+3200000,3200451,Coburg,sat
+3200000,3200452,Coburg,sat
+3200000,3200453,Coburg,sat
+3200000,3200454,Coburg,sat
+3200000,3200455,Coburg,sat
+3200000,3200456,Coburg,sat
+3200000,3200457,Coburg,sat
+3200000,3200458,Coburg,sat
+3200000,3200459,Coburg,sat
+3200000,3200460,Coburg,sat
+3200000,3200461,Coburg,sat
+3200000,3200462,Coburg,sat
+3200000,3200463,Coburg,sat
+3200000,3200464,Coburg,sat
+3200000,3200465,Coburg,sat
+3200000,3200466,Coburg,sat
+3200000,3200467,Coburg,sat
+3200000,3200468,Coburg,sat
+3200000,3200469,Coburg,sat
+3200000,3200470,Coburg,sat
+3200000,3200471,Coburg,sat
+3200000,3200472,Coburg,sat
+3200000,3200473,Coburg,sat
+3200000,3200474,Coburg,sat
+3200000,3200475,Coburg,sat
+3200000,3200476,Coburg,sat
+3200000,3200477,Coburg,sat
+3200000,3200478,Coburg,sat
+3200000,3200479,Coburg,sat
+3200000,3200480,Coburg,sat
+3200000,3200481,Coburg,sat
+3200000,3200482,Coburg,sat
+3200000,3200483,Coburg,sat
+3200000,3200484,Coburg,sat
+3200000,3200485,Coburg,sat
+3200000,3200486,Coburg,sat
+3200000,3200487,Coburg,sat
+3200000,3200488,Coburg,sat
+3200000,3200489,Coburg,sat
+3200000,3200490,Coburg,sat
+3200000,3200491,Coburg,sat
+3200000,3200492,Coburg,sat
+3200000,3200493,Coburg,sat
+3200000,3200494,Coburg,sat
+3200000,3200495,Coburg,sat
+3200000,3200496,Coburg,sat
+3200000,3200497,Coburg,sat
+3200000,3200498,Coburg,sat
+3200000,3200499,Coburg,sat
+3200000,3200500,Coburg,sat
+3200000,3200501,Coburg,sat
+3200000,3200502,Coburg,sat
+3200000,3200503,Coburg,sat
+3200000,3200504,Coburg,sat
+3200000,3200505,Coburg,sat
+3200000,3200506,Coburg,sat
+3200000,3200507,Coburg,sat
+3200000,3200508,Coburg,sat
+3200000,3200509,Coburg,sat
+3200000,3200510,Coburg,sat
+3200000,3200511,Coburg,sat
+3200000,3200512,Coburg,sat
+3200000,3200513,Coburg,sat
+3200000,3200514,Coburg,sat
+3200000,3200515,Coburg,sat
+3200000,3200516,Coburg,sat
+3200000,3200517,Coburg,sat
+3200000,3200518,Coburg,sat
+3200000,3200519,Coburg,sat
+3200000,3200520,Coburg,sat
+3200000,3200521,Coburg,sat
+3200000,3200522,Coburg,sat
+3200000,3200523,Coburg,sat
+3200000,3200524,Coburg,sat
+3200000,3200525,Coburg,sat
+3200000,3200526,Coburg,sat
+3200000,3200527,Coburg,sat
+3200000,3200528,Coburg,sat
+3200000,3200529,Coburg,sat
+3200000,3200530,Coburg,sat
+3200000,3200531,Coburg,sat
+3200000,3200532,Coburg,sat
+3200000,3200533,Coburg,sat
+3200000,3200534,Coburg,sat
+3200000,3200535,Coburg,sat
+3200000,3200536,Coburg,sat
+3200000,3200537,Coburg,sat
+3200000,3200538,Coburg,sat
+3200000,3200539,Coburg,sat
+3200000,3200540,Coburg,sat
+3200000,3200541,Coburg,sat
+3200000,3200542,Coburg,sat
+3200000,3200543,Coburg,sat
+3200000,3200544,Coburg,sat
+3200000,3200545,Coburg,sat
+3200000,3200546,Coburg,sat
+3200000,3200547,Coburg,sat
+3200000,3200548,Coburg,sat
+3200000,3200549,Coburg,sat
+3200000,3200550,Coburg,sat
+3200000,3200551,Coburg,sat
+3200000,3200552,Coburg,sat
+3200000,3200553,Coburg,sat
+3200000,3200554,Coburg,sat
+3200000,3200555,Coburg,sat
+3200000,3200556,Coburg,sat
+3200000,3200557,Coburg,sat
+3200000,3200558,Coburg,sat
+3200000,3200559,Coburg,sat
+3200000,3200560,Coburg,sun
+3200000,3200561,Coburg,sun
+3200000,3200562,Coburg,sun
+3200000,3200563,Coburg,sun
+3200000,3200564,Coburg,sun
+3200000,3200565,Coburg,sun
+3200000,3200566,Coburg,sun
+3200000,3200567,Coburg,sun
+3200000,3200568,Coburg,sun
+3200000,3200569,Coburg,sun
+3200000,3200570,Coburg,sun
+3200000,3200571,Coburg,sun
+3200000,3200572,Coburg,sun
+3200000,3200573,Coburg,sun
+3200000,3200574,Coburg,sun
+3200000,3200575,Coburg,sun
+3200000,3200576,Coburg,sun
+3200000,3200577,Coburg,sun
+3200000,3200578,Coburg,sun
+3200000,3200579,Coburg,sun
+3200000,3200580,Coburg,sun
+3200000,3200581,Coburg,sun
+3200000,3200582,Coburg,sun
+3200000,3200583,Coburg,sun
+3200000,3200584,Coburg,sun
+3200000,3200585,Coburg,sun
+3200000,3200586,Coburg,sun
+3200000,3200587,Coburg,sun
+3200000,3200588,Coburg,sun
+3200000,3200589,Coburg,sun
+3200000,3200590,Coburg,sun
+3200000,3200591,Coburg,sun
+3200000,3200592,Coburg,sun
+3200000,3200593,Coburg,sun
+3200000,3200594,Coburg,sun
+3200000,3200595,Coburg,sun
+3200000,3200596,Coburg,sun
+3200000,3200597,Coburg,sun
+3200000,3200598,Coburg,sun
+3200000,3200599,Coburg,sun
+3200000,3200600,Coburg,sun
+3200000,3200601,Coburg,sun
+3200000,3200602,Coburg,sun
+3200000,3200603,Coburg,sun
+3200000,3200604,Coburg,sun
+3200000,3200605,Coburg,sun
+3200000,3200606,Coburg,sun
+3200000,3200607,Coburg,sun
+3200000,3200608,Coburg,sun
+3200000,3200609,Coburg,sun
+3200000,3200610,Coburg,sun
+3200000,3200611,Coburg,sun
+3200000,3200612,Coburg,sun
+3200000,3200613,Coburg,sun
+3200000,3200614,Coburg,sun
+3200000,3200615,Coburg,sun
+3200000,3200616,Coburg,sun
+3200000,3200617,Coburg,sun
+3200000,3200618,Coburg,sun
+3200000,3200619,Coburg,sun
+3200000,3200620,Coburg,sun
+3200000,3200621,Coburg,sun
+3200000,3200622,Coburg,sun
+3200000,3200623,Coburg,sun
+3200000,3200624,Coburg,sun
+3200000,3200625,Coburg,sun
+3200000,3200626,Coburg,sun
+3200000,3200627,Coburg,sun
+3200000,3200628,Coburg,sun
+3200000,3200629,Coburg,sun
+3200000,3200630,Coburg,sun
+3200000,3200631,Coburg,sun
+3200000,3200632,Coburg,sun
+3200000,3200633,Coburg,sun
+3200000,3200634,Coburg,sun
+3200000,3200635,Coburg,sun
+3200000,3200636,Coburg,sun
+3200000,3200637,Coburg,sun
+3200000,3200638,Coburg,sun
+3200000,3200639,Coburg,sun
+3200000,3200640,Coburg,sun
+3200000,3200641,Coburg,sun
+3200000,3200642,Coburg,sun
+3200000,3200643,Coburg,sun
+3200000,3200644,Coburg,sun
+3200000,3200645,Coburg,sun
+3200000,3200646,Coburg,sun
+3200000,3200647,Coburg,sun
+3200000,3200648,Coburg,sun
+3200000,3200649,Coburg,sun
+3200000,3200650,Coburg,sun
+3200000,3200651,Coburg,sun
+3200000,3200652,Coburg,sun
+3200000,3200653,Coburg,sun
+3200000,3200654,Coburg,sun
+3200000,3200655,Coburg,sun
+3200000,3200656,Coburg,sun
+3200000,3200657,Coburg,sun
+3200000,3200658,Coburg,sun
+3200000,3200659,Coburg,sun
+3200000,3200660,Coburg,sun
+3200000,3200661,Coburg,sun
+3200000,3200662,Coburg,sun
+3200000,3200663,Coburg,sun
+3200000,3200664,Coburg,sun
+3200000,3200665,Coburg,sun
+3200000,3200666,Coburg,sun
+3200000,3200667,Coburg,sun
+3200000,3200668,Coburg,sun
+3200000,3200669,Coburg,sun
+3200000,3200670,Coburg,sun
+3200000,3200671,Coburg,sun
+3200000,3200672,Coburg,sun
+3200000,3200673,Coburg,sun
+3200000,3200674,Coburg,sun
+3200000,3200675,Coburg,sun
+3200000,3200676,Coburg,sun
+3200000,3200677,Coburg,sun
+3200000,3200678,Coburg,sun
+3200000,3200679,Coburg,sun
+3200000,3200680,Coburg,sun
+3200000,3200681,Coburg,sun
+3200000,3200682,Coburg,sun
+3200000,3200683,Coburg,sun
+3200000,3200684,Coburg,sun
+3200000,3200685,Coburg,sun
+3200000,3200686,Coburg,sun
+3200000,3200687,Coburg,sun
+3200000,3200688,Coburg,sun
+3200000,3200689,Coburg,sun
+3200000,3200690,Coburg,sun
+3200000,3200691,Coburg,sun
+3200000,3200692,Coburg,sun
+3200000,3200693,Coburg,sun
+3200000,3200694,Coburg,sun
+3200000,3200695,Coburg,sun
+3200000,3200696,Coburg,sun
+3200000,3200697,Coburg,sun
+3200000,3200698,Coburg,sun
+3200000,3200699,Coburg,sun
+3200000,3200700,Albert Park,monthur
+3200000,3200701,Albert Park,monthur
+3200000,3200702,Albert Park,monthur
+3200000,3200703,Albert Park,monthur
+3200000,3200704,Albert Park,monthur
+3200000,3200705,Albert Park,monthur
+3200000,3200706,Albert Park,monthur
+3200000,3200707,Albert Park,monthur
+3200000,3200708,Albert Park,monthur
+3200000,3200709,Albert Park,monthur
+3200000,3200710,Albert Park,monthur
+3200000,3200711,Albert Park,monthur
+3200000,3200712,Albert Park,monthur
+3200000,3200713,Albert Park,monthur
+3200000,3200714,Albert Park,monthur
+3200000,3200715,Albert Park,monthur
+3200000,3200716,Albert Park,monthur
+3200000,3200717,Albert Park,monthur
+3200000,3200718,Albert Park,monthur
+3200000,3200719,Albert Park,monthur
+3200000,3200720,Albert Park,monthur
+3200000,3200721,Albert Park,monthur
+3200000,3200722,Albert Park,monthur
+3200000,3200723,Albert Park,monthur
+3200000,3200724,Albert Park,monthur
+3200000,3200725,Albert Park,monthur
+3200000,3200726,Albert Park,monthur
+3200000,3200727,Albert Park,monthur
+3200000,3200728,Albert Park,monthur
+3200000,3200729,Albert Park,monthur
+3200000,3200730,Albert Park,monthur
+3200000,3200731,Albert Park,monthur
+3200000,3200732,Albert Park,monthur
+3200000,3200733,Albert Park,monthur
+3200000,3200734,Albert Park,monthur
+3200000,3200735,Albert Park,monthur
+3200000,3200736,Albert Park,monthur
+3200000,3200737,Albert Park,monthur
+3200000,3200738,Albert Park,monthur
+3200000,3200739,Albert Park,monthur
+3200000,3200740,Albert Park,monthur
+3200000,3200741,Albert Park,monthur
+3200000,3200742,Albert Park,monthur
+3200000,3200743,Albert Park,monthur
+3200000,3200744,Albert Park,monthur
+3200000,3200745,Albert Park,monthur
+3200000,3200746,Albert Park,monthur
+3200000,3200747,Albert Park,monthur
+3200000,3200748,Albert Park,monthur
+3200000,3200749,Albert Park,monthur
+3200000,3200750,Albert Park,monthur
+3200000,3200751,Albert Park,monthur
+3200000,3200752,Albert Park,monthur
+3200000,3200753,Albert Park,monthur
+3200000,3200754,Albert Park,monthur
+3200000,3200755,Albert Park,monthur
+3200000,3200756,Albert Park,monthur
+3200000,3200757,Albert Park,monthur
+3200000,3200758,Albert Park,monthur
+3200000,3200759,Albert Park,monthur
+3200000,3200760,Albert Park,monthur
+3200000,3200761,Albert Park,monthur
+3200000,3200762,Albert Park,monthur
+3200000,3200763,Albert Park,monthur
+3200000,3200764,Albert Park,monthur
+3200000,3200765,Albert Park,monthur
+3200000,3200766,Albert Park,monthur
+3200000,3200767,Albert Park,monthur
+3200000,3200768,Albert Park,monthur
+3200000,3200769,Albert Park,monthur
+3200000,3200770,Albert Park,monthur
+3200000,3200771,Albert Park,monthur
+3200000,3200772,Albert Park,monthur
+3200000,3200773,Albert Park,monthur
+3200000,3200774,Albert Park,monthur
+3200000,3200775,Albert Park,monthur
+3200000,3200776,Albert Park,monthur
+3200000,3200777,Albert Park,monthur
+3200000,3200778,Albert Park,monthur
+3200000,3200779,Albert Park,monthur
+3200000,3200780,Albert Park,monthur
+3200000,3200781,Albert Park,monthur
+3200000,3200782,Albert Park,monthur
+3200000,3200783,Albert Park,monthur
+3200000,3200784,Albert Park,monthur
+3200000,3200785,Albert Park,monthur
+3200000,3200786,Albert Park,monthur
+3200000,3200787,Albert Park,monthur
+3200000,3200788,Albert Park,monthur
+3200000,3200789,Albert Park,monthur
+3200000,3200790,Albert Park,monthur
+3200000,3200791,Albert Park,monthur
+3200000,3200792,Albert Park,monthur
+3200000,3200793,Albert Park,monthur
+3200000,3200794,Albert Park,monthur
+3200000,3200795,Albert Park,monthur
+3200000,3200796,Albert Park,monthur
+3200000,3200797,Albert Park,monthur
+3200000,3200798,Albert Park,monthur
+3200000,3200799,Albert Park,monthur
+3200000,3200800,Albert Park,monthur
+3200000,3200801,Albert Park,monthur
+3200000,3200802,Albert Park,monthur
+3200000,3200803,Albert Park,monthur
+3200000,3200804,Albert Park,monthur
+3200000,3200805,Albert Park,monthur
+3200000,3200806,Albert Park,monthur
+3200000,3200807,Albert Park,monthur
+3200000,3200808,Albert Park,monthur
+3200000,3200809,Albert Park,monthur
+3200000,3200810,Albert Park,monthur
+3200000,3200811,Albert Park,monthur
+3200000,3200812,Albert Park,monthur
+3200000,3200813,Albert Park,monthur
+3200000,3200814,Albert Park,monthur
+3200000,3200815,Albert Park,monthur
+3200000,3200816,Albert Park,monthur
+3200000,3200817,Albert Park,monthur
+3200000,3200818,Albert Park,monthur
+3200000,3200819,Albert Park,monthur
+3200000,3200820,Albert Park,monthur
+3200000,3200821,Albert Park,monthur
+3200000,3200822,Albert Park,monthur
+3200000,3200823,Albert Park,monthur
+3200000,3200824,Albert Park,monthur
+3200000,3200825,Albert Park,monthur
+3200000,3200826,Albert Park,monthur
+3200000,3200827,Albert Park,monthur
+3200000,3200828,Albert Park,monthur
+3200000,3200829,Albert Park,monthur
+3200000,3200830,Albert Park,monthur
+3200000,3200831,Albert Park,monthur
+3200000,3200832,Albert Park,monthur
+3200000,3200833,Albert Park,monthur
+3200000,3200834,Albert Park,monthur
+3200000,3200835,Albert Park,monthur
+3200000,3200836,Albert Park,monthur
+3200000,3200837,Albert Park,monthur
+3200000,3200838,Albert Park,monthur
+3200000,3200839,Albert Park,monthur
+3200000,3200840,Albert Park,monfri
+3200000,3200841,Albert Park,monfri
+3200000,3200842,Albert Park,monfri
+3200000,3200843,Albert Park,monfri
+3200000,3200844,Albert Park,monfri
+3200000,3200845,Albert Park,monfri
+3200000,3200846,Albert Park,monfri
+3200000,3200847,Albert Park,monfri
+3200000,3200848,Albert Park,monfri
+3200000,3200849,Albert Park,monfri
+3200000,3200850,Albert Park,monfri
+3200000,3200851,Albert Park,monfri
+3200000,3200852,Albert Park,monfri
+3200000,3200853,Albert Park,monfri
+3200000,3200854,Albert Park,monfri
+3200000,3200855,Albert Park,monfri
+3200000,3200856,Albert Park,monfri
+3200000,3200857,Albert Park,monfri
+3200000,3200858,Albert Park,monfri
+3200000,3200859,Albert Park,monfri
+3200000,3200860,Albert Park,monfri
+3200000,3200861,Albert Park,monfri
+3200000,3200862,Albert Park,monfri
+3200000,3200863,Albert Park,monfri
+3200000,3200864,Albert Park,monfri
+3200000,3200865,Albert Park,monfri
+3200000,3200866,Albert Park,monfri
+3200000,3200867,Albert Park,monfri
+3200000,3200868,Albert Park,monfri
+3200000,3200869,Albert Park,monfri
+3200000,3200870,Albert Park,monfri
+3200000,3200871,Albert Park,monfri
+3200000,3200872,Albert Park,monfri
+3200000,3200873,Albert Park,monfri
+3200000,3200874,Albert Park,monfri
+3200000,3200875,Albert Park,monfri
+3200000,3200876,Albert Park,monfri
+3200000,3200877,Albert Park,monfri
+3200000,3200878,Albert Park,monfri
+3200000,3200879,Albert Park,monfri
+3200000,3200880,Albert Park,monfri
+3200000,3200881,Albert Park,monfri
+3200000,3200882,Albert Park,monfri
+3200000,3200883,Albert Park,monfri
+3200000,3200884,Albert Park,monfri
+3200000,3200885,Albert Park,monfri
+3200000,3200886,Albert Park,monfri
+3200000,3200887,Albert Park,monfri
+3200000,3200888,Albert Park,monfri
+3200000,3200889,Albert Park,monfri
+3200000,3200890,Albert Park,monfri
+3200000,3200891,Albert Park,monfri
+3200000,3200892,Albert Park,monfri
+3200000,3200893,Albert Park,monfri
+3200000,3200894,Albert Park,monfri
+3200000,3200895,Albert Park,monfri
+3200000,3200896,Albert Park,monfri
+3200000,3200897,Albert Park,monfri
+3200000,3200898,Albert Park,monfri
+3200000,3200899,Albert Park,monfri
+3200000,3200900,Albert Park,monfri
+3200000,3200901,Albert Park,monfri
+3200000,3200902,Albert Park,monfri
+3200000,3200903,Albert Park,monfri
+3200000,3200904,Albert Park,monfri
+3200000,3200905,Albert Park,monfri
+3200000,3200906,Albert Park,monfri
+3200000,3200907,Albert Park,monfri
+3200000,3200908,Albert Park,monfri
+3200000,3200909,Albert Park,monfri
+3200000,3200910,Albert Park,monfri
+3200000,3200911,Albert Park,monfri
+3200000,3200912,Albert Park,monfri
+3200000,3200913,Albert Park,monfri
+3200000,3200914,Albert Park,monfri
+3200000,3200915,Albert Park,monfri
+3200000,3200916,Albert Park,monfri
+3200000,3200917,Albert Park,monfri
+3200000,3200918,Albert Park,monfri
+3200000,3200919,Albert Park,monfri
+3200000,3200920,Albert Park,monfri
+3200000,3200921,Albert Park,monfri
+3200000,3200922,Albert Park,monfri
+3200000,3200923,Albert Park,monfri
+3200000,3200924,Albert Park,monfri
+3200000,3200925,Albert Park,monfri
+3200000,3200926,Albert Park,monfri
+3200000,3200927,Albert Park,monfri
+3200000,3200928,Albert Park,monfri
+3200000,3200929,Albert Park,monfri
+3200000,3200930,Albert Park,monfri
+3200000,3200931,Albert Park,monfri
+3200000,3200932,Albert Park,monfri
+3200000,3200933,Albert Park,monfri
+3200000,3200934,Albert Park,monfri
+3200000,3200935,Albert Park,monfri
+3200000,3200936,Albert Park,monfri
+3200000,3200937,Albert Park,monfri
+3200000,3200938,Albert Park,monfri
+3200000,3200939,Albert Park,monfri
+3200000,3200940,Albert Park,monfri
+3200000,3200941,Albert Park,monfri
+3200000,3200942,Albert Park,monfri
+3200000,3200943,Albert Park,monfri
+3200000,3200944,Albert Park,monfri
+3200000,3200945,Albert Park,monfri
+3200000,3200946,Albert Park,monfri
+3200000,3200947,Albert Park,monfri
+3200000,3200948,Albert Park,monfri
+3200000,3200949,Albert Park,monfri
+3200000,3200950,Albert Park,monfri
+3200000,3200951,Albert Park,monfri
+3200000,3200952,Albert Park,monfri
+3200000,3200953,Albert Park,monfri
+3200000,3200954,Albert Park,monfri
+3200000,3200955,Albert Park,monfri
+3200000,3200956,Albert Park,monfri
+3200000,3200957,Albert Park,monfri
+3200000,3200958,Albert Park,monfri
+3200000,3200959,Albert Park,monfri
+3200000,3200960,Albert Park,monfri
+3200000,3200961,Albert Park,monfri
+3200000,3200962,Albert Park,monfri
+3200000,3200963,Albert Park,monfri
+3200000,3200964,Albert Park,monfri
+3200000,3200965,Albert Park,monfri
+3200000,3200966,Albert Park,monfri
+3200000,3200967,Albert Park,monfri
+3200000,3200968,Albert Park,monfri
+3200000,3200969,Albert Park,monfri
+3200000,3200970,Albert Park,monfri
+3200000,3200971,Albert Park,monfri
+3200000,3200972,Albert Park,monfri
+3200000,3200973,Albert Park,monfri
+3200000,3200974,Albert Park,monfri
+3200000,3200975,Albert Park,monfri
+3200000,3200976,Albert Park,monfri
+3200000,3200977,Albert Park,monfri
+3200000,3200978,Albert Park,monfri
+3200000,3200979,Albert Park,monfri
+3200000,3200980,Albert Park,fri
+3200000,3200981,Albert Park,fri
+3200000,3200982,Albert Park,fri
+3200000,3200983,Albert Park,fri
+3200000,3200984,Albert Park,fri
+3200000,3200985,Albert Park,fri
+3200000,3200986,Albert Park,fri
+3200000,3200987,Albert Park,fri
+3200000,3200988,Albert Park,fri
+3200000,3200989,Albert Park,fri
+3200000,3200990,Albert Park,fri
+3200000,3200991,Albert Park,fri
+3200000,3200992,Albert Park,fri
+3200000,3200993,Albert Park,fri
+3200000,3200994,Albert Park,fri
+3200000,3200995,Albert Park,fri
+3200000,3200996,Albert Park,fri
+3200000,3200997,Albert Park,fri
+3200000,3200998,Albert Park,fri
+3200000,3200999,Albert Park,fri
+3200000,3201000,Albert Park,fri
+3200000,3201001,Albert Park,fri
+3200000,3201002,Albert Park,fri
+3200000,3201003,Albert Park,fri
+3200000,3201004,Albert Park,fri
+3200000,3201005,Albert Park,fri
+3200000,3201006,Albert Park,fri
+3200000,3201007,Albert Park,fri
+3200000,3201008,Albert Park,fri
+3200000,3201009,Albert Park,fri
+3200000,3201010,Albert Park,fri
+3200000,3201011,Albert Park,fri
+3200000,3201012,Albert Park,fri
+3200000,3201013,Albert Park,fri
+3200000,3201014,Albert Park,fri
+3200000,3201015,Albert Park,fri
+3200000,3201016,Albert Park,fri
+3200000,3201017,Albert Park,fri
+3200000,3201018,Albert Park,fri
+3200000,3201019,Albert Park,fri
+3200000,3201020,Albert Park,fri
+3200000,3201021,Albert Park,fri
+3200000,3201022,Albert Park,fri
+3200000,3201023,Albert Park,fri
+3200000,3201024,Albert Park,fri
+3200000,3201025,Albert Park,fri
+3200000,3201026,Albert Park,fri
+3200000,3201027,Albert Park,fri
+3200000,3201028,Albert Park,fri
+3200000,3201029,Albert Park,fri
+3200000,3201030,Albert Park,fri
+3200000,3201031,Albert Park,fri
+3200000,3201032,Albert Park,fri
+3200000,3201033,Albert Park,fri
+3200000,3201034,Albert Park,fri
+3200000,3201035,Albert Park,fri
+3200000,3201036,Albert Park,fri
+3200000,3201037,Albert Park,fri
+3200000,3201038,Albert Park,fri
+3200000,3201039,Albert Park,fri
+3200000,3201040,Albert Park,fri
+3200000,3201041,Albert Park,fri
+3200000,3201042,Albert Park,fri
+3200000,3201043,Albert Park,fri
+3200000,3201044,Albert Park,fri
+3200000,3201045,Albert Park,fri
+3200000,3201046,Albert Park,fri
+3200000,3201047,Albert Park,fri
+3200000,3201048,Albert Park,fri
+3200000,3201049,Albert Park,fri
+3200000,3201050,Albert Park,fri
+3200000,3201051,Albert Park,fri
+3200000,3201052,Albert Park,fri
+3200000,3201053,Albert Park,fri
+3200000,3201054,Albert Park,fri
+3200000,3201055,Albert Park,fri
+3200000,3201056,Albert Park,fri
+3200000,3201057,Albert Park,fri
+3200000,3201058,Albert Park,fri
+3200000,3201059,Albert Park,fri
+3200000,3201060,Albert Park,fri
+3200000,3201061,Albert Park,fri
+3200000,3201062,Albert Park,fri
+3200000,3201063,Albert Park,fri
+3200000,3201064,Albert Park,fri
+3200000,3201065,Albert Park,fri
+3200000,3201066,Albert Park,fri
+3200000,3201067,Albert Park,fri
+3200000,3201068,Albert Park,fri
+3200000,3201069,Albert Park,fri
+3200000,3201070,Albert Park,fri
+3200000,3201071,Albert Park,fri
+3200000,3201072,Albert Park,fri
+3200000,3201073,Albert Park,fri
+3200000,3201074,Albert Park,fri
+3200000,3201075,Albert Park,fri
+3200000,3201076,Albert Park,fri
+3200000,3201077,Albert Park,fri
+3200000,3201078,Albert Park,fri
+3200000,3201079,Albert Park,fri
+3200000,3201080,Albert Park,fri
+3200000,3201081,Albert Park,fri
+3200000,3201082,Albert Park,fri
+3200000,3201083,Albert Park,fri
+3200000,3201084,Albert Park,fri
+3200000,3201085,Albert Park,fri
+3200000,3201086,Albert Park,fri
+3200000,3201087,Albert Park,fri
+3200000,3201088,Albert Park,fri
+3200000,3201089,Albert Park,fri
+3200000,3201090,Albert Park,fri
+3200000,3201091,Albert Park,fri
+3200000,3201092,Albert Park,fri
+3200000,3201093,Albert Park,fri
+3200000,3201094,Albert Park,fri
+3200000,3201095,Albert Park,fri
+3200000,3201096,Albert Park,fri
+3200000,3201097,Albert Park,fri
+3200000,3201098,Albert Park,fri
+3200000,3201099,Albert Park,fri
+3200000,3201100,Albert Park,fri
+3200000,3201101,Albert Park,fri
+3200000,3201102,Albert Park,fri
+3200000,3201103,Albert Park,fri
+3200000,3201104,Albert Park,fri
+3200000,3201105,Albert Park,fri
+3200000,3201106,Albert Park,fri
+3200000,3201107,Albert Park,fri
+3200000,3201108,Albert Park,fri
+3200000,3201109,Albert Park,fri
+3200000,3201110,Albert Park,fri
+3200000,3201111,Albert Park,fri
+3200000,3201112,Albert Park,fri
+3200000,3201113,Albert Park,fri
+3200000,3201114,Albert Park,fri
+3200000,3201115,Albert Park,fri
+3200000,3201116,Albert Park,fri
+3200000,3201117,Albert Park,fri
+3200000,3201118,Albert Park,fri
+3200000,3201119,Albert Park,fri
+3200000,3201120,Albert Park,sat
+3200000,3201121,Albert Park,sat
+3200000,3201122,Albert Park,sat
+3200000,3201123,Albert Park,sat
+3200000,3201124,Albert Park,sat
+3200000,3201125,Albert Park,sat
+3200000,3201126,Albert Park,sat
+3200000,3201127,Albert Park,sat
+3200000,3201128,Albert Park,sat
+3200000,3201129,Albert Park,sat
+3200000,3201130,Albert Park,sat
+3200000,3201131,Albert Park,sat
+3200000,3201132,Albert Park,sat
+3200000,3201133,Albert Park,sat
+3200000,3201134,Albert Park,sat
+3200000,3201135,Albert Park,sat
+3200000,3201136,Albert Park,sat
+3200000,3201137,Albert Park,sat
+3200000,3201138,Albert Park,sat
+3200000,3201139,Albert Park,sat
+3200000,3201140,Albert Park,sat
+3200000,3201141,Albert Park,sat
+3200000,3201142,Albert Park,sat
+3200000,3201143,Albert Park,sat
+3200000,3201144,Albert Park,sat
+3200000,3201145,Albert Park,sat
+3200000,3201146,Albert Park,sat
+3200000,3201147,Albert Park,sat
+3200000,3201148,Albert Park,sat
+3200000,3201149,Albert Park,sat
+3200000,3201150,Albert Park,sat
+3200000,3201151,Albert Park,sat
+3200000,3201152,Albert Park,sat
+3200000,3201153,Albert Park,sat
+3200000,3201154,Albert Park,sat
+3200000,3201155,Albert Park,sat
+3200000,3201156,Albert Park,sat
+3200000,3201157,Albert Park,sat
+3200000,3201158,Albert Park,sat
+3200000,3201159,Albert Park,sat
+3200000,3201160,Albert Park,sat
+3200000,3201161,Albert Park,sat
+3200000,3201162,Albert Park,sat
+3200000,3201163,Albert Park,sat
+3200000,3201164,Albert Park,sat
+3200000,3201165,Albert Park,sat
+3200000,3201166,Albert Park,sat
+3200000,3201167,Albert Park,sat
+3200000,3201168,Albert Park,sat
+3200000,3201169,Albert Park,sat
+3200000,3201170,Albert Park,sat
+3200000,3201171,Albert Park,sat
+3200000,3201172,Albert Park,sat
+3200000,3201173,Albert Park,sat
+3200000,3201174,Albert Park,sat
+3200000,3201175,Albert Park,sat
+3200000,3201176,Albert Park,sat
+3200000,3201177,Albert Park,sat
+3200000,3201178,Albert Park,sat
+3200000,3201179,Albert Park,sat
+3200000,3201180,Albert Park,sat
+3200000,3201181,Albert Park,sat
+3200000,3201182,Albert Park,sat
+3200000,3201183,Albert Park,sat
+3200000,3201184,Albert Park,sat
+3200000,3201185,Albert Park,sat
+3200000,3201186,Albert Park,sat
+3200000,3201187,Albert Park,sat
+3200000,3201188,Albert Park,sat
+3200000,3201189,Albert Park,sat
+3200000,3201190,Albert Park,sat
+3200000,3201191,Albert Park,sat
+3200000,3201192,Albert Park,sat
+3200000,3201193,Albert Park,sat
+3200000,3201194,Albert Park,sat
+3200000,3201195,Albert Park,sat
+3200000,3201196,Albert Park,sat
+3200000,3201197,Albert Park,sat
+3200000,3201198,Albert Park,sat
+3200000,3201199,Albert Park,sat
+3200000,3201200,Albert Park,sat
+3200000,3201201,Albert Park,sat
+3200000,3201202,Albert Park,sat
+3200000,3201203,Albert Park,sat
+3200000,3201204,Albert Park,sat
+3200000,3201205,Albert Park,sat
+3200000,3201206,Albert Park,sat
+3200000,3201207,Albert Park,sat
+3200000,3201208,Albert Park,sat
+3200000,3201209,Albert Park,sat
+3200000,3201210,Albert Park,sat
+3200000,3201211,Albert Park,sat
+3200000,3201212,Albert Park,sat
+3200000,3201213,Albert Park,sat
+3200000,3201214,Albert Park,sat
+3200000,3201215,Albert Park,sat
+3200000,3201216,Albert Park,sat
+3200000,3201217,Albert Park,sat
+3200000,3201218,Albert Park,sat
+3200000,3201219,Albert Park,sat
+3200000,3201220,Albert Park,sat
+3200000,3201221,Albert Park,sat
+3200000,3201222,Albert Park,sat
+3200000,3201223,Albert Park,sat
+3200000,3201224,Albert Park,sat
+3200000,3201225,Albert Park,sat
+3200000,3201226,Albert Park,sat
+3200000,3201227,Albert Park,sat
+3200000,3201228,Albert Park,sat
+3200000,3201229,Albert Park,sat
+3200000,3201230,Albert Park,sat
+3200000,3201231,Albert Park,sat
+3200000,3201232,Albert Park,sat
+3200000,3201233,Albert Park,sat
+3200000,3201234,Albert Park,sat
+3200000,3201235,Albert Park,sat
+3200000,3201236,Albert Park,sat
+3200000,3201237,Albert Park,sat
+3200000,3201238,Albert Park,sat
+3200000,3201239,Albert Park,sat
+3200000,3201240,Albert Park,sat
+3200000,3201241,Albert Park,sat
+3200000,3201242,Albert Park,sat
+3200000,3201243,Albert Park,sat
+3200000,3201244,Albert Park,sat
+3200000,3201245,Albert Park,sat
+3200000,3201246,Albert Park,sat
+3200000,3201247,Albert Park,sat
+3200000,3201248,Albert Park,sat
+3200000,3201249,Albert Park,sat
+3200000,3201250,Albert Park,sat
+3200000,3201251,Albert Park,sat
+3200000,3201252,Albert Park,sat
+3200000,3201253,Albert Park,sat
+3200000,3201254,Albert Park,sat
+3200000,3201255,Albert Park,sat
+3200000,3201256,Albert Park,sat
+3200000,3201257,Albert Park,sat
+3200000,3201258,Albert Park,sat
+3200000,3201259,Albert Park,sat
+3200000,3201260,Albert Park,sun
+3200000,3201261,Albert Park,sun
+3200000,3201262,Albert Park,sun
+3200000,3201263,Albert Park,sun
+3200000,3201264,Albert Park,sun
+3200000,3201265,Albert Park,sun
+3200000,3201266,Albert Park,sun
+3200000,3201267,Albert Park,sun
+3200000,3201268,Albert Park,sun
+3200000,3201269,Albert Park,sun
+3200000,3201270,Albert Park,sun
+3200000,3201271,Albert Park,sun
+3200000,3201272,Albert Park,sun
+3200000,3201273,Albert Park,sun
+3200000,3201274,Albert Park,sun
+3200000,3201275,Albert Park,sun
+3200000,3201276,Albert Park,sun
+3200000,3201277,Albert Park,sun
+3200000,3201278,Albert Park,sun
+3200000,3201279,Albert Park,sun
+3200000,3201280,Albert Park,sun
+3200000,3201281,Albert Park,sun
+3200000,3201282,Albert Park,sun
+3200000,3201283,Albert Park,sun
+3200000,3201284,Albert Park,sun
+3200000,3201285,Albert Park,sun
+3200000,3201286,Albert Park,sun
+3200000,3201287,Albert Park,sun
+3200000,3201288,Albert Park,sun
+3200000,3201289,Albert Park,sun
+3200000,3201290,Albert Park,sun
+3200000,3201291,Albert Park,sun
+3200000,3201292,Albert Park,sun
+3200000,3201293,Albert Park,sun
+3200000,3201294,Albert Park,sun
+3200000,3201295,Albert Park,sun
+3200000,3201296,Albert Park,sun
+3200000,3201297,Albert Park,sun
+3200000,3201298,Albert Park,sun
+3200000,3201299,Albert Park,sun
+3200000,3201300,Albert Park,sun
+3200000,3201301,Albert Park,sun
+3200000,3201302,Albert Park,sun
+3200000,3201303,Albert Park,sun
+3200000,3201304,Albert Park,sun
+3200000,3201305,Albert Park,sun
+3200000,3201306,Albert Park,sun
+3200000,3201307,Albert Park,sun
+3200000,3201308,Albert Park,sun
+3200000,3201309,Albert Park,sun
+3200000,3201310,Albert Park,sun
+3200000,3201311,Albert Park,sun
+3200000,3201312,Albert Park,sun
+3200000,3201313,Albert Park,sun
+3200000,3201314,Albert Park,sun
+3200000,3201315,Albert Park,sun
+3200000,3201316,Albert Park,sun
+3200000,3201317,Albert Park,sun
+3200000,3201318,Albert Park,sun
+3200000,3201319,Albert Park,sun
+3200000,3201320,Albert Park,sun
+3200000,3201321,Albert Park,sun
+3200000,3201322,Albert Park,sun
+3200000,3201323,Albert Park,sun
+3200000,3201324,Albert Park,sun
+3200000,3201325,Albert Park,sun
+3200000,3201326,Albert Park,sun
+3200000,3201327,Albert Park,sun
+3200000,3201328,Albert Park,sun
+3200000,3201329,Albert Park,sun
+3200000,3201330,Albert Park,sun
+3200000,3201331,Albert Park,sun
+3200000,3201332,Albert Park,sun
+3200000,3201333,Albert Park,sun
+3200000,3201334,Albert Park,sun
+3200000,3201335,Albert Park,sun
+3200000,3201336,Albert Park,sun
+3200000,3201337,Albert Park,sun
+3200000,3201338,Albert Park,sun
+3200000,3201339,Albert Park,sun
+3200000,3201340,Albert Park,sun
+3200000,3201341,Albert Park,sun
+3200000,3201342,Albert Park,sun
+3200000,3201343,Albert Park,sun
+3200000,3201344,Albert Park,sun
+3200000,3201345,Albert Park,sun
+3200000,3201346,Albert Park,sun
+3200000,3201347,Albert Park,sun
+3200000,3201348,Albert Park,sun
+3200000,3201349,Albert Park,sun
+3200000,3201350,Albert Park,sun
+3200000,3201351,Albert Park,sun
+3200000,3201352,Albert Park,sun
+3200000,3201353,Albert Park,sun
+3200000,3201354,Albert Park,sun
+3200000,3201355,Albert Park,sun
+3200000,3201356,Albert Park,sun
+3200000,3201357,Albert Park,sun
+3200000,3201358,Albert Park,sun
+3200000,3201359,Albert Park,sun
+3200000,3201360,Albert Park,sun
+3200000,3201361,Albert Park,sun
+3200000,3201362,Albert Park,sun
+3200000,3201363,Albert Park,sun
+3200000,3201364,Albert Park,sun
+3200000,3201365,Albert Park,sun
+3200000,3201366,Albert Park,sun
+3200000,3201367,Albert Park,sun
+3200000,3201368,Albert Park,sun
+3200000,3201369,Albert Park,sun
+3200000,3201370,Albert Park,sun
+3200000,3201371,Albert Park,sun
+3200000,3201372,Albert Park,sun
+3200000,3201373,Albert Park,sun
+3200000,3201374,Albert Park,sun
+3200000,3201375,Albert Park,sun
+3200000,3201376,Albert Park,sun
+3200000,3201377,Albert Park,sun
+3200000,3201378,Albert Park,sun
+3200000,3201379,Albert Park,sun
+3200000,3201380,Albert Park,sun
+3200000,3201381,Albert Park,sun
+3200000,3201382,Albert Park,sun
+3200000,3201383,Albert Park,sun
+3200000,3201384,Albert Park,sun
+3200000,3201385,Albert Park,sun
+3200000,3201386,Albert Park,sun
+3200000,3201387,Albert Park,sun
+3200000,3201388,Albert Park,sun
+3200000,3201389,Albert Park,sun
+3200000,3201390,Albert Park,sun
+3200000,3201391,Albert Park,sun
+3200000,3201392,Albert Park,sun
+3200000,3201393,Albert Park,sun
+3200000,3201394,Albert Park,sun
+3200000,3201395,Albert Park,sun
+3200000,3201396,Albert Park,sun
+3200000,3201397,Albert Park,sun
+3200000,3201398,Albert Park,sun
+3200000,3201399,Albert Park,sun

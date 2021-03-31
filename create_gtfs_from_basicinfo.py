@@ -82,12 +82,11 @@ def build_stop_list_and_seg_info_along_route(route_def, serv_period, dir_id,
     stops_lyr = stops_shp.GetLayer(0)
 
     seg_speed_model.setup_for_trip_set(route_def, serv_period, dir_id)
-
     # Apply a filter to speed up calculations - only segments on this route.
-    # where_clause = "%s LIKE '%%%s' OR %s LIKE '%%%s,%%'" % \
-    #     (tp_model.SEG_ROUTE_LIST_FIELD, route_def.id,\
-    #     tp_model.SEG_ROUTE_LIST_FIELD, route_def.id)
-    # route_segments_lyr.SetAttributeFilter(where_clause)
+    where_clause = "%s LIKE '%%%s' OR %s LIKE '%%%s,%%'" % \
+        (tp_model.SEG_ROUTE_LIST_FIELD, route_def.id,\
+        tp_model.SEG_ROUTE_LIST_FIELD, route_def.id)
+    route_segments_lyr.SetAttributeFilter(where_clause)
     segs_lookup_table = tp_model.build_segs_lookup_table(route_segments_lyr)
 
     ordered_seg_refs = route_segs.create_ordered_seg_refs_from_ids(

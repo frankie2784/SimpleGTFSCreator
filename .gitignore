@@ -38,3 +38,4 @@ nosetests.xml
 # VIM editor swapfiles
 *.swo
 *.swp
+sample_input/PTLINK.DBF

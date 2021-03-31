@@ -1140,7 +1140,7 @@ def read_route_defs(csv_file_name, do_sort=True):
 
     for ii, row in enumerate(dict_reader):
         if format_version == "00":
-            r_id = ii
+            r_id = row['id']
             r_short_name = row['route']
             r_long_name = None
         else:

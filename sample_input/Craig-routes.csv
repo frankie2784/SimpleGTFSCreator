@@ -1,2 +1,2 @@
-route;dir1;dir2;segments
-Craigieburn;City;Craigieburn;0,1,2
+route;id;dir1;dir2;segments
+Craigieburn;0;City;Craigieburn;0,1,2

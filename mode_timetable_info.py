@@ -1,4 +1,5 @@
 from datetime import datetime, date, time, timedelta
+# import VITM_peaks
 
 TODAY = date.today()
 
@@ -19,7 +20,7 @@ TODAY = date.today()
 # Where each is a start time, end time, and then a headway during that period.
 
 sparse_test_headways = [
-    (time(05,00), time(02,00), 60),
+    (time(5,00), time(2,00), 60),
     ]
 
 SPARSE_SERVICE_INFO = [
@@ -37,13 +38,22 @@ TP_END_COL = 1
 HWAY_COL = 2
 PEAK_STATUS_COL = 3
 default_service_headways = [
-    (time(05,00), time(07,30), 20, False),
-    (time(07,30), time(10,00), 5, True), 
+    (time(5,00), time(7,30), 20, False),
+    (time(7,30), time(10,00), 5, True), 
     (time(10,00), time(16,00), 10, False),
     (time(16,00), time(18,30), 5, True),
     (time(18,30), time(23,00), 10, False),
-    (time(23,00), time(02,00), 20, False)
+    (time(23,00), time(2,00), 20, False)
     ]
+
+VITM_peaks = [
+    (time(7,00), time(9,00), 8, True),
+    (time(9,00), time(15,00), 10, False), 
+    (time(15,00), time(18,00), 8, True),
+    (time(18,00), time(7,00), 20, False)
+]
+
+VITM_SERVICE_INFO = [("monfri", VITM_peaks)]
 
 DEFAULT_TRAINS_SERVICE_INFO = [
     ("monfri", default_service_headways),
@@ -63,13 +73,13 @@ DEFAULT_TRAMS_SERVICE_INFO = [
 # congestion, smooth out the peak-offpeak and vice-versa transitions, to avoid
 # large spreading/bunching that can result from this.
 ramped_service_headways = [
-    (time(04,30), time(06,00), 20, False),
-    (time(05,30), time(06,00), 10, False),
-    (time(06,00), time(06,30), 7.5, False),
-    (time(06,30), time(07,00), 5, False),
-    (time(07,00), time(07,15), 4, False), # Special 'pre-peak injection'
-    (time(07,15), time(07,30), 3, False), # Special 'pre-peak injection'
-    (time(07,30), time(8,00), 5, True), 
+    (time(5,00), time(5,30), 20, False),
+    (time(5,30), time(6,00), 10, False),
+    (time(6,00), time(6,30), 7.5, False),
+    (time(6,30), time(7,00), 5, False),
+    (time(7,00), time(7,15), 4, False), # Special 'pre-peak injection'
+    (time(7,15), time(7,30), 3, False), # Special 'pre-peak injection'
+    (time(7,30), time(8,00), 5, True), 
     (time(8,00), time(8,40), 5, True), 
     (time(8,40), time(9,30), 7.5, True), 
     (time(9,30), time(10,00), 10, True), 
@@ -81,17 +91,22 @@ ramped_service_headways = [
     (time(15,45), time(16,00), 3, False),# Special 'pre-peak injection'
     (time(16,00), time(16,30), 5, True),
     (time(16,30), time(17,30), 5, True),
-    (time(17,30), time(18,05), 6.5, True),
-    (time(18,05), time(18,30), 7.5, True),
+    (time(17,30), time(18,5), 6.5, True),
+    (time(18,5), time(18,30), 7.5, True),
     (time(18,30), time(19,00), 7.5, False),
     (time(19,00), time(23,00), 10, False),
-    (time(23,00), time(02,00), 20, False)
+    (time(23,00), time(2,00), 20, False)
     ]
 
 RAMPED_SERVICE_INFO = [
     ("monfri", ramped_service_headways),
     ("sat", ramped_service_headways),
     ("sun", ramped_service_headways) ]
+
+
+DEFAULT_TRAINS_SERVICE_INFO = VITM_SERVICE_INFO
+RAMPED_SERVICE_INFO = VITM_SERVICE_INFO
+default_service_headways = VITM_peaks
 
 # PDS: stop_prefix introduced 2014-05-07: to reflect Netview-based
 #  convention to use a different prefix before different types of 
