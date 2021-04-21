@@ -154,7 +154,7 @@ def get_gtfs_route_ids_in_output_order(routes_dict):
         # Create a temp route_def
         route_def = route_segs.Route_Def(route.route_id,
             route.route_short_name,
-            route.route_long_name, ["", ""], [])
+            route.route_long_name, [])
         temp_route_defs.append(route_def)
     temp_route_defs.sort(key=route_segs.get_route_order_key_from_name)
     gtfs_route_id_output_order = map(operator.attrgetter('id'), 
@@ -251,7 +251,7 @@ def get_route_defs_and_segments_from_gtfs(schedule, segments_lyr,
                 updated_segs_this_route)
         seg_ids = map(operator.attrgetter('seg_id'), updated_segs_this_route)
         route_def = route_segs.Route_Def(r_id, r_short_name, r_long_name, 
-            all_route_dirs[gtfs_route_id], seg_ids,
+            seg_ids,
             gtfs_origin_id=gtfs_route_id)
         route_defs.append(route_def)
 

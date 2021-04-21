@@ -296,7 +296,7 @@ def read_route_break_specs_from_json(route_break_spec_json_fname):
             r_long_name = None
 
         rt_spec = route_segs.Route_Def(None, r_short_name, r_long_name,
-            (None, None), None)
+            None)
         
         rt_subset_specs = []
         for r_subset_dict in r_break_dict["subset_route_specs"]:

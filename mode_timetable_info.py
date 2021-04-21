@@ -1,5 +1,5 @@
 from datetime import datetime, date, time, timedelta
-# import VITM_peaks
+# import VITM_info
 
 TODAY = date.today()
 
@@ -20,7 +20,10 @@ TODAY = date.today()
 # Where each is a start time, end time, and then a headway during that period.
 
 sparse_test_headways = [
-    (time(5,00), time(2,00), 60),
+    (time(7,00), time(9,00), 15, 'AM'),
+    (time(9,00), time(15,00), 15, 'IP'), 
+    (time(15,00), time(18,00), 15, 'PM'),
+    (time(18,00), time(7,00), 15, 'OP')
     ]
 
 SPARSE_SERVICE_INFO = [
@@ -37,23 +40,11 @@ TP_START_COL = 0
 TP_END_COL = 1
 HWAY_COL = 2
 PEAK_STATUS_COL = 3
-default_service_headways = [
-    (time(5,00), time(7,30), 20, False),
-    (time(7,30), time(10,00), 5, True), 
-    (time(10,00), time(16,00), 10, False),
-    (time(16,00), time(18,30), 5, True),
-    (time(18,30), time(23,00), 10, False),
-    (time(23,00), time(2,00), 20, False)
-    ]
 
-VITM_peaks = [
-    (time(7,00), time(9,00), 8, True),
-    (time(9,00), time(15,00), 10, False), 
-    (time(15,00), time(18,00), 8, True),
-    (time(18,00), time(7,00), 20, False)
-]
+# VITM_headways = VITM_info.set_headways(1, 2021)
+# VITM_SERVICE_INFO = [("monfri", VITM_headways)]
 
-VITM_SERVICE_INFO = [("monfri", VITM_peaks)]
+default_service_headways = sparse_test_headways
 
 DEFAULT_TRAINS_SERVICE_INFO = [
     ("monfri", default_service_headways),
@@ -104,9 +95,9 @@ RAMPED_SERVICE_INFO = [
     ("sun", ramped_service_headways) ]
 
 
-DEFAULT_TRAINS_SERVICE_INFO = VITM_SERVICE_INFO
-RAMPED_SERVICE_INFO = VITM_SERVICE_INFO
-default_service_headways = VITM_peaks
+DEFAULT_TRAINS_SERVICE_INFO = SPARSE_SERVICE_INFO
+DEFAULT_TRAMS_SERVICE_INFO = SPARSE_SERVICE_INFO
+RAMPED_SERVICE_INFO = SPARSE_SERVICE_INFO
 
 # PDS: stop_prefix introduced 2014-05-07: to reflect Netview-based
 #  convention to use a different prefix before different types of 
@@ -115,9 +106,9 @@ default_service_headways = VITM_peaks
 #  should be 'Subway', 'Tram', or 'Bus' - can't just make up any name.
 settings = {
     'train': {
-        'name': 'Metro Trains - Upgraded',
+        'name': 'Metro Trains',
         'loc': 'Australia/Melbourne',
-        'url': 'http://www.bze.org.au',
+        'url': 'https://transport.vic.gov.au',
         'system': 'Subway',
         'maxspeed': 100,
         'accel': 1.0,
@@ -133,9 +124,9 @@ settings = {
         'stop_prefix': 'TR',
     },
     'tram': {
-        'name': 'Yarra Trams - Upgraded',
+        'name': 'Yarra Trams',
         'loc': 'Australia/Melbourne',
-        'url': 'http://www.bze.org.au',
+        'url': 'https://transport.vic.gov.au',
         'system': 'Tram',
         'maxspeed': 80,
         'accel': 1.2,
@@ -151,9 +142,9 @@ settings = {
         'stop_prefix': 'TM',
     },
     'bus': {
-        'name': 'Melbourne Bus - Upgraded',
+        'name': 'Melbourne Bus',
         'loc': 'Australia/Melbourne',
-        'url': 'http://www.bze.org.au',
+        'url': 'https://transport.vic.gov.au',
         'system': 'Bus',
         'maxspeed': 60,
         'accel': 1.0,
@@ -171,9 +162,9 @@ settings = {
         'min_seg_length_on_motorways': 650,
     },
     'bus-smartbus': {
-        'name': 'Melbourne Bus - Upgraded - Smartbus',
+        'name': 'Melbourne Bus - Smartbus',
         'loc': 'Australia/Melbourne',
-        'url': 'http://www.bze.org.au',
+        'url': 'https://transport.vic.gov.au',
         'system': 'Bus',
         'maxspeed': 60,
         'accel': 1.0,
@@ -193,7 +184,7 @@ settings = {
     'bus-motorway': {
         'name': 'Melbourne Bus - Motorways',
         'loc': 'Australia/Melbourne',
-        'url': 'http://www.bze.org.au',
+        'url': 'https://transport.vic.gov.au',
         'system': 'Bus',
         'maxspeed': 100,
         'accel': 1.0,
@@ -217,8 +208,8 @@ settings['bus-smartbus']['on_motorway'] = settings['bus-motorway']
 settings['bus-motorway']['on_street'] = settings['bus']
 
 # These are plain strings, as required by the transitfeed library
-START_DATE_STR = '20130101'
-END_DATE_STR = '20151231'
+# START_DATE_STR = '20130101'
+# END_DATE_STR = '20151231'
 
 def calc_total_service_time_elapsed(serv_headways, curr_time):
     first_period_start_time = serv_headways[0][TP_START_COL]

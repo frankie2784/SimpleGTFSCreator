@@ -177,7 +177,6 @@ def create_extended_route_def(r_def_to_extend, r_ext_info,
         r_def_to_extend.id,
         r_short_name,
         r_long_name,
-        updated_dir_names,
         combined_seg_ref_ids)
 
     return extended_r_def
@@ -262,7 +261,6 @@ def create_new_route_def_extend_existing(r_def_to_extend, r_ext_info,
         new_r_id, 
         r_short_name,
         r_long_name,
-        dir_names,
         combined_seg_ref_ids)
 
     return new_r_def

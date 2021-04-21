@@ -46,13 +46,15 @@ def get_route_names_sorted(route_names):
 # manipulation of them.
 
 class Route_Def:
-    def __init__(self, route_id, short_name, long_name, dir_names,
+    def __init__(self, route_id, short_name, long_name, mode, headways, speeds,
             ordered_seg_ids, gtfs_origin_id = None):
         self.id = route_id
         self.gtfs_origin_id = gtfs_origin_id
         self.short_name = short_name
         self.long_name = long_name
-        self.dir_names = dir_names
+        self.mode = mode
+        self.headways = headways
+        self.speeds = speeds
         self.ordered_seg_ids = ordered_seg_ids
   
 class Seg_Reference:
@@ -289,8 +291,8 @@ def create_route_defs_list_from_route_segs(segs_by_route,
         # Haven't yet implemented ability to create route long names
         r_short_name = tp_model.route_name_from_id(r_id, mode_config)
         r_long_name = None
-        rdef = Route_Def(r_id, r_short_name, r_long_name, route_dirs[r_id],
-            map(operator.attrgetter('seg_id'), segs_by_route[r_id]))
+        rdef = Route_Def(r_id, None, r_short_name, r_long_name,
+            map(operator.attrgetter('seg_id'), None, segs_by_route[r_id]))
         route_defs.append(rdef)
     return route_defs
 
@@ -319,7 +321,8 @@ def get_stop_order(seg_ref, next_seg_ref):
     a matching stop with the 2nd segment. Return the IDs of the 1st and 2nd 
     stops in the first segment."""
     
-    linking_stop_id = find_linking_stop_id(seg_ref, next_seg_ref)
+    linking_stop_id = seg_ref.second_id
+    # linking_stop_id = find_linking_stop_id(seg_ref, next_seg_ref)
     if linking_stop_id is None:
         print "Error, in segment with id %d, next seg id is %d, "\
             "stop a is #%d, stop b is #%d, "\
@@ -1111,7 +1114,7 @@ def get_route_infos_to_extend(route_ext_infos, route_defs, segs_lyr,
 # I/O from route definition CSV
 
 # Old (Pre 15 Oct 2014) headers of route_defs.csv
-ROUTE_CSV_HEADERS_00 = ['Route', 'dir1', 'dir2', 'Segments']
+ROUTE_CSV_HEADERS_00 = ['route','id','mode','dir1','dir2','period','headway','speed','segments']
 
 # New headers:
 ROUTE_CSV_HEADERS_01 = ['route_id', 'route_short_name', 'route_long_name',
@@ -1141,8 +1144,8 @@ def read_route_defs(csv_file_name, do_sort=True):
     for ii, row in enumerate(dict_reader):
         if format_version == "00":
             r_id = row['id']
+            r_long_name = row['name']
             r_short_name = row['route']
-            r_long_name = None
         else:
             r_id = int(row['route_id'])
             r_short_name = row['route_short_name']
@@ -1159,13 +1162,14 @@ def read_route_defs(csv_file_name, do_sort=True):
                 r_gtfs_id = None
         except KeyError:
             r_gtfs_id = None
-        dir1 = row['dir1']
-        dir2 = row['dir2']
+        mode = row['mode']
+        speeds = {'AM':float(row['speed_am']),'IP':float(row['speed_ip']),'PM':float(row['speed_pm']),'OP':float(row['speed_op'])}
+        headways = {'AM':round(float(row['headway_am'])),'IP':round(float(row['headway_ip'])),'PM':round(float(row['headway_pm'])),'OP':round(float(row['headway_op']))}
         segments_str = row['segments'].split(',')
 
         seg_ids = [int(segstr) for segstr in segments_str]
-        route_def = Route_Def(r_id, r_short_name, r_long_name,
-            (dir1, dir2), seg_ids, gtfs_origin_id=r_gtfs_id)
+        route_def = Route_Def(r_id, r_short_name, r_long_name, \
+            mode, headways, speeds, seg_ids, gtfs_origin_id=r_gtfs_id)
         route_defs.append(route_def)
     if do_sort == True:
         route_defs.sort(key=get_route_order_key_from_name)
@@ -1181,19 +1185,19 @@ def write_route_defs(csv_file_name, route_defs):
     rwriter.writerow(ROUTE_CSV_HEADERS_01)
 
     for rdef in route_defs:
-        dirs = tuple(rdef.dir_names)
-        if not dirs:
-            print "Warning:- no dirs listed for route %s to write. "\
-                "writing as empty dirs." % rdef.short_name
-            dirs = ("", "")
-        if len(dirs) == 1:    
-            print "Warning:- only one dir listed for route %s to write. "\
-                "writing other dir as empty." % rdef.short_name
-            dirs = (dirs[0], "")
+        # dirs = tuple(rdef.dir_names)
+        # if not dirs:
+        #     print "Warning:- no dirs listed for route %s to write. "\
+        #         "writing as empty dirs." % rdef.short_name
+        #     dirs = ("", "")
+        # if len(dirs) == 1:    
+        #     print "Warning:- only one dir listed for route %s to write. "\
+        #         "writing other dir as empty." % rdef.short_name
+        #     dirs = (dirs[0], "")
             
         seg_str_all = ','.join(map(str, rdef.ordered_seg_ids))
         rwriter.writerow([rdef.id, rdef.short_name, rdef.long_name,
-            rdef.gtfs_origin_id, dirs[0], dirs[1], seg_str_all])
+            rdef.gtfs_origin_id, seg_str_all])
 
     routesfile.close()
     print "Wrote output to %s" % (csv_file_name)

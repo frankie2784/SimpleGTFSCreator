@@ -60,8 +60,8 @@ def get_route_def_and_trim_stop_specs_from_csv(csv_fname):
             print "Error:- in trim spec CSV:- there is a row where no "\
                 "route identifying info has been specified."
             sys.exit(1)
-        r_def = route_segs.Route_Def(r_id, short_name, long_name, 
-            (None, None), None)
+        r_def = route_segs.Route_Def(r_id, None, short_name, long_name, 
+            None, None)
         trim_first = csv_row['first_stop_name']
         trim_last = csv_row['last_stop_name']
         dir1 = csv_row['dir1']

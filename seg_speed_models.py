@@ -37,7 +37,7 @@ class SpeedModel:
         # By default, do nothing.
         return True
 
-    def save_extra_seg_speed_info(self, next_segment, serv_period, travel_dir):
+    def save_extra_seg_speed_info(self, next_segment, serv_period, mode_config, travel_dir):
         # By default, do nothing :- as not all sub-classes use this.
         return
     
@@ -76,9 +76,11 @@ SEG_PEAK_SPEED_FIELD = "peak_speed" # real, 24, 15
 class PeakOffPeakSegSpeedInfo:
     """A small struct to store needed extra per-stop speed info read in
     from shapefiles - to be added to a Seq_Stop_Info."""
-    def __init__(self, peak_speed_next, free_speed_next):
-        self.peak_speed_next = peak_speed_next
-        self.free_speed_next = free_speed_next
+    def __init__(self, am_speed_next, ip_speed_next, pm_speed_next, op_speed_next):
+        self.am_speed_next = am_speed_next
+        self.ip_speed_next = ip_speed_next
+        self.pm_speed_next = pm_speed_next
+        self.op_speed_next = op_speed_next
 
 class PerSegmentPeakOffPeakSpeedModel(SpeedModel):
     def add_extra_needed_speed_fields(self, segments_layer):
@@ -92,23 +94,27 @@ class PerSegmentPeakOffPeakSpeedModel(SpeedModel):
         segments_layer.CreateField(field) 
         return
 
-    def save_extra_seg_speed_info(self, next_segment, serv_period, travel_dir):
-        try:
-            peak_speed_next = next_segment.GetField(SEG_PEAK_SPEED_FIELD)
-        except ValueError:
-            print "ERROR: you asked to use per-segment speeds when "\
-                "calculating timetable, but given segments shapefile is "\
-                "missing field '%s'"\
-                % (SEG_PEAK_SPEED_FIELD)
-            sys.exit(1)    
-        try:
-            free_speed_next = next_segment.GetField(SEG_FREE_SPEED_FIELD)
-        except ValueError:
-            print "ERROR: you asked to use per-segment speeds when "\
-                "calculating timetable, but given segments shapefile is "\
-                "missing field '%s'" % (SEG_FREE_SPEED_FIELD)
-            sys.exit(1)    
-        speed_ext = PeakOffPeakSegSpeedInfo(peak_speed_next, free_speed_next)
+    def save_extra_seg_speed_info(self, next_segment, serv_period, mode_config, travel_dir):
+        am_speed_next = mode_config['speeds']['AM']
+        ip_speed_next = mode_config['speeds']['IP']
+        pm_speed_next = mode_config['speeds']['PM']
+        op_speed_next = mode_config['speeds']['OP']
+        # try:
+        #     peak_speed_next = next_segment.GetField(SEG_PEAK_SPEED_FIELD)
+        # except ValueError:
+        #     print "ERROR: you asked to use per-segment speeds when "\
+        #         "calculating timetable, but given segments shapefile is "\
+        #         "missing field '%s'"\
+        #         % (SEG_PEAK_SPEED_FIELD)
+        #     sys.exit(1)    
+        # try:
+        #     free_speed_next = next_segment.GetField(SEG_FREE_SPEED_FIELD)
+        # except ValueError:
+        #     print "ERROR: you asked to use per-segment speeds when "\
+        #         "calculating timetable, but given segments shapefile is "\
+        #         "missing field '%s'" % (SEG_FREE_SPEED_FIELD)
+        #     sys.exit(1)    
+        speed_ext = PeakOffPeakSegSpeedInfo(am_speed_next, ip_speed_next, pm_speed_next, op_speed_next)
         return speed_ext
 
     def get_speed_on_next_segment(self, seg_speed_info, curr_time,
@@ -117,10 +123,14 @@ class PerSegmentPeakOffPeakSpeedModel(SpeedModel):
         based on an average speed on that segment, and physical distance
         between them."""
         #assert isinstance(seg_speed_info, PeakOffPeakSegSpeedInfo)
-        if peak_status:
-            seg_speed = seg_speed_info.peak_speed_next
-        else:
-            seg_speed = seg_speed_info.free_speed_next
+        if peak_status == 'AM':
+            seg_speed = seg_speed_info.am_speed_next
+        elif peak_status == 'IP':
+            seg_speed = seg_speed_info.ip_speed_next
+        elif peak_status == 'PM':
+            seg_speed = seg_speed_info.pm_speed_next
+        elif peak_status == 'OP':
+            seg_speed = seg_speed_info.op_speed_next
         return seg_speed
 
     def assign_speeds_to_all_segments(self, segments_layer, mode_config,
@@ -240,7 +250,7 @@ class MultipleTimePeriodsSpeedModel(SpeedModel):
                 segments_layer.CreateField(field)
         return
 
-    def save_extra_seg_speed_info(self, next_segment, serv_period, travel_dir):
+    def save_extra_seg_speed_info(self, next_segment, serv_period, mode_config, travel_dir):
         time_period_speeds = []
         seg_field_prefix_in_dir = SEG_SPEED_IR_FIELD_PREFIXES[travel_dir]
         try:
@@ -324,6 +334,7 @@ class MultipleTimePeriodsPerRouteSpeedModel(MultipleTimePeriodsSpeedModel):
         for serv_period, trips_dir in \
                 itertools.product(serv_periods, route_def.dir_names):
             try:
+                # time_periods = route_def.periods
                 time_periods, route_avg_speeds, seg_distances, null = \
                     tps_speeds_model.read_route_speed_info_by_time_periods(
                         self.input_avg_speeds_dir, route_def.short_name,
@@ -357,7 +368,7 @@ class MultipleTimePeriodsPerRouteSpeedModel(MultipleTimePeriodsSpeedModel):
             pass
         return True
 
-    def save_extra_seg_speed_info(self, next_segment, serv_period, travel_dir):
+    def save_extra_seg_speed_info(self, next_segment, serv_period, mode_config, travel_dir):
         # We will look up relevant data for current serv period and direction,
         #  and save.
         seg_ref = route_segs.seg_ref_from_feature(next_segment)

@@ -1,5 +1,0 @@
-stop_lon,stop_name,stop_lat,stop_id,location_type
-144.921825,Ascot Vale Station,-37.77531,3000000,0
-144.930525,Kensington Station,-37.793777,3000001,0
-144.928984,Newmarket Station,-37.787326,3000002,0
-144.94151,North Melbourne Station,-37.806309,3000003,0

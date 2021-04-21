@@ -162,17 +162,17 @@ def build_segs_lookup_table(route_segments_lyr):
     return lookup_dict
 
 def build_stop_id_to_gtfs_stop_id_map(stops_lyr):
-    lyr_defn = stops_lyr.GetLayerDefn()
-    field_exists, field_i = check_field_exists(lyr_defn, STOP_GTFS_ID_FIELD)
-    if not field_exists:
-        raise ValueError("Can't build stop ID to GTFS ID map for a "\
-            "stops layer that doesn't include a GTFS ID field.")
+    # lyr_defn = stops_lyr.GetLayerDefn()
+    # field_exists, field_i = check_field_exists(lyr_defn, STOP_GTFS_ID_FIELD)
+    # if not field_exists:
+    #     raise ValueError("Can't build stop ID to GTFS ID map for a "\
+    #         "stops layer that doesn't include a GTFS ID field.")
     stop_id_to_gtfs_id_map = {}
     # Build mapping of osstip route id to gtfs route id
     for stop in stops_lyr:
         stop_id = stop.GetField(STOP_ID_FIELD)
-        gtfs_id = stop.GetField(STOP_GTFS_ID_FIELD)
-        stop_id_to_gtfs_id_map[stop_id] = gtfs_id
+        # gtfs_id = stop.GetField(STOP_GTFS_ID_FIELD)
+        stop_id_to_gtfs_id_map[stop_id] = stop_id
     stops_lyr.ResetReading()
     return stop_id_to_gtfs_id_map
 
@@ -201,7 +201,7 @@ def get_distance_km(seg_feature):
 
 def get_routes_on_seg(seg_feature):
     seg_routes = seg_feature.GetField(SEG_ROUTE_LIST_FIELD)
-    rlist = map(int, seg_routes.split(','))
+    rlist = [seg_routes]
     assert len(rlist) > 0
     return rlist
 

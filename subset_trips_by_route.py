@@ -34,8 +34,7 @@ def get_route_def_specs_from_csv(csv_fname):
             long_name = csv_row['route_long_name']
         except KeyError:
             long_name = None
-        r_def = route_segs.Route_Def(r_id, short_name, long_name, (None, None),
-            None)
+        r_def = route_segs.Route_Def(r_id, short_name, long_name, None, None)
         route_defs.append(r_def)
     csv_file.close()
     return route_defs
@@ -44,7 +43,7 @@ def get_single_route_def_list(route_short_names, route_long_names,
         csv_route_defs):
     single_route_def_list = []
     for short_name in route_short_names:
-        r_def = route_segs.Route_Def(None, short_name, None, (None, None), None)
+        r_def = route_segs.Route_Def(None, short_name, None, None, None)
         if True not in [route_segs.route_defs_match_statuses(r_def, r_def2) \
             for r_def2 in single_route_def_list]:
             single_route_def_list.append(r_def)
@@ -53,7 +52,7 @@ def get_single_route_def_list(route_short_names, route_long_names,
                 "ID %s, name %s. Skipping repeat instance." \
                     % (str(r_def.id), route_segs.get_print_name(r_def))
     for long_name in route_long_names:    
-        r_def = route_segs.Route_Def(None, None, long_name, (None, None), None)    
+        r_def = route_segs.Route_Def(None, None, long_name, None, None)    
         if True not in [route_segs.route_defs_match_statuses(r_def, r_def2) \
             for r_def2 in single_route_def_list]:
             single_route_def_list.append(r_def)

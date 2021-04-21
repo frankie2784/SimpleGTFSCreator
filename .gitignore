@@ -39,3 +39,12 @@ nosetests.xml
 *.swo
 *.swp
 sample_input/PTLINK.DBF
+sample_input/VITM Network/DetailedPTReporting_v200619_Y2036_VR19_Ref_C.xlsb
+sample_input/VITM Network/PT_Reporting.csv
+sample_input/VITM Network/PTLINK_ALL_Y2036_VR19_Ref_C.DBF
+sample_input/VITM Network/Train Stations_State_v8.csv
+sample_input/VITM Network/VITM_ALL_Y2036_VR19_Ref_C.cpg
+sample_input/VITM Network/VITM_ALL_Y2036_VR19_Ref_C.dbf
+sample_input/VITM Network/VITM_ALL_Y2036_VR19_Ref_C.prj
+sample_input/VITM Network/VITM_ALL_Y2036_VR19_Ref_C.shp
+sample_input/VITM Network/VITM_ALL_Y2036_VR19_Ref_C.shx

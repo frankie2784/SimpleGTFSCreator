@@ -1,2 +1,0 @@
-agency_url,agency_name,agency_id,agency_timezone
-http://www.bze.org.au,Metro Trains - Upgraded,30,Australia/Melbourne

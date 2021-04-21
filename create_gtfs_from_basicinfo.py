@@ -25,6 +25,7 @@ import topology_shapefile_data_model as tp_model
 import route_segs
 import seg_speed_models
 import time_periods_hways_model as tps_hways_model
+import VITM_info
 
 # Will determine how much infor is printed.
 VERBOSE = False
@@ -33,6 +34,8 @@ VERBOSE = False
 TODAY = date.today()
 
 ROUTE_WRITE_BATCH_DEF_SIZE = 20
+
+GTFS_ID = 0
 
 class Seq_Stop_Info:
     """A small struct to store key info about a stop in the sequence of a
@@ -46,10 +49,10 @@ class Seq_Stop_Info:
         self.extra_speed_info = None
 
     def save_seq_stop_info(self, next_segment, stops_lyr, serv_period,
-            travel_dir, speed_model):
+            travel_dir, speed_model, mode_config):
         self.dist_km_to_next = tp_model.get_distance_km(next_segment)
         self.extra_speed_info = speed_model.save_extra_seg_speed_info(
-            next_segment, serv_period, travel_dir)
+            next_segment, serv_period, mode_config, travel_dir)
 
     def calc_time_on_next_segment(self, speed_model, mode_config, curr_time,
             peak_status):
@@ -83,12 +86,13 @@ def build_stop_list_and_seg_info_along_route(route_def, serv_period, dir_id,
 
     seg_speed_model.setup_for_trip_set(route_def, serv_period, dir_id)
     # Apply a filter to speed up calculations - only segments on this route.
-    where_clause = "%s LIKE '%%%s' OR %s LIKE '%%%s,%%'" % \
-        (tp_model.SEG_ROUTE_LIST_FIELD, route_def.id,\
-        tp_model.SEG_ROUTE_LIST_FIELD, route_def.id)
+    # where_clause = "%s LIKE '%%%s' OR %s LIKE '%%%s,%%'" % \
+    #     (tp_model.SEG_ROUTE_LIST_FIELD, route_def.id,\
+    #     tp_model.SEG_ROUTE_LIST_FIELD, route_def.id)
+    where_clause = "%s = '%s'" % \
+        (tp_model.SEG_ROUTE_LIST_FIELD, route_def.id)
     route_segments_lyr.SetAttributeFilter(where_clause)
     segs_lookup_table = tp_model.build_segs_lookup_table(route_segments_lyr)
-
     ordered_seg_refs = route_segs.create_ordered_seg_refs_from_ids(
         route_def.ordered_seg_ids, segs_lookup_table)
     stop_ids_along_route = route_segs.extract_stop_list_along_route(
@@ -115,7 +119,7 @@ def build_stop_list_and_seg_info_along_route(route_def, serv_period, dir_id,
             sys.exit(1)    
         s_info = Seq_Stop_Info(first_stop)
         s_info.save_seq_stop_info(seg_feature, stops_lyr, serv_period, dir_id,
-            seg_speed_model)
+            seg_speed_model, mode_config)
         prebuilt_stop_info_list.append(s_info)
 
     # Now we've exited from the loop :- we need to now add info for
@@ -133,7 +137,8 @@ def build_stop_list_and_seg_info_along_route(route_def, serv_period, dir_id,
     return prebuilt_stop_info_list
 
 def create_gtfs_route_entries(route_defs, mode_config, schedule):
-    print "%s() called." % inspect.stack()[0][3]
+    global GTFS_ID
+    # print "%s() called." % inspect.stack()[0][3]
     route_id_to_gtfs_route_id_map = {}
     # Routes
     sorted_route_defs = sorted(route_defs,
@@ -142,7 +147,7 @@ def create_gtfs_route_entries(route_defs, mode_config, schedule):
         route_long_name = route_def.long_name
         route_short_name = route_def.short_name
         route_description = None
-        gtfs_route_id = str(mode_config['index'] + ii)
+        gtfs_route_id = str(mode_config['index'] + GTFS_ID)
         route_id_to_gtfs_route_id_map[route_def.id] = gtfs_route_id
         route = transitfeed.Route(
             short_name = route_short_name, 
@@ -150,9 +155,10 @@ def create_gtfs_route_entries(route_defs, mode_config, schedule):
             route_type = mode_config['system'],
             route_id = gtfs_route_id
             )
-        print "Adding route with ID %s, name '%s: %s'" % \
-            (gtfs_route_id, route_short_name, route_long_name)
+        print "Adding route with ID %s, name: %s" % \
+            (gtfs_route_id, route_long_name)
         schedule.AddRouteObject(route)
+        GTFS_ID += 1
     return route_id_to_gtfs_route_id_map        
 
 def create_gtfs_stop_entries(stops_shapefile, mode_config, schedule):
@@ -160,7 +166,7 @@ def create_gtfs_stop_entries(stops_shapefile, mode_config, schedule):
     attribute called 'Name' listing the name of the stop. (Note: it is ok if
     this is actually just a number, but it will be treated as a string.)"""
 
-    print "%s() called." % inspect.stack()[0][3]
+    # print "%s() called." % inspect.stack()[0][3]
 
     stop_id_to_gtfs_stop_id_map = {}
     layer = stops_shapefile.GetLayer(0)
@@ -205,10 +211,11 @@ def create_gtfs_stop_entries(stops_shapefile, mode_config, schedule):
     layer.ResetReading() # Necessary as we need to loop thru again later
     return stop_id_to_gtfs_stop_id_map       
 
-def add_service_period(days_week_str, schedule):    
+def add_service_period(days_week_str, schedule, year):
+    START_DATE_STR, END_DATE_STR = VITM_info.set_dates(year)
     service_period = transitfeed.ServicePeriod(id=days_week_str)
-    service_period.SetStartDate(m_t_info.START_DATE_STR)
-    service_period.SetEndDate(m_t_info.END_DATE_STR)
+    service_period.SetStartDate(START_DATE_STR)
+    service_period.SetEndDate(END_DATE_STR)
     # Set the day of week times
     if days_week_str == 'monthur':
         service_period.SetDayOfWeekHasService(0)
@@ -224,7 +231,7 @@ def add_service_period(days_week_str, schedule):
     elif days_week_str == 'sun':
         service_period.SetDayOfWeekHasService(6)
     else:
-        print("Error: Timetable %s not defined" % days_week_str)
+        print "Error: Timetable %s not defined" % days_week_str
     schedule.AddServicePeriodObject(service_period, validate=False)
     return service_period
 
@@ -234,9 +241,9 @@ def build_stop_name_to_gtfs_id_map(schedule):
         stop_name_to_gtfs_id_map[stop.stop_name] = stop_id
     return stop_name_to_gtfs_id_map
 
-def create_gtfs_service_periods(services_info, schedule):
+def create_gtfs_service_periods(services_info, schedule, year):
     for serv_period, period_info in services_info:
-        gtfs_period = add_service_period(serv_period, schedule)
+        gtfs_period = add_service_period(serv_period, schedule, year)
 
 def create_gtfs_trips_stoptimes(route_defs, route_segments_shp, stops_shp,
         mode_config, schedule, seg_speed_model, route_id_to_gtfs_id_map,
@@ -260,6 +267,9 @@ def create_gtfs_trips_stoptimes(route_defs, route_segments_shp, stops_shp,
     sorted_route_defs = sorted(route_defs,
         key=route_segs.get_route_order_key_from_name)
     for ii, route_def in enumerate(sorted_route_defs):
+        mode_config['speeds'] = route_def.speeds
+        VITM_headways = VITM_info.set_headways(route_def.headways)
+        mode_config['services_info'] = [("monfri", VITM_headways)]
         gtfs_route_id = route_id_to_gtfs_id_map[route_def.id]
         avg_hways_for_route = None
         if per_route_hways:
@@ -294,97 +304,96 @@ def create_gtfs_trips_stoptimes_for_route(route_def, route_segments_shp,
     route = schedule.GetRoute(gtfs_route_id)
 
     services_info = mode_config['services_info']
+    year = mode_config['year']
+
     if not avg_hways_for_route:
         serv_periods = map(operator.itemgetter(0), services_info)
     else:
         serv_periods = sorted(set(map(operator.itemgetter(1), 
             avg_hways_for_route.keys())))
-
     rsetup_status = seg_speed_model.setup_for_route(route_def, serv_periods)
     if not rsetup_status:
         print "Error:- failed to setup speed model for route %s - exiting." \
             % misc_utils.get_route_print_name(route_def.short_name, \
                route_def.long_name)
         sys.exit(1)
-
     # For our basic scheduler, we're going to just create both trips in
     # both directions, starting at exactly the same time, at the same
     # frequencies. The real-world implication of this is at least
     # 2 vehicles needed to service each route.
-    for dir_id, direction in enumerate(route_def.dir_names):
-        headsign = direction
-        for sp_i, serv_period in enumerate(serv_periods):
-            print "Handing service period '%s'" % (serv_period)
-            serv_headways = None
-            if not avg_hways_for_route:
-                serv_headways = services_info[sp_i][1]
-            else:
-                try:
-                    avg_hways_for_route_in_dir_period = \
-                        avg_hways_for_route[(direction, serv_period)]
-                except KeyError:
-                    # In some cases for bus loops, we had to manually add a
-                    # reverse dir, so try other one.
-                    other_dir = route_def.dir_names[1 - dir_id]
-                    avg_hways_for_route_in_dir_period = \
-                        avg_hways_for_route[(other_dir, serv_period)]
-                serv_headways = tps_hways_model.get_tp_hways_tuples(\
-                    avg_hways_for_route_in_dir_period, hways_tps)
-                    
-            assert serv_headways
-
+    headsign = route_def.long_name
+    for sp_i, serv_period in enumerate(serv_periods):
+        print "Handling service period '%s' for direction '%s'" % (serv_period, headsign)
+        serv_headways = None
+        if not avg_hways_for_route:
+            serv_headways = services_info[sp_i][1]
+        else:
             try:
-                gtfs_period = schedule.GetServicePeriod(serv_period)
-            except KeyError:    
-                gtfs_period = add_service_period(serv_period, schedule)
+                avg_hways_for_route_in_dir_period = \
+                    avg_hways_for_route[(direction, serv_period)]
+            except KeyError:
+                # In some cases for bus loops, we had to manually add a
+                # reverse dir, so try other one.
+                other_dir = route_def.dir_names[1]
+                avg_hways_for_route_in_dir_period = \
+                    avg_hways_for_route[(other_dir, serv_period)]
+            serv_headways = tps_hways_model.get_tp_hways_tuples(\
+                avg_hways_for_route_in_dir_period, hways_tps)
+                
+        assert serv_headways
 
-            # Pre-calculate the stops list and save relevant info related to 
-            # speed calculation from shapefiles for later.
-            # as this is a moderately expensive operation.
-            # This way we do this just once per route, direction,
-            # and serv period.
-            prebuilt_stop_info_list = build_stop_list_and_seg_info_along_route(
-                route_def, serv_period, dir_id, route_segments_shp, stops_shp,
-                mode_config, schedule, seg_speed_model,
-                stop_id_to_gtfs_stop_id_map)
-        
-            for curr_tp_i, curr_period_info in enumerate(serv_headways):
-                hw_min = serv_headways[curr_tp_i][m_t_info.HWAY_COL]
-                if hw_min <= 0:
-                    # No trips should start during this period.
-                    # Skip ahead straight to next.
-                    continue
-                curr_headway = timedelta(minutes=hw_min)
-                curr_period_inc = timedelta(0)
-                curr_period_start = curr_period_info[m_t_info.TP_START_COL]
-                curr_period_end = curr_period_info[m_t_info.TP_END_COL]
-                period_duration = \
-                    datetime.combine(TODAY, curr_period_end) - \
-                    datetime.combine(TODAY, curr_period_start)
-                # This logic needed to handle periods that cross midnight
-                if period_duration < timedelta(0):
-                    period_duration += timedelta(days=1)
- 
-                curr_start_time = curr_period_start
-                while curr_period_inc < period_duration:
-                    trip_id = mode_config['index'] + init_trip_ctr \
-                        + ntrips_this_route   
-                    trip = route.AddTrip(
-                        schedule, 
-                        headsign = headsign,
-                        trip_id = trip_id,
-                        service_period = gtfs_period )
+        try:
+            gtfs_period = schedule.GetServicePeriod(serv_period)
+        except KeyError:    
+            gtfs_period = add_service_period(serv_period, schedule, year)
 
-                    create_gtfs_trip_stoptimes(trip, curr_start_time,
-                        curr_tp_i, serv_headways, route_def,
-                        prebuilt_stop_info_list, mode_config,
-                        schedule, seg_speed_model)
-                    ntrips_this_route += 1
-                    # Now update necessary variables ...
-                    curr_period_inc += curr_headway
-                    next_start_time = (datetime.combine(TODAY, \
-                        curr_start_time) + curr_headway).time()
-                    curr_start_time = next_start_time
+        # Pre-calculate the stops list and save relevant info related to 
+        # speed calculation from shapefiles for later.
+        # as this is a moderately expensive operation.
+        # This way we do this just once per route, direction,
+        # and serv period.
+        prebuilt_stop_info_list = build_stop_list_and_seg_info_along_route(
+            route_def, serv_period, 0, route_segments_shp, stops_shp,
+            mode_config, schedule, seg_speed_model,
+            stop_id_to_gtfs_stop_id_map)
+    
+        for curr_tp_i, curr_period_info in enumerate(serv_headways):
+            hw_min = serv_headways[curr_tp_i][m_t_info.HWAY_COL]
+            if hw_min <= 0:
+                # No trips should start during this period.
+                # Skip ahead straight to next.
+                continue
+            curr_headway = timedelta(minutes=hw_min)
+            curr_period_inc = timedelta(0)
+            curr_period_start = curr_period_info[m_t_info.TP_START_COL]
+            curr_period_end = curr_period_info[m_t_info.TP_END_COL]
+            period_duration = \
+                datetime.combine(TODAY, curr_period_end) - \
+                datetime.combine(TODAY, curr_period_start)
+            # This logic needed to handle periods that cross midnight
+            if period_duration < timedelta(0):
+                period_duration += timedelta(days=1)
+
+            curr_start_time = curr_period_start
+            while curr_period_inc < period_duration:
+                trip_id = mode_config['index'] + init_trip_ctr \
+                    + ntrips_this_route   
+                trip = route.AddTrip(
+                    schedule, 
+                    headsign = headsign,
+                    trip_id = trip_id,
+                    service_period = gtfs_period )
+
+                create_gtfs_trip_stoptimes(trip, curr_start_time,
+                    curr_tp_i, serv_headways, route_def,
+                    prebuilt_stop_info_list, mode_config,
+                    schedule, seg_speed_model)
+                ntrips_this_route += 1
+                # Now update necessary variables ...
+                curr_period_inc += curr_headway
+                next_start_time = (datetime.combine(TODAY, \
+                    curr_start_time) + curr_headway).time()
+                curr_start_time = next_start_time
     return ntrips_this_route
 
 def create_gtfs_trip_stoptimes(trip, trip_start_time,
@@ -466,7 +475,7 @@ def create_gtfs_trip_stoptimes(trip, trip_start_time,
                 serv_headways[period_at_stop_i][m_t_info.PEAK_STATUS_COL]
             end_elapsed_curr_p = m_t_info.calc_service_time_elapsed_end_period(
                 serv_headways, period_at_stop_i)
-            
+        
         # Only have to do time inc. calculations if more stops remaining.
         if (stop_seq+1) < n_stops_on_route:
             time_inc = s_info.calc_time_on_next_segment(seg_speed_model,
@@ -480,11 +489,12 @@ def get_partial_save_name(output_fname, ii):
 
 def process_data(route_defs_csv_fname, input_segments_fname,
         input_stops_fname, mode_config, output, seg_speed_model,
-        memory_db, delete_partials, route_write_batch_size,
+        memory_db, delete_partials, route_write_batch_size, year,
         per_route_hways_fname = None):
     # Now see if we can open both needed shape files correctly
     route_defs = route_segs.read_route_defs(route_defs_csv_fname)
     route_segments_shp = osgeo.ogr.Open(input_segments_fname)
+    mode_config['year'] = year
     if route_segments_shp is None:
         print "Error, route segments shape file given, %s , failed to open." \
             % (input_segments_fname)
@@ -520,7 +530,7 @@ def process_data(route_defs_csv_fname, input_segments_fname,
         # Agency
         schedule.AddAgency(mode_config['name'], mode_config['url'],
             mode_config['loc'], agency_id=mode_config['id'])
-        create_gtfs_service_periods(mode_config['services_info'], schedule)
+        create_gtfs_service_periods(mode_config['services_info'], schedule, mode_config['year'])
         route_id_to_gtfs_route_id_map = create_gtfs_route_entries(
             route_defs[r_start:r_end+1], mode_config, schedule)
         stop_id_to_gtfs_stop_id_map = create_gtfs_stop_entries(stops_shp,
@@ -555,7 +565,7 @@ def process_data(route_defs_csv_fname, input_segments_fname,
         master_schedule.AddAgency(mode_config['name'], mode_config['url'],
             mode_config['loc'], agency_id=mode_config['id'])
         create_gtfs_service_periods(mode_config['services_info'],
-            master_schedule)
+            master_schedule, mode_config['year'])
         create_gtfs_route_entries(route_defs, mode_config, master_schedule)
         create_gtfs_stop_entries(stops_shp, mode_config, master_schedule)
         # Now close the shape files.
@@ -618,12 +628,14 @@ if __name__ == "__main__":
         dest='route_write_batch_size', 
         help='Number of routes to write out to file in each batch. Larger '\
             'values mean writing will be faster, but will use more memory.')
+    parser.add_option('--year', dest='year', 
+        help='Forecast year GTFS feed is based upon.')
     parser.add_option('--per_route_hways', dest='per_route_hways',
         help='An optional file specifying per-route headways in time '\
             'periods.')
     parser.set_defaults(output='google_transit.zip', usesegspeeds='True',
         gtfs_speeds_dir='', memorydb='True',
-        delete_partials='True',
+        delete_partials='True', year=date.today().year,
         route_write_batch_size=ROUTE_WRITE_BATCH_DEF_SIZE,)
     (options, args) = parser.parse_args()
             
@@ -676,6 +688,7 @@ if __name__ == "__main__":
         parser.error("Bad value of --route_write_batch_size given, must "\
             "be > 0.")
 
+    year = int(options.year)
     mode_config = m_t_info.settings[options.service]
 
     seg_speed_model = None
@@ -698,4 +711,5 @@ if __name__ == "__main__":
         memory_db,
         delete_partials,
         route_write_batch_size,
+        year,
         per_route_hways_fname)
