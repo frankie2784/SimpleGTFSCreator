@@ -99,7 +99,7 @@ def write_headways_minutes(stop_gtfs_ids_to_names_map, period_headways,
     writer.writerow(HWAYS_PER_STOP_HDRS + period_names)
 
     if stop_id_order is None:
-        s_ids = period_headways.keys()
+        s_ids = list(period_headways.keys())
     else:
         s_ids = stop_id_order
     for s_id in s_ids:
@@ -114,7 +114,7 @@ def read_headways_minutes(csv_fname):
     csv_file = open(safe_fpath, 'r')
     reader = csv.reader(csv_file, delimiter=';')
 
-    headers = reader.next()
+    headers = next(reader)
     tperiod_strings = headers[len(HWAYS_PER_STOP_HDRS):]
     time_periods = misc_utils.get_time_periods_from_strings(tperiod_strings)
     stop_id_i = HWAYS_PER_STOP_HDRS.index('Stop_id')
@@ -128,7 +128,7 @@ def read_headways_minutes(csv_fname):
         stop_name = row[stop_name_i]
         if not stop_name: stop_name = None
         stop_gtfs_ids_to_names_map[int(stop_id)] = stop_name
-        hways_in_tps = map(float, row[len(HWAYS_PER_STOP_HDRS):])
+        hways_in_tps = list(map(float, row[len(HWAYS_PER_STOP_HDRS):]))
         headways_at_stops_in_tps[stop_id] = hways_in_tps
     csv_file.close()
     return time_periods, headways_at_stops_in_tps, \
@@ -136,8 +136,8 @@ def read_headways_minutes(csv_fname):
 
 def write_route_hways_all_routes_all_stops(r_ids_to_names_map,
         time_periods, avg_hways_all_stops, output_fname, round_places=2):
-    print "Writing all route average headways in TPs to file %s ..." \
-        % output_fname
+    print("Writing all route average headways in TPs to file %s ..." \
+        % output_fname)
     
     safe_path_fname = misc_utils.get_win_safe_path(output_fname)
     if sys.version_info >= (3,0,0):
@@ -146,24 +146,23 @@ def write_route_hways_all_routes_all_stops(r_ids_to_names_map,
         csv_file = open(safe_path_fname, 'wb')
     writer = csv.writer(csv_file, delimiter=';')
     period_names = misc_utils.get_time_period_name_strings(time_periods)
-    route_ids_sorted = sorted(avg_hways_all_stops.keys(), key=lambda x:int(x))
+    route_ids_sorted = sorted(list(avg_hways_all_stops.keys()), key=lambda x:int(x))
     writer.writerow(AVG_HWAYS_ALL_STOPS_HDRS + period_names)
     for route_id in route_ids_sorted:
         avg_hways_all_stops_by_dir_period_pairs = avg_hways_all_stops[route_id]
         r_short_name, r_long_name = r_ids_to_names_map[route_id]
         avg_hways_all_stops_by_dpps_sorted = \
-            sorted(avg_hways_all_stops_by_dir_period_pairs.items(),
+            sorted(list(avg_hways_all_stops_by_dir_period_pairs.items()),
                 key=lambda x: (x[0][1], x[0][0]))
         for dir_period_pair, avg_hways_in_tps in \
                 avg_hways_all_stops_by_dpps_sorted:
             trips_dir = dir_period_pair[0]
             serv_period = dir_period_pair[1]
-            avg_hways_in_tps_rnd = map(lambda x: round(x, round_places), \
-                avg_hways_in_tps)
+            avg_hways_in_tps_rnd = [round(x, round_places) for x in avg_hways_in_tps]
             writer.writerow([route_id, r_short_name, r_long_name, \
                 serv_period, trips_dir] + avg_hways_in_tps_rnd)
     csv_file.close()
-    print "... done writing."
+    print("... done writing.")
     return
 
 def read_route_hways_all_routes_all_stops(per_route_hways_fname):
@@ -178,7 +177,7 @@ def read_route_hways_all_routes_all_stops(per_route_hways_fname):
     r_l_name_i = AVG_HWAYS_ALL_STOPS_HDRS.index('route_long_name')
     sp_i = AVG_HWAYS_ALL_STOPS_HDRS.index('serv_period')
     td_i = AVG_HWAYS_ALL_STOPS_HDRS.index('trips_dir')
-    headers = reader.next()
+    headers = next(reader)
     n_base_cols = len(AVG_HWAYS_ALL_STOPS_HDRS) 
     tp_strs = headers[n_base_cols:]
     tps = misc_utils.get_time_periods_from_strings(tp_strs)
@@ -193,7 +192,7 @@ def read_route_hways_all_routes_all_stops(per_route_hways_fname):
         r_ids_to_names_map[r_id] = r_short_name, r_long_name
         serv_period = row[sp_i]
         trips_dir = row[td_i]
-        avg_hways_in_tps = map(float, row[n_base_cols:])
+        avg_hways_in_tps = list(map(float, row[n_base_cols:]))
         if r_id not in avg_hways_all_stops:
             avg_hways_all_stops[r_id] = {}
         avg_hways_all_stops[r_id][(trips_dir,serv_period)] = avg_hways_in_tps

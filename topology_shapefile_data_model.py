@@ -59,14 +59,14 @@ STOP_TYPE_NEW_EXTENDED = "NEW_EXTENDED_ROUTE"
 
 def open_check_shp_lyr(shp_filename, shp_description):
     if not shp_filename:
-        print "Error, needed shape file of %s was given an empty path " \
-            "string." % (shp_description)
+        print("Error, needed shape file of %s was given an empty path " \
+            "string." % (shp_description))
         sys.exit(1)
     full_fname = os.path.expanduser(shp_filename)
     shp = osgeo.ogr.Open(full_fname, 0)
     if shp is None:
-        print "Error, needed shape file of %s with given path %s failed "\
-        "to open." % (shp_description, shp_filename)
+        print("Error, needed shape file of %s with given path %s failed "\
+        "to open." % (shp_description, shp_filename))
         sys.exit(1)
     lyr = shp.GetLayer(0)    
     return lyr, shp
@@ -111,12 +111,12 @@ def ensure_field_exists(route_segments_lyr, field_name, field_type_code,
         ok_props = check_field_props(lyr_defn, field_i, field_type_code,
             field_width, field_precision)
         if not ok_props:
-            print "Error: field '%s' exists, but badly defined - deleting, "\
-                "will re-create." % (field_name)
+            print("Error: field '%s' exists, but badly defined - deleting, "\
+                "will re-create." % (field_name))
             route_segments_lyr.DeleteField(field_i)
             field_exists = False
     if field_exists == False:
-        print "Creating new field '%s'." % field_name
+        print("Creating new field '%s'." % field_name)
         f_defn = ogr.FieldDefn(field_name, field_type_code)
         f_defn.SetWidth(field_width)
         if field_precision:
@@ -302,14 +302,14 @@ def create_stops_shp_file(stops_shp_file_name, delete_existing=False,
     and the stops layer within it."""
     # OGR doesn't like relative paths
     abs_stops_shp_file_name = os.path.abspath(stops_shp_file_name)
-    print "Creating new stops shape file at path %s:" % abs_stops_shp_file_name
+    print("Creating new stops shape file at path %s:" % abs_stops_shp_file_name)
     if os.path.exists(abs_stops_shp_file_name):
-        print "File exists at that name."
+        print("File exists at that name.")
         if delete_existing == True:
-            print "deleting so we can overwrite."
+            print("deleting so we can overwrite.")
             os.unlink(abs_stops_shp_file_name)
         else:
-            print "... so exiting."
+            print("... so exiting.")
             sys.exit(1)
     dirname = os.path.dirname(abs_stops_shp_file_name)
     if not os.path.exists(dirname):
@@ -317,8 +317,8 @@ def create_stops_shp_file(stops_shp_file_name, delete_existing=False,
     driver = ogr.GetDriverByName("ESRI Shapefile")
     stops_shp_file = driver.CreateDataSource(abs_stops_shp_file_name)
     if stops_shp_file is None:
-        print "Error trying to create new shapefile at path %s - exiting." %\
-            abs_stops_shp_file_name
+        print("Error trying to create new shapefile at path %s - exiting." %\
+            abs_stops_shp_file_name)
         sys.exit(1)
     srs = osr.SpatialReference()
     srs.ImportFromEPSG(EPSG_STOPS_FILE)
@@ -332,7 +332,7 @@ def create_stops_shp_file(stops_shp_file_name, delete_existing=False,
     layer.CreateField(field)
     if gtfs_origin_field:
         layer.CreateField(ogr.FieldDefn(STOP_GTFS_ID_FIELD, ogr.OFTInteger))
-    print "... done."
+    print("... done.")
     return stops_shp_file, layer
 
 def create_stops_shp_file_combined_from_existing(
@@ -458,20 +458,20 @@ def create_segs_shp_file(segs_shp_file_name, speed_model,
     and the segments layer within it."""
     # OGR doesn't like relative paths
     abs_segs_shp_file_name = os.path.abspath(segs_shp_file_name)
-    print "Creating new segs shape file at path %s:" % abs_segs_shp_file_name
+    print("Creating new segs shape file at path %s:" % abs_segs_shp_file_name)
     if os.path.exists(abs_segs_shp_file_name):
-        print "File exists at that name."
+        print("File exists at that name.")
         if delete_existing == True:
-            print "deleting so we can overwrite."
+            print("deleting so we can overwrite.")
             os.unlink(abs_segs_shp_file_name)
         else:
-            print "... so exiting."
+            print("... so exiting.")
             sys.exit(1)
     driver = ogr.GetDriverByName("ESRI Shapefile")
     segs_shp_file = driver.CreateDataSource(abs_segs_shp_file_name)
     if segs_shp_file is None:
-        print "Error trying to create new shapefile at path %s - exiting." %\
-            abs_segs_shp_file_name
+        print("Error trying to create new shapefile at path %s - exiting." %\
+            abs_segs_shp_file_name)
         sys.exit(1)
     srs = osr.SpatialReference()
     srs.ImportFromEPSG(EPSG_SEGS_FILE)
@@ -496,7 +496,7 @@ def create_segs_shp_file(segs_shp_file_name, speed_model,
 
     speed_model.add_extra_needed_speed_fields(layer)
 
-    print "... done."
+    print("... done.")
     return segs_shp_file, layer
 
 def add_route_to_seg(segments_lyr, seg_feat, route_name):
@@ -520,10 +520,10 @@ def route_id_from_name(route_name):
     try:
         r_id = int(re.findall(r'\d+', route_name)[0])
     except IndexError:
-        print "Error:- for route name '%s', couldn't extract an ID. "\
+        print("Error:- for route name '%s', couldn't extract an ID. "\
             "Route names should be of pattern text prefix followed by "\
             "a route number, e.g. 'R43', 'M002'." \
-            % (route_name)
+            % (route_name))
     return r_id
 
 def get_stop_ids_of_seg(seg_feature):

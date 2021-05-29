@@ -38,13 +38,100 @@ nosetests.xml
 # VIM editor swapfiles
 *.swo
 *.swp
-sample_input/PTLINK.DBF
-sample_input/VITM Network/DetailedPTReporting_v200619_Y2036_VR19_Ref_C.xlsb
-sample_input/VITM Network/PT_Reporting.csv
-sample_input/VITM Network/PTLINK_ALL_Y2036_VR19_Ref_C.DBF
-sample_input/VITM Network/Train Stations_State_v8.csv
-sample_input/VITM Network/VITM_ALL_Y2036_VR19_Ref_C.cpg
-sample_input/VITM Network/VITM_ALL_Y2036_VR19_Ref_C.dbf
-sample_input/VITM Network/VITM_ALL_Y2036_VR19_Ref_C.prj
-sample_input/VITM Network/VITM_ALL_Y2036_VR19_Ref_C.shp
-sample_input/VITM Network/VITM_ALL_Y2036_VR19_Ref_C.shx
+input/.DS_Store
+input/1/shapes.txt
+input/1/VITM_routes.csv
+input/1/VITM_segments.cpg
+input/1/VITM_segments.dbf
+input/1/VITM_segments.prj
+input/1/VITM_segments.shp
+input/1/VITM_segments.shx
+input/1/VITM_stops.cpg
+input/1/VITM_stops.dbf
+input/1/VITM_stops.prj
+input/1/VITM_stops.shp
+input/1/VITM_stops.shx
+input/11/shapes.txt
+input/11/VITM_routes.csv
+input/11/VITM_segments.cpg
+input/11/VITM_segments.dbf
+input/11/VITM_segments.prj
+input/11/VITM_segments.shp
+input/11/VITM_segments.shx
+input/11/VITM_stops.cpg
+input/11/VITM_stops.dbf
+input/11/VITM_stops.prj
+input/11/VITM_stops.shp
+input/11/VITM_stops.shx
+input/2/shapes.txt
+input/2/VITM_routes.csv
+input/2/VITM_segments.cpg
+input/2/VITM_segments.dbf
+input/2/VITM_segments.prj
+input/2/VITM_segments.shp
+input/2/VITM_segments.shx
+input/2/VITM_stops.cpg
+input/2/VITM_stops.dbf
+input/2/VITM_stops.prj
+input/2/VITM_stops.shp
+input/2/VITM_stops.shx
+input/3/shapes.txt
+input/3/VITM_routes.csv
+input/3/VITM_segments.cpg
+input/3/VITM_segments.dbf
+input/3/VITM_segments.prj
+input/3/VITM_segments.shp
+input/3/VITM_segments.shx
+input/3/VITM_stops.cpg
+input/3/VITM_stops.dbf
+input/3/VITM_stops.prj
+input/3/VITM_stops.shp
+input/3/VITM_stops.shx
+input/4/shapes.txt
+input/4/VITM_routes.csv
+input/4/VITM_segments.cpg
+input/4/VITM_segments.dbf
+input/4/VITM_segments.prj
+input/4/VITM_segments.shp
+input/4/VITM_segments.shx
+input/4/VITM_stops.cpg
+input/4/VITM_stops.dbf
+input/4/VITM_stops.prj
+input/4/VITM_stops.shp
+input/4/VITM_stops.shx
+input/VITM Network/.DS_Store
+input/VITM Network/Train Stations_State_v8.csv
+input/VITM Network/2018/DetailedPTReporting_v200619_Y2018_VR19_Ref_C.xlsb
+input/VITM Network/2018/PTLINK_ALL_Y2018_VR19_Ref_C.DBF
+input/VITM Network/2018/SUMMARY_LOADED_NETWORK_LINKS_Y2018_VR19_Ref_C.cpg
+input/VITM Network/2018/SUMMARY_LOADED_NETWORK_LINKS_Y2018_VR19_Ref_C.DBF
+input/VITM Network/2018/SUMMARY_LOADED_NETWORK_LINKS_Y2018_VR19_Ref_C.shp
+input/VITM Network/2018/SUMMARY_LOADED_NETWORK_LINKS_Y2018_VR19_Ref_C.shx
+input/VITM Network/2026/DetailedPTReporting_v200619_Y2026_VR19_Ref_C.xlsb
+input/VITM Network/2026/PTLINK_ALL_Y2026_VR19_Ref_C.DBF
+input/VITM Network/2026/SUMMARY_LOADED_NETWORK_LINKS_Y2026_VR19_Ref_C.cpg
+input/VITM Network/2026/SUMMARY_LOADED_NETWORK_LINKS_Y2026_VR19_Ref_C.DBF
+input/VITM Network/2026/SUMMARY_LOADED_NETWORK_LINKS_Y2026_VR19_Ref_C.shp
+input/VITM Network/2026/SUMMARY_LOADED_NETWORK_LINKS_Y2026_VR19_Ref_C.shx
+input/VITM Network/2036/DetailedPTReporting_v200619_Y2036_VR19_Ref_C.xlsb
+input/VITM Network/2036/PTLINK_ALL_Y2036_VR19_Ref_C.DBF
+input/VITM Network/2036/SUMMARY_LOADED_NETWORK_LINKS_Y2036_VR19_Ref_C.cpg
+input/VITM Network/2036/SUMMARY_LOADED_NETWORK_LINKS_Y2036_VR19_Ref_C.DBF
+input/VITM Network/2036/SUMMARY_LOADED_NETWORK_LINKS_Y2036_VR19_Ref_C.shp
+input/VITM Network/2036/SUMMARY_LOADED_NETWORK_LINKS_Y2036_VR19_Ref_C.shx
+input/VITM Network/2051/DetailedPTReporting_v200619_Y2051_VR19_Ref_C.xlsb
+input/VITM Network/2051/PTLINK_ALL_Y2051_VR19_Ref_C.DBF
+input/VITM Network/2051/SUMMARY_LOADED_NETWORK_LINKS_Y2051_VR19_Ref_C.cpg
+input/VITM Network/2051/SUMMARY_LOADED_NETWORK_LINKS_Y2051_VR19_Ref_C.DBF
+input/VITM Network/2051/SUMMARY_LOADED_NETWORK_LINKS_Y2051_VR19_Ref_C.shp
+input/VITM Network/2051/SUMMARY_LOADED_NETWORK_LINKS_Y2051_VR19_Ref_C.shx
+*.gpkg
+tests/.DS_Store
+logs/custom-scanners-service.log
+.ipynb_checkpoints/Offcuts-checkpoint.ipynb
+.ipynb_checkpoints/LICENSE-checkpoint
+.ipynb_checkpoints/createGTFS-Copy2-checkpoint.ipynb
+.ipynb_checkpoints/createGTFS-Copy1-checkpoint.ipynb
+.ipynb_checkpoints/createGTFS-checkpoint.ipynb
+.ipynb_checkpoints/create_gtfs_from_basicinfo-checkpoint.py
+.vscode/settings.json

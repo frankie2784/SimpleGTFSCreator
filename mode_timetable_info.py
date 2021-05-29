@@ -109,7 +109,7 @@ settings = {
         'name': 'Metro Trains',
         'loc': 'Australia/Melbourne',
         'url': 'https://transport.vic.gov.au',
-        'system': 'Subway',
+        'system': 'Rail',
         'maxspeed': 100,
         'accel': 1.0,
         'stop_dwell_time': 30,
@@ -154,19 +154,19 @@ settings = {
         'services_info': RAMPED_SERVICE_INFO,
         'id': 44,
         'index': 4400000,
-        'route_prefix': 'R',
+        'route_prefix': 'B',
         'stop_prefix': 'B',
         # Dist used to decide if segments are considered 'on motorway'
         # for speed purposes
         'on_motorway_seg_check_dist': 100,
         'min_seg_length_on_motorways': 650,
     },
-    'bus-smartbus': {
-        'name': 'Melbourne Bus - Smartbus',
+    'vline': {
+        'name': 'VLine',
         'loc': 'Australia/Melbourne',
         'url': 'https://transport.vic.gov.au',
-        'system': 'Bus',
-        'maxspeed': 60,
+        'system': 'Rail',
+        'maxspeed': 100,
         'accel': 1.0,
         'stop_dwell_time': 20,
         'avespeed': 30,
@@ -174,19 +174,19 @@ settings = {
         'services_info': RAMPED_SERVICE_INFO,
         'id': 45,
         'index': 4500000,
-        'route_prefix': 'R',
-        'stop_prefix': 'B',
+        'route_prefix': 'V',
+        'stop_prefix': 'V',
         # Dist used to decide if segments are considered 'on motorway'
         # for speed purposes
         'on_motorway_seg_check_dist': 100,
         'min_seg_length_on_motorways': 650,
     },
-    'bus-motorway': {
-        'name': 'Melbourne Bus - Motorways',
+    'skybus': {
+        'name': 'SkyBus',
         'loc': 'Australia/Melbourne',
         'url': 'https://transport.vic.gov.au',
         'system': 'Bus',
-        'maxspeed': 100,
+        'maxspeed': 80,
         'accel': 1.0,
         'stop_dwell_time': 20,
         'avespeed': 55,
@@ -194,8 +194,8 @@ settings = {
         'services_info': RAMPED_SERVICE_INFO,
         'id': 46,
         'index': 4600000,
-        'route_prefix': 'M',
-        'stop_prefix': 'N',
+        'route_prefix': 'S',
+        'stop_prefix': 'S',
         'on_motorway_seg_check_dist': 80,
         'min_seg_length_on_motorways': 300,
     },
@@ -203,9 +203,9 @@ settings = {
 
 # These refs are necessary for setting appropriate speed for both bus and
 # bus-motorway networks, which move between motorways and streets.
-settings['bus']['on_motorway'] = settings['bus-motorway']
-settings['bus-smartbus']['on_motorway'] = settings['bus-motorway']
-settings['bus-motorway']['on_street'] = settings['bus']
+# settings['bus']['on_motorway'] = settings['bus-motorway']
+# settings['bus-smartbus']['on_motorway'] = settings['bus-motorway']
+# settings['bus-motorway']['on_street'] = settings['bus']
 
 # These are plain strings, as required by the transitfeed library
 # START_DATE_STR = '20130101'

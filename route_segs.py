@@ -122,9 +122,9 @@ def get_seg_dist_km(seg_ref):
     if seg_ref is not None:
         return seg_ref.route_dist_on_seg / tp_model.ROUTE_DIST_RATIO_TO_KM
     else:
-        print "Warning:- asked for distance of a seg_ref with ID %d, but "\
+        print("Warning:- asked for distance of a seg_ref with ID %d, but "\
             "route distance hasn't yet been read or calculated for this "\
-            "seg_ref." % seg_ref.seg_id
+            "seg_ref." % seg_ref.seg_id)
         return None
 
 def get_other_stop_id(seg_ref, stop_id):
@@ -240,8 +240,8 @@ def route_def_matches_gtfs_route(route_def, gtfs_route):
     return match_status
 
 def get_gtfs_route_ids_matching_route_defs(route_defs_to_match, gtfs_routes):
-    route_defs_to_check_match = zip(route_defs_to_match,
-        itertools.count(0))
+    route_defs_to_check_match = list(zip(route_defs_to_match,
+        itertools.count(0)))
     matching_gtfs_ids = []
     route_defs_match_status = [False] * len(route_defs_to_match)
     all_matched = False
@@ -255,10 +255,10 @@ def get_gtfs_route_ids_matching_route_defs(route_defs_to_match, gtfs_routes):
                 if gtfs_route_id not in matching_gtfs_ids:
                     matching_gtfs_ids.append(gtfs_route_id)
                 else:
-                    print "Warning: route def just matched, with ID "\
+                    print("Warning: route def just matched, with ID "\
                         "%s, name %s, already matched a GTFS route. "\
                         "Ignoring 2nd match." \
-                        % (gtfs_route_id, get_print_name(route_def))
+                        % (gtfs_route_id, get_print_name(route_def)))
                 if route_def.id == gtfs_route_id:
                     # Only remove the route_def in this case, since we matched
                     # on ID. Otherwise there may be more matches.
@@ -272,9 +272,9 @@ def get_gtfs_route_ids_matching_route_defs(route_defs_to_match, gtfs_routes):
     for r_index, match_status in enumerate(route_defs_match_status):
         if not match_status:
             unmatched_r_def = route_defs_to_match[r_index]
-            print "Warning: route given by ID %s, name %s, didn't match "\
+            print("Warning: route given by ID %s, name %s, didn't match "\
                 "any GTFS routes in given selection." \
-                % (unmatched_r_def.id, get_print_name(unmatched_r_def))
+                % (unmatched_r_def.id, get_print_name(unmatched_r_def)))
     return matching_gtfs_ids, route_defs_match_status
 
 def create_route_defs_list_from_route_segs(segs_by_route,
@@ -285,14 +285,14 @@ def create_route_defs_list_from_route_segs(segs_by_route,
     provided, routes defs in list will be ordered in that order."""
     route_defs = []
     if r_ids_output_order is None:
-        r_ids_output_order = segs_by_route.keys()
+        r_ids_output_order = list(segs_by_route.keys())
 
     for r_id in r_ids_output_order:
         # Haven't yet implemented ability to create route long names
         r_short_name = tp_model.route_name_from_id(r_id, mode_config)
         r_long_name = None
         rdef = Route_Def(r_id, None, r_short_name, r_long_name,
-            map(operator.attrgetter('seg_id'), None, segs_by_route[r_id]))
+            list(map(operator.attrgetter('seg_id'), None, segs_by_route[r_id])))
         route_defs.append(rdef)
     return route_defs
 
@@ -324,13 +324,13 @@ def get_stop_order(seg_ref, next_seg_ref):
     linking_stop_id = seg_ref.second_id
     # linking_stop_id = find_linking_stop_id(seg_ref, next_seg_ref)
     if linking_stop_id is None:
-        print "Error, in segment with id %d, next seg id is %d, "\
+        print("Error, in segment with id %d, next seg id is %d, "\
             "stop a is #%d, stop b is #%d, "\
             "next seg stop a is #%d, stop b is #%d, "\
             "couldn't work out stop order."\
             % (seg_ref.seg_id, next_seg_ref.seg_id, \
              seg_ref.first_id, seg_ref.second_id, \
-             next_seg_ref.first_id, next_seg_ref.second_id)
+             next_seg_ref.first_id, next_seg_ref.second_id))
         sys.exit(1)
     else:
         first_stop_id = get_other_stop_id(seg_ref, linking_stop_id)
@@ -384,12 +384,12 @@ def order_segs_based_on_links(route_seg_refs, seg_links):
     (given in list route_seg_refs), based on their links via common stops."""
     # Ok: start with one of the segments that only has one link
     start_seg_id = None
-    for seg_id, links in seg_links.iteritems():
+    for seg_id, links in seg_links.items():
         if len(links) == 1:
             start_seg_id = seg_id
             break
     if start_seg_id is None:
-        print "Error: no segment with 1 link."
+        print("Error: no segment with 1 link.")
         sys.exit(1)
 
     ordered_seg_refs = [get_seg_ref_with_id(start_seg_id, route_seg_refs)]
@@ -401,8 +401,8 @@ def order_segs_based_on_links(route_seg_refs, seg_links):
         ordered_seg_refs.append(curr_seg_ref)
         links = seg_links[curr_seg_id]
         if len(links) > 2:
-            print "Error, segment %d is linked to %d other segments %s" %\
-                (currseg, len(links), links)
+            print("Error, segment %d is linked to %d other segments %s" %\
+                (currseg, len(links), links))
             sys.exit(1)    
         if len(links) == 1:
             # We have reached the final segment in the route.
@@ -416,22 +416,22 @@ def order_segs_based_on_links(route_seg_refs, seg_links):
         curr_seg_id = next_seg_id
 
     if len(route_seg_refs) != len(ordered_seg_refs):
-        print "Error: total # segments for this route is %d, but only "\
+        print("Error: total # segments for this route is %d, but only "\
             "found a linked chain of %d segments." \
-            % (len(route_seg_refs), len(ordered_seg_refs))
+            % (len(route_seg_refs), len(ordered_seg_refs)))
         unlinked_seg_ids = []
         for seg in route_seg_refs:
             if get_seg_ref_with_id(seg.seg_id, route_seg_refs) is None:
                 unlinked_seg_ids.append(seg.seg_id)
-        print "Unlinked segment IDs: %s" % unlinked_seg_ids
+        print("Unlinked segment IDs: %s" % unlinked_seg_ids)
         sys.exit(1)
     return ordered_seg_refs
 
 def get_set_of_stops_in_route_so_far(segs_so_far):
-    stop_ids_in_route_so_far = map(operator.attrgetter('first_id'),
-        segs_so_far)
-    stop_ids_in_route_so_far += map(operator.attrgetter('second_id'),
-        segs_so_far)
+    stop_ids_in_route_so_far = list(map(operator.attrgetter('first_id'),
+        segs_so_far))
+    stop_ids_in_route_so_far += list(map(operator.attrgetter('second_id'),
+        segs_so_far))
     stop_ids_in_route_so_far = set(stop_ids_in_route_so_far)    
     return stop_ids_in_route_so_far
 
@@ -461,8 +461,8 @@ def get_links_sorted_by_distance(link_seg_ids, seg_refs,
         links_and_dists.append((link_seg_id, link_seg.route_dist_on_seg))
     if links_and_dists:
         links_and_dists.sort(key=operator.itemgetter(1))
-        link_seg_ids_sorted_by_dist = map(operator.itemgetter(0),
-            links_and_dists)
+        link_seg_ids_sorted_by_dist = list(map(operator.itemgetter(0),
+            links_and_dists))
     else:
         link_seg_ids_sorted_by_dist = None
     return link_seg_ids_sorted_by_dist
@@ -500,10 +500,10 @@ def get_seg_refs_for_ordered_stop_ids(stop_ids, seg_refs):
         seg_id = get_seg_id_with_stop_ids(seg_refs,
             stop_id_a, stop_id_b)
         if seg_id is None:
-            print "WARNING:- the pattern being processed contains no "\
+            print("WARNING:- the pattern being processed contains no "\
                 "segments with stop pair IDs %d, %d, in list of "\
                 "ordered stop ids you requested."\
-                % (stop_id_a, stop_id_b)
+                % (stop_id_a, stop_id_b))
             ordered_segs = []
             break
         else:
@@ -536,7 +536,7 @@ def get_full_stop_pattern_segs(all_pattern_segs, seg_links,
     """
 
     full_stop_pattern_segs = []
-    all_seg_ids = map(operator.attrgetter('seg_id'), all_pattern_segs) 
+    all_seg_ids = list(map(operator.attrgetter('seg_id'), all_pattern_segs)) 
 
     if len(all_pattern_segs) == 1:
         full_stop_pattern_segs = list(all_pattern_segs)
@@ -546,15 +546,15 @@ def get_full_stop_pattern_segs(all_pattern_segs, seg_links,
         # In this case :- we have at least two segments to start from in a
         # given order. Build these then add the longest chain at end.
         # We know there's no need to extend/reverse from here.
-        print "Starting building chain with segs between stops %s ...." \
-            % (force_first_stop_ids)
+        print("Starting building chain with segs between stops %s ...." \
+            % (force_first_stop_ids))
         full_stop_pattern_segs = get_seg_refs_for_ordered_stop_ids(
             force_first_stop_ids, all_pattern_segs)
         if not full_stop_pattern_segs: return []
         first_link_seg_id = full_stop_pattern_segs.pop().seg_id
-        print "Added seg IDs b/w these stops: %s - next is %d" \
-            % (map(operator.attrgetter('seg_id'), full_stop_pattern_segs),\
-               first_link_seg_id)
+        print("Added seg IDs b/w these stops: %s - next is %d" \
+            % (list(map(operator.attrgetter('seg_id'), full_stop_pattern_segs)),\
+               first_link_seg_id))
         seg_chain, chain_len = get_longest_seg_linked_chain(first_link_seg_id,
             all_pattern_segs, full_stop_pattern_segs, seg_links, {})
         full_stop_pattern_segs += seg_chain
@@ -562,13 +562,13 @@ def get_full_stop_pattern_segs(all_pattern_segs, seg_links,
     elif force_first_stop_ids and len(force_first_stop_ids) == 2:
         # We've been given req'd first two stops, hence req'd first 
         # segment. So search all options with this segment in order.
-        print "Starting building chain with seg between stops %s ...." \
-            % (force_first_stop_ids)
+        print("Starting building chain with seg between stops %s ...." \
+            % (force_first_stop_ids))
         full_stop_pattern_segs = get_seg_refs_for_ordered_stop_ids(
             force_first_stop_ids, all_pattern_segs)
         if not full_stop_pattern_segs: return []
         first_seg_id = full_stop_pattern_segs[0].seg_id
-        print "First build seg is #%d" % first_seg_id
+        print("First build seg is #%d" % first_seg_id)
         link_seg_ids = seg_links[first_seg_id]
         link_segs = [get_seg_ref_with_id(seg_id, all_pattern_segs) for \
             seg_id in link_seg_ids]
@@ -589,8 +589,8 @@ def get_full_stop_pattern_segs(all_pattern_segs, seg_links,
         # this stop belongs to to start at. Need to potentially try
         # all combos passing through this stop.
         first_stop_id = force_first_stop_ids[0]
-        print "Forcing start of building chain at stop ID %d" \
-            % first_stop_id
+        print("Forcing start of building chain at stop ID %d" \
+            % first_stop_id)
         cand_start_seg_ids = get_seg_ids_that_include_stop_id(
             all_pattern_segs, first_stop_id)
         start_seg_ids_and_chains = []
@@ -622,21 +622,21 @@ def get_full_stop_pattern_segs(all_pattern_segs, seg_links,
         # only has one link - and is therefore an end of the route.
         possible_reverse_links = False
         start_seg_id = None
-        for seg_id, link_seg_ids in seg_links.iteritems():
+        for seg_id, link_seg_ids in seg_links.items():
             if len(link_seg_ids) == 1:
                 start_seg_id = seg_id
                 break
         if start_seg_id is not None:
-            print "No start stop specified, so starting with seg #%d "\
-                "that has only one link." % start_seg_id
+            print("No start stop specified, so starting with seg #%d "\
+                "that has only one link." % start_seg_id)
         else:
-            print "No start stop specified, and route has no "\
-                "segments with only one link."
+            print("No start stop specified, and route has no "\
+                "segments with only one link.")
             possible_reverse_links = True
             # Fallback case.
             cand_start_seg_ids, min_links = get_seg_ids_with_minimum_links(
                 all_seg_ids, seg_links)
-            print "Minimum links of any seg is %d" % min_links
+            print("Minimum links of any seg is %d" % min_links)
             # Try the 'starts' and 'ends' first in order we read segs for this
             # route.
             min_dist_from_end = float("inf")
@@ -647,8 +647,8 @@ def get_full_stop_pattern_segs(all_pattern_segs, seg_links,
                     start_seg_id = seg_id
                     if dist_from_end == 0:
                         break
-            print "Starting with seg to have this # of links closest to "\
-                "start or end = seg #%s" % start_seg_id
+            print("Starting with seg to have this # of links closest to "\
+                "start or end = seg #%s" % start_seg_id)
                     
         # Ok:- we've chosen a start seg ID, now need to choose best link seg
         #print "Added start seg %d." % start_seg_id
@@ -686,7 +686,7 @@ def get_full_stop_pattern_segs(all_pattern_segs, seg_links,
                     # already included chain.
                     rev_candidate_link_ids.append(link_seg_id)
             if rev_candidate_link_ids:
-                print "Calling special reverse case ..."
+                print("Calling special reverse case ...")
                 full_stop_pattern_segs.reverse()
                 longest_chains_lookup_cache = {}
                 longest_sub_chain = []
@@ -723,7 +723,7 @@ def get_longest_seg_linked_chain(init_seg_id, all_segs, segs_visited_so_far,
     curr_seg_id = init_seg_id
     while True:
         curr_seg_ref = get_seg_ref_with_id(curr_seg_id, all_segs)
-        assert curr_seg_id not in map(operator.attrgetter('seg_id'), seg_chain) 
+        assert curr_seg_id not in list(map(operator.attrgetter('seg_id'), seg_chain)) 
         seg_chain.append(curr_seg_ref)
         #print "Appended seg %d to sub chain. - sub chain is now %s." % \
         #    (curr_seg_id, map(operator.attrgetter('seg_id'), seg_chain))
@@ -804,8 +804,8 @@ def get_longest_seg_linked_chain(init_seg_id, all_segs, segs_visited_so_far,
             break
 
         # Defensive check
-        if next_seg_id in map(operator.attrgetter('seg_id'),
-                segs_visited_so_far + seg_chain):
+        if next_seg_id in list(map(operator.attrgetter('seg_id'),
+                segs_visited_so_far + seg_chain)):
             #print "Warning, we found a loop in segments while constructing "\
             #    "full-stop pattern - breaking with loop seg id being %d."\
             #    % next_seg_id
@@ -834,8 +834,8 @@ def order_all_route_segments(all_segs_by_route, r_ids_sorted=None):
         r_ids_sorted = sorted(all_segs_by_route.keys())
     segs_by_routes_ordered = {}
     for r_id in r_ids_sorted:
-        print "Ordering segments by traversal for route ID %d:" \
-            % (r_id)
+        print("Ordering segments by traversal for route ID %d:" \
+            % (r_id))
         route_seg_refs = all_segs_by_route[r_id]
         if len(route_seg_refs) == 1:
             segs_by_routes_ordered[r_id] = route_seg_refs
@@ -852,7 +852,7 @@ def create_basic_route_dir_names(all_segs_by_route, mode_config):
     """Creating basic direction names for routes :- based on first and last
     stop ids and names in each route."""
     route_dir_names = {}
-    for r_id, route_seg_refs in all_segs_by_route.iteritems():
+    for r_id, route_seg_refs in all_segs_by_route.items():
         if len(route_seg_refs) == 1:
             start_stop = route_seg_refs[0].first_id
             end_stop = route_seg_refs[0].second_id
@@ -860,18 +860,18 @@ def create_basic_route_dir_names(all_segs_by_route, mode_config):
             first_seg, second_seg = route_seg_refs[0], route_seg_refs[1]
             start_stop = find_non_linking_stop_id(first_seg, second_seg)
             if start_stop is None:
-                print "Error in working out directions for route ID %d:- "\
+                print("Error in working out directions for route ID %d:- "\
                     "first and second segments don't link via a common stop!"\
-                    % r_id
+                    % r_id)
                 sys.exit(1)    
             last_seg = route_seg_refs[-1]
             second_last_seg = route_seg_refs[-2]
             end_stop = find_non_linking_stop_id(last_seg, second_last_seg)
             if end_stop is None:
-                print "Error in working out directions for route ID %d:- "\
+                print("Error in working out directions for route ID %d:- "\
                     "last and second last segments don't link via a "\
                     "common stop!"\
-                    % r_id
+                    % r_id)
                 sys.exit(1)    
 
         first_stop_name = tp_model.stop_default_name_from_id(start_stop,
@@ -998,7 +998,7 @@ def write_segments_to_shp_file(segments_lyr, input_stops_lyr, seg_refs,
     """Write all segments defined by input seg_refs list to the segments_lyr.
     Geometries of segments defined by stop pairs in input_stops_lyr.
     """
-    print "Writing segment references to shapefile:"
+    print("Writing segment references to shapefile:")
     stops_srs = input_stops_lyr.GetSpatialRef()
     # Build lookup table by stop ID into stops layer - for speed
     stops_lookup_dict = tp_model.build_stops_lookup_table(input_stops_lyr)
@@ -1008,7 +1008,7 @@ def write_segments_to_shp_file(segments_lyr, input_stops_lyr, seg_refs,
         stop_feat_b = stops_lookup_dict[seg_ref.second_id]
         seg_ii = write_seg_ref_to_shp_file(seg_ref, segments_lyr,
             stop_feat_a, stop_feat_b, stops_srs, mode_config)
-    print "...done writing."
+    print("...done writing.")
     return
 
 ############################
@@ -1016,20 +1016,20 @@ def write_segments_to_shp_file(segments_lyr, input_stops_lyr, seg_refs,
 
 def print_route_ext_infos(route_ext_infos, indent=4):
     for re in route_ext_infos:
-        print " " * indent + "Ext id:%s, '%s', of type %s"\
-            % (re.ext_id, re.ext_name, re.ext_type)
-        print " " * indent * 2 + "connects to existing route '%s' "\
+        print(" " * indent + "Ext id:%s, '%s', of type %s"\
+            % (re.ext_id, re.ext_name, re.ext_type))
+        print(" " * indent * 2 + "connects to existing route '%s' "\
             "('%s'), at GTFS stop ID %s" \
             % (re.exist_r_short_name, re.exist_r_long_name, \
-               re.exist_r_connect_stop_gtfs_id)
+               re.exist_r_connect_stop_gtfs_id))
         if re.ext_type == tp_model.ROUTE_EXT_TYPE_NEW:
-            print " " * indent * 2 + "(new route will copy starting from "\
+            print(" " * indent * 2 + "(new route will copy starting from "\
                 "stop with GTFS ID %s)"\
-                % (re.exist_r_first_stop_gtfs_id)
-        print " " * indent * 2 + "will update r name to '%s':'%s' "\
+                % (re.exist_r_first_stop_gtfs_id))
+        print(" " * indent * 2 + "will update r name to '%s':'%s' "\
             "and new/updated dir name as '%s'." \
             % (re.upd_r_short_name, re.upd_r_long_name, \
-               re.upd_dir_name)
+               re.upd_dir_name))
     return
 
 def get_matching_existing_route_info(
@@ -1045,16 +1045,16 @@ def get_matching_existing_route_info(
     matching_r_defs = get_matching_route_defs(route_defs,
         search_route_def)
     if len(matching_r_defs) == 0:
-        print "Error:- for route extension %s with s name %s, l name %s: "\
+        print("Error:- for route extension %s with s name %s, l name %s: "\
             "no matching existing routes!" \
             % (route_ext_info.ext_name, route_ext_info.exist_r_short_name,\
-               route_ext_info.exist_r_long_name)
+               route_ext_info.exist_r_long_name))
         sys.exit(1)
     elif len(matching_r_defs) > 1:
-        print "Error:- for route extension %s with s name %s, l name %s: "\
+        print("Error:- for route extension %s with s name %s, l name %s: "\
             "matched multiple existing routes!" \
             % (route_ext_info.ext_name, route_ext_info.exist_r_short_name,\
-               route_ext_info.exist_r_long_name)
+               route_ext_info.exist_r_long_name))
         sys.exit(1)
     r_def_to_extend = matching_r_defs[0]
 
@@ -1067,15 +1067,15 @@ def get_matching_existing_route_info(
         stops_lyr, route_ext_info.exist_r_connect_stop_gtfs_id)
 
     if connect_stop_id is None:
-        print "Error:- extension route with connecting stop spec. "\
+        print("Error:- extension route with connecting stop spec. "\
             "with GTFS ID %s :- couldn't find an existing stop with "\
             "this GTFS ID."\
-            % (route_ext_info.exist_r_connect_stop_gtfs_id)
+            % (route_ext_info.exist_r_connect_stop_gtfs_id))
         sys.exit()
     elif connect_stop_id not in stop_ids_along_route:
-        print "Error:- extension route with connecting stop spec. "\
+        print("Error:- extension route with connecting stop spec. "\
             "with GTFS ID %s exists, but not found in route to extend." \
-            % (route_ext_info.exist_r_connect_stop_gtfs_id)
+            % (route_ext_info.exist_r_connect_stop_gtfs_id))
         sys.exit()
     
     if route_ext_info.ext_type == tp_model.ROUTE_EXT_TYPE_EXTENSION:
@@ -1084,9 +1084,9 @@ def get_matching_existing_route_info(
         elif connect_stop_id == stop_ids_along_route[0]:
             ext_dir_id = -1
         else:
-            print "Error:- extension route with connecting stop spec. "\
+            print("Error:- extension route with connecting stop spec. "\
                 "with GTFS ID %s not found at end of route to extend."\
-            % (route_ext_info.exist_r_connect_stop_gtfs_id)
+            % (route_ext_info.exist_r_connect_stop_gtfs_id))
             sys.exit(1)
     # For new routes, the connecting stop can legitimately be 
     #  anywhere along the route.
@@ -1120,18 +1120,19 @@ ROUTE_CSV_HEADERS_00 = ['route','id','mode','dir1','dir2','period','headway','sp
 ROUTE_CSV_HEADERS_01 = ['route_id', 'route_short_name', 'route_long_name',
     'gtfs_id', 'dir1', 'dir2', 'Segments']
 
-def read_route_defs(csv_file_name, do_sort=True):
+def read_route_defs(csv_file_name, do_sort=False):
     """Reads a CSV of route_defs, into a list of 'route_defs'.
     Each route_def is a dictionary, with following entries:
      name: name of route.
      directions: a tuple of two strings, the route directions.
      segments: a list of (ordered) route segments IDs."""
+    short_route_names = []
     route_defs = []
     try:
         csv_file = open(csv_file_name, 'r')
     except IOError:
-        print "Error, route mapping CSV file given, %s , failed to open." \
-            % (csv_file_name)
+        print("Error, route mapping CSV file given, %s , failed to open." \
+            % (csv_file_name))
         sys.exit(1) 
 
     dict_reader = csv.DictReader(csv_file, delimiter=';', quotechar="'") 
@@ -1145,7 +1146,15 @@ def read_route_defs(csv_file_name, do_sort=True):
         if format_version == "00":
             r_id = row['id']
             r_long_name = row['name']
-            r_short_name = row['route']
+            if row['route'][:5] not in [x[:5] for x in short_route_names]:
+                r_short_name = row['route'][:5]
+            else:
+                if row['route'][:3]+'_0' not in [x[:5] for x in short_route_names]:
+                    r_short_name = row['route'][:3]+'_0'
+                else:
+                    max_val = max([int(x.rsplit('_', 1)[-1]) for x in [x for x in short_route_names if (x.rsplit('_',1)[0] == row['route'][:3] and x.rsplit('_',1)[-1].isdigit())]])
+                    r_short_name = row['route'][:3]+'_'+str(max_val + 1)
+            short_route_names.append(r_short_name)
         else:
             r_id = int(row['route_id'])
             r_short_name = row['route_short_name']
@@ -1200,6 +1209,6 @@ def write_route_defs(csv_file_name, route_defs):
             rdef.gtfs_origin_id, seg_str_all])
 
     routesfile.close()
-    print "Wrote output to %s" % (csv_file_name)
+    print("Wrote output to %s" % (csv_file_name))
     return
 

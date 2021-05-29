@@ -158,12 +158,12 @@ def assign_speeds_to_segs(route_segments_lyr, mode_config, speed_func,
         speed_field_name):
     ensure_speed_field_exists(route_segments_lyr, speed_field_name)
     segs_total = route_segments_lyr.GetFeatureCount()
-    print "Assigning speed to all %d route segments:" % segs_total
+    print("Assigning speed to all %d route segments:" % segs_total)
     one_tenth = segs_total / 10.0
     segs_since_print = 0
     for seg_num, route_segment in enumerate(route_segments_lyr):
         if segs_since_print / one_tenth > 1:
-            print "...assigning to segment number %d ..." % (seg_num)
+            print("...assigning to segment number %d ..." % (seg_num))
             segs_since_print = 0
         else:
             segs_since_print += 1
@@ -171,7 +171,7 @@ def assign_speeds_to_segs(route_segments_lyr, mode_config, speed_func,
         assign_speed_to_seg(route_segments_lyr, route_segment,
             speed_field_name, speed)
         route_segment.Destroy()    
-    print "...finished assigning speeds to segments."    
+    print("...finished assigning speeds to segments.")    
     route_segments_lyr.ResetReading()
     return
 
@@ -259,10 +259,10 @@ class MultipleTimePeriodsSpeedModel(SpeedModel):
                 speed_in_period = next_segment.GetField(field_name)
                 time_period_speeds.append(speed_in_period)
         except ValueError:
-            print "ERROR: you asked to use per-segment and per time-period "\
+            print("ERROR: you asked to use per-segment and per time-period "\
                 "speeds when calculating timetable, but given segments "\
                 "shapefile is missing field '%s'"\
-                % (field_name)
+                % (field_name))
             sys.exit(1)    
         speed_ext = MultipleTimePeriodSegSpeedInfo(time_period_speeds)
         return speed_ext
@@ -383,13 +383,13 @@ class MultipleTimePeriodsPerRouteSpeedModel(MultipleTimePeriodsSpeedModel):
             (dir_name, serv_period), gtfs_stop_pair, seg_ii)
 
         if not (tp_speeds and tps):
-            print "While curr_route is id %s, name %s:- "\
+            print("While curr_route is id %s, name %s:- "\
                 "Error for segment %s: can't find a matching set of "\
                 "avg speeds for this segment in any allowed service period. "\
                 "GTFS ids of stops are %s and %s." \
                 % (self._curr_route_def.id, \
                    route_segs.get_print_name(self._curr_route_def), \
-                   seg_ref.seg_id, gtfs_stop_pair[0], gtfs_stop_pair[1])
+                   seg_ref.seg_id, gtfs_stop_pair[0], gtfs_stop_pair[1]))
             assert tp_speeds and tps
         speed_ext = MultipleTimePeriodsPerRouteSegSpeedInfo(tps, tp_speeds)
         return speed_ext
@@ -447,7 +447,7 @@ class MultipleTimePeriodsPerRouteSpeedModel(MultipleTimePeriodsSpeedModel):
         if not tp_speeds and allow_other_dpp_fallback:
             # Fall-back to searching all the other days and directions.
             for dir_period_pair_b, sp_dir_speeds \
-                    in self._curr_route_seg_speeds.iteritems():
+                    in self._curr_route_seg_speeds.items():
                 # Need to recalc seg_gtfs_stop_ids to be in order
                 # of dir_period_pair
                 curr_dir_name = dir_period_pair_b[0]
